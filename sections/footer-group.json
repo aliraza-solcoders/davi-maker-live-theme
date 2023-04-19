@@ -97,8 +97,8 @@
       ],
       "settings": {
         "section_title": "Multistep Form",
-        "step1_title": "Choose  Jewelry",
-        "step1_name": "Step 1 Name",
+        "step1_title": "Item Specifications",
+        "step1_name": "Choose  Jewelry",
         "step2_title": "Step 2 Title",
         "step2_name": "Step 2 Name",
         "step3_title": "Step 3 Title",
