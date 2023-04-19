@@ -1,0 +1,12 @@
+{
+  "sections": {
+    "main": {
+      "type": "quotes",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
