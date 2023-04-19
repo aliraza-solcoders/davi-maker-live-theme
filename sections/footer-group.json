@@ -90,10 +90,24 @@
             "davi_field_file_extensions": "",
             "davi_field_required": true
           }
+        },
+        "6095b43b-ca60-48c6-b61a-4f34d7ab5a42": {
+          "type": "davi_field",
+          "settings": {
+            "davi_field_label": "Material - multiselect",
+            "davi_field_show": "step1",
+            "davi_field_type": "multipledropdown_file",
+            "davi_field_value": "Material 1,Material 2",
+            "davi_field_image": "https:\/\/imageio.forbes.com\/specials-images\/imageserve\/5fd3e9811e4e5616661146e2\/0x0.jpg?format=jpg&width=1200,https:\/\/m.media-amazon.com\/images\/I\/618cR5fCQkL.jpg",
+            "davi_field_max_file_upload": "",
+            "davi_field_file_extensions": "",
+            "davi_field_required": true
+          }
         }
       },
       "block_order": [
-        "9857c641-6937-45ae-b064-756cbcfc36af"
+        "9857c641-6937-45ae-b064-756cbcfc36af",
+        "6095b43b-ca60-48c6-b61a-4f34d7ab5a42"
       ],
       "settings": {
         "section_title": "Multistep Form",
