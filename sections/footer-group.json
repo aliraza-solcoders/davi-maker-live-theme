@@ -104,6 +104,19 @@
             "davi_field_required": true
           }
         },
+        "556cad36-0d20-4339-860e-b59ecd0dc264": {
+          "type": "davi_field",
+          "settings": {
+            "davi_field_label": "Design File",
+            "davi_field_show": "step1",
+            "davi_field_type": "file",
+            "davi_field_value": "",
+            "davi_field_image": "",
+            "davi_field_max_file_upload": "10",
+            "davi_field_file_extensions": "csv,pdf,psd,png,jpeg,jpg",
+            "davi_field_required": true
+          }
+        },
         "1df85693-51d6-4d55-895e-3ec50d4e91a0": {
           "type": "davi_field",
           "settings": {
@@ -127,7 +140,7 @@
             "davi_field_image": "",
             "davi_field_max_file_upload": "",
             "davi_field_file_extensions": "",
-            "davi_field_required": true
+            "davi_field_required": false
           }
         },
         "2e2a9485-08b0-44db-814c-f984231e2b69": {
@@ -142,28 +155,15 @@
             "davi_field_file_extensions": "",
             "davi_field_required": true
           }
-        },
-        "556cad36-0d20-4339-860e-b59ecd0dc264": {
-          "type": "davi_field",
-          "settings": {
-            "davi_field_label": "Design File",
-            "davi_field_show": "step1",
-            "davi_field_type": "file",
-            "davi_field_value": "",
-            "davi_field_image": "",
-            "davi_field_max_file_upload": "10",
-            "davi_field_file_extensions": "csv,pdf,psd,png,jpeg,jpg",
-            "davi_field_required": true
-          }
         }
       },
       "block_order": [
         "9857c641-6937-45ae-b064-756cbcfc36af",
         "6095b43b-ca60-48c6-b61a-4f34d7ab5a42",
+        "556cad36-0d20-4339-860e-b59ecd0dc264",
         "1df85693-51d6-4d55-895e-3ec50d4e91a0",
         "fa6229cb-1f88-44ae-8634-80584903416e",
-        "2e2a9485-08b0-44db-814c-f984231e2b69",
-        "556cad36-0d20-4339-860e-b59ecd0dc264"
+        "2e2a9485-08b0-44db-814c-f984231e2b69"
       ],
       "settings": {
         "section_title": "Multistep Form",
