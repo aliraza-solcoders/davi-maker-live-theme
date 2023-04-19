@@ -75,36 +75,6 @@
         "text_color": ""
       }
     },
-    "f8f88072-2202-44ec-9da9-b4b4c67a67dc": {
-      "type": "davi-multistep-form",
-      "blocks": {
-        "a75d1d17-124c-44bd-a8e9-7927f463d42b": {
-          "type": "davi_field",
-          "settings": {
-            "davi_field_label": "Name",
-            "davi_field_show": "step1",
-            "davi_field_type": "text",
-            "davi_field_value": "",
-            "davi_field_image": "",
-            "davi_field_max_file_upload": "",
-            "davi_field_file_extensions": "",
-            "davi_field_required": true
-          }
-        }
-      },
-      "block_order": [
-        "a75d1d17-124c-44bd-a8e9-7927f463d42b"
-      ],
-      "settings": {
-        "section_title": "Multistep Form",
-        "step1_title": "Step 1 Title",
-        "step1_name": "Step 1 Name",
-        "step2_title": "Step 2 Title",
-        "step2_name": "Step 2 Name",
-        "step3_title": "Step 3 Title",
-        "step3_name": "Step 3 Name"
-      }
-    },
     "footer": {
       "type": "footer",
       "blocks": {
@@ -149,7 +119,6 @@
   },
   "order": [
     "text-with-icons",
-    "f8f88072-2202-44ec-9da9-b4b4c67a67dc",
     "footer"
   ]
 }
