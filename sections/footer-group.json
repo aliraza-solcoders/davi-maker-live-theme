@@ -81,7 +81,7 @@
         "9857c641-6937-45ae-b064-756cbcfc36af": {
           "type": "davi_field",
           "settings": {
-            "davi_field_label": "Item Type",
+            "davi_field_label": "Item Type -  single select",
             "davi_field_show": "step1",
             "davi_field_type": "dropdown_file",
             "davi_field_value": "Item 1,Item 2",
