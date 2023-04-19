@@ -239,6 +239,7 @@ function form_submit(){
     var formData = new FormData();
 
     // for pdf start
+    if($('input[name="davi_input_pdf"]').is(":visible")){
     if($('input[name="davi_input_pdf"]').prop('files').length > 1){
       var davi_input_pdf = {};
       jQuery( "input[name=davi_input_pdf]" ).each(function( index ) {
@@ -249,8 +250,10 @@ function form_submit(){
       const pdf = $('input[name="davi_input_pdf"]').prop('files')[0];
       formData.append('pdf', pdf);
     }
+    }
     // for pdf end
     // for file start
+    if($('input[name="davi_input_file"]').is(":visible")){
     if($('input[name="davi_input_file"]').prop('files').length > 1){
 
       var davi_input_file = {};
@@ -262,8 +265,10 @@ function form_submit(){
       const file = $('input[name="davi_input_file"]').prop('files')[0];
       formData.append('file', file);
     }
+    }
     // for file end
     // for files start
+    if($('input[name="davi_input_file"]').is(":visible")){
     if($('input[name="davi_input_file"]').prop('files').length > 1){
 
       var davi_input_files = {};
@@ -276,6 +281,7 @@ function form_submit(){
       }
       davi_input_files['label'] = label;
       davi_input_files['type'] = 'files';
+    }
     }
     // const files = $('input[name="davi_input_files"]').prop('files');
     // formData.append('files', files);
