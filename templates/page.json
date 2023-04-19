@@ -5,22 +5,9 @@
       "settings": {
         "content_width": "80ch"
       }
-    },
-    "5dbf57dd-623d-41ae-b2b6-d8e86fe910ff": {
-      "type": "davi-multistep-form",
-      "settings": {
-        "section_title": "Multistep Form",
-        "step1_title": "Step 1 Title",
-        "step1_name": "Step 1 Name",
-        "step2_title": "Step 2 Title",
-        "step2_name": "Step 2 Name",
-        "step3_title": "Step 3 Title",
-        "step3_name": "Step 3 Name"
-      }
     }
   },
   "order": [
-    "main",
-    "5dbf57dd-623d-41ae-b2b6-d8e86fe910ff"
+    "main"
   ]
 }
