@@ -264,9 +264,9 @@ function form_submit(){
     }
     // for file end
     // for files start
-    if(('input[name="davi_input_files"]').prop('files').length > 1){
+    if($('input[name="davi_input_file"]').prop('files').length > 1){
 
-$      var davi_input_files = {};
+      var davi_input_files = {};
       jQuery( "input[name=davi_input_files]" ).each(function( index ) {
         label = $(this).parent().prev().text();
       })
