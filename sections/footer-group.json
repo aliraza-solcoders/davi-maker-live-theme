@@ -188,7 +188,7 @@
             "davi_field_label": "Terms and Condition",
             "davi_field_show": "step3",
             "davi_field_type": "terms_and_condition",
-            "davi_field_value": "",
+            "davi_field_value": "This is Terms.",
             "davi_field_image": "",
             "davi_field_max_file_upload": "",
             "davi_field_file_extensions": "",
