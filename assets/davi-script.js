@@ -239,36 +239,44 @@ function form_submit(){
     var formData = new FormData();
 
     // for pdf start
-    var davi_input_pdf = {};
-    jQuery( "input[name=davi_input_pdf]" ).each(function( index ) {
-      label = $(this).parent().prev().text();
-    })
-    davi_input_pdf['label'] = label;
-    davi_input_pdf['type'] = 'pdf';
-    const pdf = $('input[name="davi_input_pdf"]').prop('files')[0];
-    formData.append('pdf', pdf);
+    if(('input[name="davi_input_pdf"]').prop('files').length > 1){
+      var davi_input_pdf = {};
+      jQuery( "input[name=davi_input_pdf]" ).each(function( index ) {
+        label = $(this).parent().prev().text();
+      })
+      davi_input_pdf['label'] = label;
+      davi_input_pdf['type'] = 'pdf';
+      const pdf = $('input[name="davi_input_pdf"]').prop('files')[0];
+      formData.append('pdf', pdf);
+    }
     // for pdf end
     // for file start
-    var davi_input_file = {};
-    jQuery( "input[name=davi_input_file]" ).each(function( index ) {
-      label = $(this).parent().prev().text();
-    })
-    davi_input_file['label'] = label;
-    davi_input_file['type'] = 'file';
-    const file = $('input[name="davi_input_file"]').prop('files')[0];
-    formData.append('file', file);
+    if(('input[name="davi_input_file"]').prop('files').length > 1){
+
+      var davi_input_file = {};
+      jQuery( "input[name=davi_input_file]" ).each(function( index ) {
+        label = $(this).parent().prev().text();
+      })
+      davi_input_file['label'] = label;
+      davi_input_file['type'] = 'file';
+      const file = $('input[name="davi_input_file"]').prop('files')[0];
+      formData.append('file', file);
+    }
     // for file end
     // for files start
-    var davi_input_files = {};
-    jQuery( "input[name=davi_input_files]" ).each(function( index ) {
-      label = $(this).parent().prev().text();
-    })
-    var totalfiles = $('input[name="davi_input_files[]"]').prop('files').length;
-    for (var index = 0; index < totalfiles; index++) {
-      formData.append("files[]", $('input[name="davi_input_files[]"]').prop('files')[index]);
+    if(('input[name="davi_input_files"]').prop('files').length > 1){
+
+      var davi_input_files = {};
+      jQuery( "input[name=davi_input_files]" ).each(function( index ) {
+        label = $(this).parent().prev().text();
+      })
+      var totalfiles = $('input[name="davi_input_files[]"]').prop('files').length;
+      for (var index = 0; index < totalfiles; index++) {
+        formData.append("files[]", $('input[name="davi_input_files[]"]').prop('files')[index]);
+      }
+      davi_input_files['label'] = label;
+      davi_input_files['type'] = 'files';
     }
-    davi_input_files['label'] = label;
-    davi_input_files['type'] = 'files';
     // const files = $('input[name="davi_input_files"]').prop('files');
     // formData.append('files', files);
     // for files end
