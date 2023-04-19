@@ -168,6 +168,19 @@
             "davi_field_file_extensions": "",
             "davi_field_required": true
           }
+        },
+        "9fe23ac1-9943-488c-87b4-50fc2a5f3e4f": {
+          "type": "davi_field",
+          "settings": {
+            "davi_field_label": "Budget",
+            "davi_field_show": "step2",
+            "davi_field_type": "dropdown",
+            "davi_field_value": "50$-100$,100$-200$",
+            "davi_field_image": "",
+            "davi_field_max_file_upload": "",
+            "davi_field_file_extensions": "",
+            "davi_field_required": true
+          }
         }
       },
       "block_order": [
@@ -177,7 +190,8 @@
         "1df85693-51d6-4d55-895e-3ec50d4e91a0",
         "fa6229cb-1f88-44ae-8634-80584903416e",
         "2e2a9485-08b0-44db-814c-f984231e2b69",
-        "87d925da-f87b-4407-a96d-fb1f087c2feb"
+        "87d925da-f87b-4407-a96d-fb1f087c2feb",
+        "9fe23ac1-9943-488c-87b4-50fc2a5f3e4f"
       ],
       "settings": {
         "section_title": "Multistep Form",
