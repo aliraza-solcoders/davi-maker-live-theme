@@ -59,13 +59,41 @@
             "davi_field_file_extensions": "",
             "davi_field_required": true
           }
+        },
+        "d972a540-8f44-4179-8e73-9a2ddae78f16": {
+          "type": "davi_field",
+          "settings": {
+            "davi_field_label": "Single File",
+            "davi_field_show": "step2",
+            "davi_field_type": "text",
+            "davi_field_value": "",
+            "davi_field_image": "",
+            "davi_field_max_file_upload": "10",
+            "davi_field_file_extensions": "png,jpg,jpeg,psd,csv",
+            "davi_field_required": false
+          }
+        },
+        "9bcb7bd5-d3be-4e91-97ce-27776c75b72e": {
+          "type": "davi_field",
+          "settings": {
+            "davi_field_label": "",
+            "davi_field_show": "step2",
+            "davi_field_type": "dropdown",
+            "davi_field_value": "50$-100$,100$-200$",
+            "davi_field_image": "",
+            "davi_field_max_file_upload": "",
+            "davi_field_file_extensions": "",
+            "davi_field_required": true
+          }
         }
       },
       "block_order": [
         "99798812-6b2f-4b84-bc1c-2c8f2254ecfe",
         "6b6afcc6-837c-421c-8b45-3bb63c340d82",
         "74d1139d-ef76-45ee-8fb6-9f635e78631f",
-        "d6448b4d-d257-4273-8e76-f0469e2b3c03"
+        "d6448b4d-d257-4273-8e76-f0469e2b3c03",
+        "d972a540-8f44-4179-8e73-9a2ddae78f16",
+        "9bcb7bd5-d3be-4e91-97ce-27776c75b72e"
       ],
       "settings": {
         "section_title": "Multistep Form",
