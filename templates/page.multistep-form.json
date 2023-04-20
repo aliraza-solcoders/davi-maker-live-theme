@@ -1,12 +1,4 @@
 {
   "sections": {
-    "main": {
-      "type": "davi-multistep-form",
-      "settings": {
-      }
-    }
-  },
-  "order": [
-    "main"
-  ]
+  }
 }
