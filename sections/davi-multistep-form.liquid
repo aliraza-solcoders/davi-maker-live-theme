@@ -2,6 +2,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js" defer></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
+{{ 'davi-style.css' | asset_url | stylesheet_tag }}
 <style>
   
 .davi-customize {
@@ -866,7 +867,10 @@
                     <option value="{{ option }}" data-img="{{ imgs[forloop.index0] }}">{{ option }}</option>
                   {% endfor %}
                 </select>
-                <button type="button" class="custom-multiple-2-dropdown-main"><div class="custom-multiple-2-badge-wrapper"></div></button>
+              <button type="button" class="custom-multiple-2-dropdown-main">
+                <div class="custom-multiple-2-badge-wrapper">
+                </div>
+                </button>
                 <ul class="custom-multiple-2-dropdown-list">
                   {% for option in dropdown %}
                     <li><img src="{{ imgs[forloop.index0] }}" /> <span>{{ option }}</span></li>
@@ -1035,7 +1039,10 @@
                       <option value="{{ option }}" data-img="{{ imgs[forloop.index0] }}">{{ option }}</option>
                     {% endfor %}
                   </select>
-                  <button type="button" class="custom-multiple-2-dropdown-main"><div class="custom-multiple-2-badge-wrapper"></div></button>
+                    <button type="button" class="custom-multiple-2-dropdown-main">
+                      <div class="custom-multiple-2-badge-wrapper">
+                      </div>
+                      </button>
                   <ul class="custom-multiple-2-dropdown-list">
                     {% for option in dropdown %}
                       <li><img src="{{ imgs[forloop.index0] }}" /> <span>{{ option }}</span></li>
@@ -1075,8 +1082,10 @@
   
         
               {% elsif block.settings.davi_field_show == 'step2' and block.settings.davi_field_type == "address" %}
-                <input type="text" class="davi-theme custom-address" name="davi_input_address" placeholder="address"  {% if block.settings.davi_field_show == 'step2' and block.settings.davi_field_type == "address" and block.settings.davi_field_required == true %}  required {% endif %}><br>
-                <input type="text" class="davi-theme custom-address" name="davi_input_appartment_no" placeholder="appartment_no"  {% if block.settings.davi_field_show == 'step2' and block.settings.davi_field_type == "address" and block.settings.davi_field_required == true %}  required {% endif %}> <input type="text" {% if block.settings.davi_field_show == 'step2' and block.settings.davi_field_type == "address" and block.settings.davi_field_required == true %}  required {% endif %} class="davi-theme custom-address" name="davi_input_zip_code" placeholder="zip_code" > <input type="text" class="davi-theme custom-address" {% if block.settings.davi_field_show == 'step2' and block.settings.davi_field_type == "address" and block.settings.davi_field_required == true %}  required {% endif %} name="davi_input_state" placeholder="state"  {% if block.settings.davi_field_show == 'step2' and block.settings.davi_field_required == true %}  required {% endif %}>
+              <input type="text" class="davi-theme custom-address" name="davi_input_address" placeholder="address"  {% if block.settings.davi_field_show == 'step2' and block.settings.davi_field_type == "address" and block.settings.davi_field_required == true %}  required {% endif %}>
+              <input type="text" class="davi-theme custom-address" name="davi_input_appartment_no" placeholder="appartment_no"  {% if block.settings.davi_field_show == 'step2' and block.settings.davi_field_type == "address" and block.settings.davi_field_required == true %}  required {% endif %}>
+	      <input type="text" {% if block.settings.davi_field_show == 'step2' and block.settings.davi_field_type == "address" and block.settings.davi_field_required == true %}  required {% endif %} class="davi-theme custom-address" name="davi_input_zip_code" placeholder="zip_code" >
+	      <input type="text" class="davi-theme custom-address" {% if block.settings.davi_field_show == 'step2' and block.settings.davi_field_type == "address" and block.settings.davi_field_required == true %}  required {% endif %} name="davi_input_state" placeholder="state"  {% if block.settings.davi_field_show == 'step2' and block.settings.davi_field_required == true %}  required {% endif %}>
               {% endif %}
               {% if block.settings.davi_field_show == 'step2' %}
                   {% unless block.settings.davi_field_type == "pdf" or block.settings.davi_field_type == "file" or block.settings.davi_field_type == "multiplefile" %}
@@ -1204,7 +1213,10 @@
                         <option value="{{ option }}" data-img="{{ imgs[forloop.index0] }}">{{ option }}</option>
                       {% endfor %}
                     </select>
-                    <button type="button" class="custom-multiple-2-dropdown-main"><div class="custom-multiple-2-badge-wrapper"></div></button>
+                <button type="button" class="custom-multiple-2-dropdown-main">
+                  <div class="custom-multiple-2-badge-wrapper">
+                  </div>
+                  </button>
                     <ul class="custom-multiple-2-dropdown-list">
                       {% for option in dropdown %}
                         <li><img src="{{ imgs[forloop.index0] }}" /> <span>{{ option }}</span></li>
