@@ -14,10 +14,10 @@ setTimeout(function() {
               outputDiv.innerHTML = data;
           } else {
               // var extensions = $(this).hasAttribute("multiple");
-              var ext = $(this).val().split('.').pop().toLowerCase();
-              if($.inArray(ext, ['gif','png','jpg','jpeg']) == -1) {
-                  alert('invalid extension!');
-              }
+              // var ext = $(this).val().split('.').pop().toLowerCase();
+              // if($.inArray(ext, ['gif','png','jpg','jpeg']) == -1) {
+              //     alert('invalid extension!');
+              // }
               let fileName = this.files[0].name;
               let image = this.files[0].type.indexOf("image") != -1 ? URL.createObjectURL(this.files[0]) : "{{ 'file.svg' | asset_url }}";
               let imageClass = this.files[0].type.indexOf("image") != -1 ? "custom--image" : "custom--file";
