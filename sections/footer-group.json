@@ -207,6 +207,19 @@
             "davi_field_file_extensions": "",
             "davi_field_required": true
           }
+        },
+        "9a78cba7-82e9-4e93-855a-1e3e6fbf1bb4": {
+          "type": "davi_field",
+          "settings": {
+            "davi_field_label": "Hidden Field",
+            "davi_field_show": "step3",
+            "davi_field_type": "hidden",
+            "davi_field_value": "Hi I am hidden field",
+            "davi_field_image": "",
+            "davi_field_max_file_upload": "",
+            "davi_field_file_extensions": "",
+            "davi_field_required": false
+          }
         }
       },
       "block_order": [
@@ -219,7 +232,8 @@
         "87d925da-f87b-4407-a96d-fb1f087c2feb",
         "9fe23ac1-9943-488c-87b4-50fc2a5f3e4f",
         "2703981c-c2fd-4035-bdde-546082b9305d",
-        "6a760b1c-b0aa-420a-877a-a4318eee7659"
+        "6a760b1c-b0aa-420a-877a-a4318eee7659",
+        "9a78cba7-82e9-4e93-855a-1e3e6fbf1bb4"
       ],
       "settings": {
         "section_title": "Multistep Form",
