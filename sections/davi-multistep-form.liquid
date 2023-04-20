@@ -773,12 +773,12 @@
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer=""></script>
 <script src="{{ 'davi-script.js' | asset_url }}" defer="defer"></script>
 {% if customer %}
-<div class="loader" style="text-align:center; display:flex; justify-content:center">
+<div class="loader" style="text-align:center; display:flex">
   <img src="https://daviapp.solcoder.com/public/uploads/loader/Loader.gif" width="200" height="200">
 </div>
   <div class="container davi-customize">
   <div id="form" style="display:none; padding : 20px;">
-    <h2 style="display:none">{{ section.settings.section_title }}</h2>
+    <h2>{{ section.settings.section_title }}</h2>
     <form id="contactForm" enctype="multipart/form-data">
       <ul class="custom-steps-wrapper" data-step="1">
         <li class="custom-steps-circle s1c"><span>{{ section.settings.step1_name }}</span></li>
