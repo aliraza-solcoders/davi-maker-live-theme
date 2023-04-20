@@ -130,19 +130,6 @@
             "davi_field_required": true
           }
         },
-        "fa6229cb-1f88-44ae-8634-80584903416e": {
-          "type": "davi_field",
-          "settings": {
-            "davi_field_label": "Phone",
-            "davi_field_show": "step3",
-            "davi_field_type": "phone",
-            "davi_field_value": "",
-            "davi_field_image": "",
-            "davi_field_max_file_upload": "",
-            "davi_field_file_extensions": "",
-            "davi_field_required": false
-          }
-        },
         "4ad9a08b-a113-43f7-a133-1d2832b0f458": {
           "type": "davi_field",
           "settings": {
@@ -227,7 +214,6 @@
         "6095b43b-ca60-48c6-b61a-4f34d7ab5a42",
         "bba6f1a1-fc37-48da-87b1-6fbbf286d9e4",
         "1df85693-51d6-4d55-895e-3ec50d4e91a0",
-        "fa6229cb-1f88-44ae-8634-80584903416e",
         "4ad9a08b-a113-43f7-a133-1d2832b0f458",
         "2e2a9485-08b0-44db-814c-f984231e2b69",
         "87d925da-f87b-4407-a96d-fb1f087c2feb",
