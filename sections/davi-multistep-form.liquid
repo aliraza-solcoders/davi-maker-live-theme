@@ -1,12 +1,177 @@
-1{{ page.url  }}2
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js" defer></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
+<script>
+
+  setTimeout(function() {
+    document.querySelectorAll(".custom-form-file input").forEach(function(item) {
+        item.addEventListener("change", function(input) {
+            if (item.hasAttribute("multiple")) {
+                let outputDiv = this.closest(".custom-form-group").querySelector(".custom-form-file-output");
+                let data = ``;
+                for (file of this.files) {
+                    let fileName = file.name;
+                    let image = file.type.indexOf("image") != -1 ? URL.createObjectURL(file) : "{{ 'file.svg' | asset_url }}";
+                    let imageClass = file.type.indexOf("image") != -1 ? "custom--image" : "custom--file";
+                    data += `<div class="custom-form-file-output-wrapper"><div class="custom-form-file-output-img ${imageClass}"><img src="${image}" /></div><div class="custom-form-file-output-name">${fileName}</div></div>`;
+                }
+                outputDiv.innerHTML = data;
+            } else {
+                // var extensions = $(this).hasAttribute("multiple");
+                // var ext = $(this).val().split('.').pop().toLowerCase();
+                // if($.inArray(ext, ['gif','png','jpg','jpeg']) == -1) {
+                //     alert('invalid extension!');
+                // }
+                let fileName = this.files[0].name;
+                let image = this.files[0].type.indexOf("image") != -1 ? URL.createObjectURL(this.files[0]) : "{{ 'file.svg' | asset_url }}";
+                let imageClass = this.files[0].type.indexOf("image") != -1 ? "custom--image" : "custom--file";
+                let outputDiv = this.closest(".custom-form-group").querySelector(".custom-form-file-output");
+                outputDiv.innerHTML = `<div class="custom-form-file-output-wrapper"><div class="custom-form-file-output-img ${imageClass}"><img src="${image}" /></div><div class="custom-form-file-output-name">${fileName}</div></div>`;
+            }
+  
+        });
+    });
+    document.addEventListener("click", function(e) {
+        if (!$(e.target).closest('.custom-multiple-dropdown').length) {
+            document.querySelectorAll(".custom-multiple-dropdown-main").forEach(function(item) {
+                item.classList.remove("custom-open");
+            });
+        }
+    });
+    document.addEventListener("click", function(e) {
+        if (!$(e.target).closest('.custom-multiple-2-dropdown').length) {
+            document.querySelectorAll(".custom-multiple-2-dropdown-main").forEach(function(item) {
+                item.classList.remove("custom-open");
+            });
+        }
+    });
+    document.querySelectorAll(".custom-multiple-dropdown-main").forEach(function(item) {
+        item.addEventListener("click", function(e) {
+            e.currentTarget.classList.toggle("custom-open");
+        });
+    });
+    document.querySelectorAll(".custom-multiple-dropdown-list li").forEach(function(item) {
+        item.addEventListener("click", function(e) {
+            let img = e.currentTarget.querySelector("img").getAttribute("src");
+            let text = e.currentTarget.querySelector("span").innerText;
+            let main = e.currentTarget.closest(".custom-multiple-dropdown").querySelector(".custom-multiple-dropdown-main");
+            main.querySelector("img").setAttribute("src", img);
+            main.querySelector("span").innerText = text;
+            main.classList.remove("custom-open");
+            e.currentTarget.closest(".custom-multiple-dropdown").querySelectorAll(".custom-single-select option").forEach(function(opt) {
+                if (opt.innerText.toLowerCase().trim() == text.toLowerCase().trim()) {
+                    opt.selected = true;
+                }
+            })
+        });
+    });
+    document.querySelectorAll(".custom-multiple-2-dropdown-main").forEach(function(item) {
+        item.addEventListener("click", function(e) {
+            e.currentTarget.classList.toggle("custom-open");
+        });
+    });
+    document.querySelectorAll(".custom-multiple-2-dropdown-list li").forEach(function(item) {
+        item.addEventListener("click", function(e) {
+            let img = e.currentTarget.querySelector("img").getAttribute("src");
+            let text = e.currentTarget.querySelector("span").innerText;
+            let main2 = e.currentTarget.closest(".custom-multiple-2-dropdown").querySelector(".custom-multiple-2-dropdown-main");
+            main2.classList.remove("custom-open");
+            e.currentTarget.closest(".custom-multiple-2-dropdown").querySelectorAll(".custom-multiple-select option").forEach(function(opt) {
+                if (opt.innerText.toLowerCase().trim() == text.toLowerCase().trim()) {
+                    opt.selected = true;
+                    e.currentTarget.classList.add("custom-hide");
+                }
+            })
+            let main = e.currentTarget.closest(".custom-multiple-2-dropdown").querySelector(".custom-multiple-2-badge-wrapper");
+            let data = ``;
+            e.currentTarget.closest(".custom-multiple-2-dropdown").querySelectorAll(".custom-multiple-select option").forEach(function(opt) {
+                if (opt.selected) {
+                    data += `<div class="custom-multiple-2-badge"><img src="${opt.dataset.img}" /> <span>${opt.innerText}</span> <em class="custom-multiple-2-cross">&#10005;</em></div>`;
+                }
+            })
+            main.innerHTML = data;
+        });
+    });
+    $(document).on("click", ".custom-multiple-2-cross", function(e) {
+        e.stopPropagation();
+        let text = e.currentTarget.previousElementSibling.innerText;
+        let li = e.currentTarget.closest(".custom-multiple-2-dropdown").querySelectorAll(".custom-multiple-2-dropdown-list li");
+        e.currentTarget.closest(".custom-multiple-2-dropdown").querySelectorAll(".custom-multiple-select option").forEach(function(opt) {
+            if (opt.innerText.toLowerCase().trim() == text.toLowerCase().trim()) {
+                opt.selected = false;
+                e.currentTarget.closest(".custom-multiple-2-badge").remove();
+            }
+        })
+  
+        li.forEach(function(list) {
+            if (list.querySelector("span").innerText.toLowerCase().trim() == text.toLowerCase().trim()) {
+                list.classList.remove("custom-hide");
+            }
+        });
+    });
+  
+    document.querySelectorAll(".custom-phone-list").forEach(function(item) {
+        item.addEventListener("click", function(e) {
+            if (e.target.tagName == 'LI') {
+                let btn = e.currentTarget.closest(".custom-multiple-dropdown").querySelector(".custom-phone-button");
+                let inp = e.currentTarget.closest(".custom-form-group").querySelector('[name="davi_input_phone"]');
+                let inpV = e.currentTarget.closest(".custom-form-group").querySelector(".custom-phone-inp");
+                inp.value = e.target.dataset.code + ' ' + inpV.value;
+                btn.innerHTML = `${e.target.dataset.code} <em>${e.target.dataset.flag}</em>`;
+                btn.setAttribute("data-code", e.target.dataset.code);
+                btn.classList.remove("custom-open");
+            }
+        })
+    })
+  
+    document.querySelectorAll(".custom-phone-inp").forEach(function(item) {
+        item.addEventListener("input", function(e) {
+            let inp = e.target.closest(".custom-form-group").querySelector('[name="davi_input_phone"]');
+            let btn = e.target.closest(".custom-form-group").querySelector('.custom-phone-button');
+            inp.value = btn.dataset.code + ' ' + this.value;
+        })
+    })
+  
+    fetch('https://gist.githubusercontent.com/DmytroLisitsyn/1c31186e5b66f1d6c52da6b5c70b12ad/raw/2bc71083a77106afec2ec37cf49d05ee54be1a22/country_dial_info.json')
+        .then(response => response.json())
+        .then(res => {
+            if (res.length > 0) {
+                const element2 = document.querySelectorAll(".custom-phone-list");
+                const button = document.querySelectorAll(".custom-phone-button");
+  
+                const fragment2 = document.createDocumentFragment();
+  
+                res.sort((a, b) => {
+                    return a.dial_code - b.dial_code;
+                });
+  
+                button.forEach((item) => {
+                    item.innerHTML = `${res[0].dial_code} <em>${res[0].flag}</em>`;
+                    item.setAttribute("data-code", res[0].dial_code)
+                    item.setAttribute("data-flag", res[0].flag)
+                })
+  
+                res.forEach((item) => {
+  
+                    const li = document.createElement("li");
+                    li.innerHTML = `${item.dial_code} <em>${item.flag}</em>`;
+                    li.setAttribute("data-code", item.dial_code);
+                    li.setAttribute("data-flag", item.flag);
+                    fragment2.appendChild(li);
+  
+                });
+                element2.forEach((item) => {
+                    item.appendChild(fragment2);
+                })
+            }
+        });
+  }, 3000);
+</script>
+
 {{ 'davi-style.css' | asset_url | stylesheet_tag }}
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer=""></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer=""></>
 <script src="{{ 'davi-script.js' | asset_url }}" defer="defer"></script>
-1{{ template_name.first }}2
 {% if customer %}
 <div class="loader" style="text-align:center; display:flex; justify-content:center">
   <img src="https://daviapp.solcoder.com/public/uploads/loader/Loader.gif" width="200" height="200">
