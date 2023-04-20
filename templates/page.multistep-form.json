@@ -5,16 +5,159 @@
       "settings": {
       }
     },
-    "3d4aa97e-d9d1-4f5f-b159-28120304aa33": {
+    "3b53f804-a26e-4661-a6c6-3fa8b67dceed": {
       "type": "davi-multistep-form",
       "blocks": {
-        "99798812-6b2f-4b84-bc1c-2c8f2254ecfe": {
+        "9857c641-6937-45ae-b064-756cbcfc36af": {
           "type": "davi_field",
           "settings": {
-            "davi_field_label": "ettesst",
+            "davi_field_label": "Item Type -  single select",
             "davi_field_show": "step1",
-            "davi_field_type": "text",
+            "davi_field_type": "dropdown_file",
+            "davi_field_value": "Item 1,Item 2",
+            "davi_field_image": "https:\/\/w7.pngwing.com\/pngs\/245\/635\/png-transparent-cartier-jewellery-gemstone-lapis-lazuli-diamond-jewelery-miscellaneous-gemstone-ring-thumbnail.png,https:\/\/ae01.alicdn.com\/kf\/HTB1DEbPaULrK1Rjy0Fjq6zYXFXam\/Shining-Bridal-Jewelry-Sets-for-Women-Jewelery-Costume-Acessories-Necklace-Earrings-with-Stones-Jewellery-Sets-11.jpg_Q90.jpg_.webp",
+            "davi_field_max_file_upload": "",
+            "davi_field_file_extensions": "",
+            "davi_field_required": true
+          }
+        },
+        "6095b43b-ca60-48c6-b61a-4f34d7ab5a42": {
+          "type": "davi_field",
+          "settings": {
+            "davi_field_label": "Material - multiselect",
+            "davi_field_show": "step1",
+            "davi_field_type": "multipledropdown_file",
+            "davi_field_value": "Material 1,Material 2",
+            "davi_field_image": "https:\/\/imageio.forbes.com\/specials-images\/imageserve\/5fd3e9811e4e5616661146e2\/0x0.jpg?format=jpg&width=1200,https:\/\/m.media-amazon.com\/images\/I\/618cR5fCQkL.jpg",
+            "davi_field_max_file_upload": "",
+            "davi_field_file_extensions": "",
+            "davi_field_required": true
+          }
+        },
+        "bba6f1a1-fc37-48da-87b1-6fbbf286d9e4": {
+          "type": "davi_field",
+          "settings": {
+            "davi_field_label": "PDF Uploader",
+            "davi_field_show": "step1",
+            "davi_field_type": "pdf",
             "davi_field_value": "",
+            "davi_field_image": "",
+            "davi_field_max_file_upload": "10",
+            "davi_field_file_extensions": "",
+            "davi_field_required": false
+          }
+        },
+        "1df85693-51d6-4d55-895e-3ec50d4e91a0": {
+          "type": "davi_field",
+          "settings": {
+            "davi_field_label": "Delivery Date",
+            "davi_field_show": "step2",
+            "davi_field_type": "date",
+            "davi_field_value": "",
+            "davi_field_image": "",
+            "davi_field_max_file_upload": "",
+            "davi_field_file_extensions": "",
+            "davi_field_required": true
+          }
+        },
+        "4ad9a08b-a113-43f7-a133-1d2832b0f458": {
+          "type": "davi_field",
+          "settings": {
+            "davi_field_label": "Single File",
+            "davi_field_show": "step2",
+            "davi_field_type": "file",
+            "davi_field_value": "",
+            "davi_field_image": "",
+            "davi_field_max_file_upload": "10",
+            "davi_field_file_extensions": "png,jpg,jpeg,psd,csv",
+            "davi_field_required": false
+          }
+        },
+        "9fe23ac1-9943-488c-87b4-50fc2a5f3e4f": {
+          "type": "davi_field",
+          "settings": {
+            "davi_field_label": "Budget",
+            "davi_field_show": "step2",
+            "davi_field_type": "dropdown",
+            "davi_field_value": "50$-100$,100$-200$",
+            "davi_field_image": "",
+            "davi_field_max_file_upload": "",
+            "davi_field_file_extensions": "",
+            "davi_field_required": true
+          }
+        },
+        "2e2a9485-08b0-44db-814c-f984231e2b69": {
+          "type": "davi_field",
+          "settings": {
+            "davi_field_label": "Address",
+            "davi_field_show": "step3",
+            "davi_field_type": "address",
+            "davi_field_value": "",
+            "davi_field_image": "",
+            "davi_field_max_file_upload": "",
+            "davi_field_file_extensions": "",
+            "davi_field_required": true
+          }
+        },
+        "6a760b1c-b0aa-420a-877a-a4318eee7659": {
+          "type": "davi_field",
+          "settings": {
+            "davi_field_label": "Select Products",
+            "davi_field_show": "step2",
+            "davi_field_type": "products",
+            "davi_field_value": "",
+            "davi_field_image": "",
+            "davi_field_max_file_upload": "",
+            "davi_field_file_extensions": "",
+            "davi_field_required": true
+          }
+        },
+        "87d925da-f87b-4407-a96d-fb1f087c2feb": {
+          "type": "davi_field",
+          "settings": {
+            "davi_field_label": "Email",
+            "davi_field_show": "step3",
+            "davi_field_type": "email",
+            "davi_field_value": "",
+            "davi_field_image": "",
+            "davi_field_max_file_upload": "",
+            "davi_field_file_extensions": "",
+            "davi_field_required": true
+          }
+        },
+        "2703981c-c2fd-4035-bdde-546082b9305d": {
+          "type": "davi_field",
+          "settings": {
+            "davi_field_label": "Terms and Condition",
+            "davi_field_show": "step3",
+            "davi_field_type": "terms_and_condition",
+            "davi_field_value": "This is Terms.",
+            "davi_field_image": "",
+            "davi_field_max_file_upload": "",
+            "davi_field_file_extensions": "",
+            "davi_field_required": false
+          }
+        },
+        "9a78cba7-82e9-4e93-855a-1e3e6fbf1bb4": {
+          "type": "davi_field",
+          "settings": {
+            "davi_field_label": "Hidden Field",
+            "davi_field_show": "step3",
+            "davi_field_type": "hidden",
+            "davi_field_value": "Hi I am hidden field",
+            "davi_field_image": "",
+            "davi_field_max_file_upload": "",
+            "davi_field_file_extensions": "",
+            "davi_field_required": false
+          }
+        },
+        "a0e8d077-e36d-4ead-9ab9-a155107f1d24": {
+          "type": "davi_field",
+          "settings": {
+            "davi_field_label": "Insert image",
+            "davi_field_show": "step3",
+            "davi_field_type": "images",
+            "davi_field_value": "https:\/\/cdn.shopify.com\/s\/files\/1\/0580\/4071\/3356\/files\/genmakes-logo.png?v=1681923255&width=240",
             "davi_field_image": "",
             "davi_field_max_file_upload": "",
             "davi_field_file_extensions": "",
@@ -23,18 +166,29 @@
         }
       },
       "block_order": [
-        "99798812-6b2f-4b84-bc1c-2c8f2254ecfe"
+        "9857c641-6937-45ae-b064-756cbcfc36af",
+        "6095b43b-ca60-48c6-b61a-4f34d7ab5a42",
+        "bba6f1a1-fc37-48da-87b1-6fbbf286d9e4",
+        "1df85693-51d6-4d55-895e-3ec50d4e91a0",
+        "4ad9a08b-a113-43f7-a133-1d2832b0f458",
+        "9fe23ac1-9943-488c-87b4-50fc2a5f3e4f",
+        "2e2a9485-08b0-44db-814c-f984231e2b69",
+        "6a760b1c-b0aa-420a-877a-a4318eee7659",
+        "87d925da-f87b-4407-a96d-fb1f087c2feb",
+        "2703981c-c2fd-4035-bdde-546082b9305d",
+        "9a78cba7-82e9-4e93-855a-1e3e6fbf1bb4",
+        "a0e8d077-e36d-4ead-9ab9-a155107f1d24"
       ],
       "settings": {
         "section_title": "Multistep Form",
-        "step1_title": "Step 1 Title",
-        "step1_name": "Step 1 Name",
-        "step2_title": "Step 2 Title",
-        "step2_name": "Step 2 Name",
-        "step3_title": "Step 3 Title",
-        "step3_name": "Step 3 Name"
+        "step1_title": "Item Specifications",
+        "step1_name": "Item Specifications",
+        "step2_title": "Your Requirements",
+        "step2_name": "Your Requirements",
+        "step3_title": "Tell us about yourself",
+        "step3_name": "Review & Submit"
       }
-    }
+    },
   },
   "order": [
     "main",
