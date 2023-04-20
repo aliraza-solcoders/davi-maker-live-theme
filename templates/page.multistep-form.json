@@ -1,4 +1,12 @@
 {
   "sections": {
-  }
+    "main": {
+      "type": "multistep-form",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
 }
