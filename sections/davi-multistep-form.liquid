@@ -793,7 +793,7 @@
         <div class="custom-flex-item">
       {% for block in section.blocks %}    
         {% if block.settings.davi_field_show == 'step1' %}
-          {% unless block.settings.davi_field_type == "pdf" or unless block.settings.davi_field_type == "pdf" or block.settings.davi_field_type == "file" or block.settings.davi_field_type == "multiplefile" or block.settings.davi_field_type == "hidden" %}
+          {% unless block.settings.davi_field_type == "pdf" or block.settings.davi_field_type == "file" or block.settings.davi_field_type == "multiplefile" or block.settings.davi_field_type == "hidden" %}
             <div class="custom-form-group">
             <label class="custom-form-label">{{ block.settings.davi_field_label }}</label>
           {% endunless %}
