@@ -4,9 +4,40 @@
       "type": "multistep-form",
       "settings": {
       }
+    },
+    "3d4aa97e-d9d1-4f5f-b159-28120304aa33": {
+      "type": "davi-multistep-form",
+      "blocks": {
+        "99798812-6b2f-4b84-bc1c-2c8f2254ecfe": {
+          "type": "davi_field",
+          "settings": {
+            "davi_field_label": "ettesst",
+            "davi_field_show": "step1",
+            "davi_field_type": "text",
+            "davi_field_value": "",
+            "davi_field_image": "",
+            "davi_field_max_file_upload": "",
+            "davi_field_file_extensions": "",
+            "davi_field_required": false
+          }
+        }
+      },
+      "block_order": [
+        "99798812-6b2f-4b84-bc1c-2c8f2254ecfe"
+      ],
+      "settings": {
+        "section_title": "Multistep Form",
+        "step1_title": "Step 1 Title",
+        "step1_name": "Step 1 Name",
+        "step2_title": "Step 2 Title",
+        "step2_name": "Step 2 Name",
+        "step3_title": "Step 3 Title",
+        "step3_name": "Step 3 Name"
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "3d4aa97e-d9d1-4f5f-b159-28120304aa33"
   ]
 }
