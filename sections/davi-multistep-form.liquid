@@ -1,3 +1,4 @@
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js" defer></script>
@@ -5,6 +6,7 @@
 {{ 'davi-style.css' | asset_url | stylesheet_tag }}
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer=""></script>
 <script src="{{ 'davi-script.js' | asset_url }}" defer="defer"></script>
+{{ template_name.first }}
 {% if customer %}
 <div class="loader" style="text-align:center; display:flex; justify-content:center">
   <img src="https://daviapp.solcoder.com/public/uploads/loader/Loader.gif" width="200" height="200">
