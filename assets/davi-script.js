@@ -13,7 +13,7 @@ setTimeout(function() {
               }
               outputDiv.innerHTML = data;
           } else {
-              var extensions = $(this).hasAttribute("multiple");
+              // var extensions = $(this).hasAttribute("multiple");
               var ext = $(this).val().split('.').pop().toLowerCase();
               if($.inArray(ext, ['gif','png','jpg','jpeg']) == -1) {
                   alert('invalid extension!');
