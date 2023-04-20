@@ -795,7 +795,7 @@
             {% if block.settings.davi_field_show == 'step1' %}
               {% unless block.settings.davi_field_type == "pdf" or block.settings.davi_field_type == "file" or block.settings.davi_field_type == "multiplefile" %}
                 <div class="custom-form-group">
-                  {% if block.settings.davi_field_type == "hidden" or unless block.settings.davi_field_type == "images"  %}
+                  {% if block.settings.davi_field_type == "hidden" or block.settings.davi_field_type == "images"  %}
                     <label class="custom-form-label" style="display:none">{{ block.settings.davi_field_label }}</label>
                   {% else %}
                     <label class="custom-form-label">{{ block.settings.davi_field_label }}</label>
@@ -964,7 +964,7 @@
               {% if block.settings.davi_field_show == 'step2' %}
                 {% unless block.settings.davi_field_type == "pdf" or block.settings.davi_field_type == "file" or block.settings.davi_field_type == "multiplefile" %}
                   <div class="custom-form-group">
-                    {% if block.settings.davi_field_type == "hidden" or unless block.settings.davi_field_type == "images"  %}
+                    {% if block.settings.davi_field_type == "hidden" or block.settings.davi_field_type == "images"  %}
                       <label class="custom-form-label" style="display:none">{{ block.settings.davi_field_label }}</label>
                     {% else %}
                       <label class="custom-form-label">{{ block.settings.davi_field_label }}</label>
@@ -1133,7 +1133,7 @@
                 {% if block.settings.davi_field_show == 'step3' %}
                   {% unless block.settings.davi_field_type == "pdf" or block.settings.davi_field_type == "file" or block.settings.davi_field_type == "multiplefile" %}
                     <div class="custom-form-group">
-                      {% if block.settings.davi_field_type == "hidden" or unless block.settings.davi_field_type == "images"  %}
+                      {% if block.settings.davi_field_type == "hidden" or block.settings.davi_field_type == "images"  %}
                         <label class="custom-form-label" style="display:none">{{ block.settings.davi_field_label }}</label>
                       {% else %}
                         <label class="custom-form-label">{{ block.settings.davi_field_label }}</label>
