@@ -139,16 +139,11 @@ aliraza2
                 return response.json();
             })
             .then(function (response) {
-                console.log(response);
-                {% comment %} var formData = jQuery.parseJSON(response.field_settings); {% endcomment %}
-                {% comment %} console.log(response.field_settings); {% endcomment %}
-                {% comment %} console.log(formData); {% endcomment %}
+
                 var html = "";
                 var file = "";
                 const formData = JSON.parse(response.field_settings);
-                console.log(formData)
                 $(formData).each(function( key, value ) {
-                    console.log(value);
                     if(value.type != "file" && value.type != "pdf"){
                         html += '<div class="col-md-6 p-3 border-bottom"><strong>'+value.label+'</strong></div><div class="col-md-6 p-3 border-bottom">'+value.value+'</div>';
                     }
