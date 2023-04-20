@@ -85,6 +85,58 @@
             "davi_field_file_extensions": "",
             "davi_field_required": true
           }
+        },
+        "1ba5df2c-0d49-4f74-8b0d-e1e15451cb56": {
+          "type": "davi_field",
+          "settings": {
+            "davi_field_label": "Select Products",
+            "davi_field_show": "step2",
+            "davi_field_type": "products",
+            "davi_field_value": "",
+            "davi_field_image": "",
+            "davi_field_max_file_upload": "",
+            "davi_field_file_extensions": "",
+            "davi_field_required": false
+          }
+        },
+        "ff92cfd3-77c1-4a38-8961-45d13d9c67bf": {
+          "type": "davi_field",
+          "settings": {
+            "davi_field_label": "Address",
+            "davi_field_show": "step3",
+            "davi_field_type": "address",
+            "davi_field_value": "",
+            "davi_field_image": "",
+            "davi_field_max_file_upload": "",
+            "davi_field_file_extensions": "",
+            "davi_field_required": true
+          }
+        },
+        "5e993d05-6bae-43db-b7ff-e2dbc0d0375e": {
+          "type": "davi_field",
+          "settings": {
+            "davi_field_label": "Insert image",
+            "davi_field_show": "step2",
+            "davi_field_type": "images",
+            "davi_field_value": "https:\/\/cdn.shopify.com\/s\/files\/1\/0580\/4071\/3356\/files\/genmakes-logo.png?v=1681923255&width=240",
+            "davi_field_image": "",
+            "davi_field_max_file_upload": "",
+            "davi_field_file_extensions": "",
+            "davi_field_required": false
+          }
+        },
+        "5e2b39dc-e38b-4151-9001-7e8ce14322f2": {
+          "type": "davi_field",
+          "settings": {
+            "davi_field_label": "Hidden Field",
+            "davi_field_show": "step2",
+            "davi_field_type": "hidden",
+            "davi_field_value": "Hi I am hidden field",
+            "davi_field_image": "",
+            "davi_field_max_file_upload": "",
+            "davi_field_file_extensions": "",
+            "davi_field_required": false
+          }
         }
       },
       "block_order": [
@@ -93,7 +145,11 @@
         "74d1139d-ef76-45ee-8fb6-9f635e78631f",
         "d6448b4d-d257-4273-8e76-f0469e2b3c03",
         "d972a540-8f44-4179-8e73-9a2ddae78f16",
-        "9bcb7bd5-d3be-4e91-97ce-27776c75b72e"
+        "9bcb7bd5-d3be-4e91-97ce-27776c75b72e",
+        "1ba5df2c-0d49-4f74-8b0d-e1e15451cb56",
+        "ff92cfd3-77c1-4a38-8961-45d13d9c67bf",
+        "5e993d05-6bae-43db-b7ff-e2dbc0d0375e",
+        "5e2b39dc-e38b-4151-9001-7e8ce14322f2"
       ],
       "settings": {
         "section_title": "Multistep Form",
