@@ -298,7 +298,7 @@ function form_submit(){
     .then(data => {
       console.log(data);  
 
-    if($('input[name="davi_input_pdf"]').is(":visible")){
+    if($('input[name="davi_input_pdf"]').length){
       if($('input[name="davi_input_pdf"]').prop('files').length > 0){
         if(data.pdf){
           davi_input_pdf['value'] = data.pdf;
@@ -307,7 +307,7 @@ function form_submit(){
       }
     }
 
-    if($('input[name="davi_input_file"]').is(":visible")){
+    if($('input[name="davi_input_file"]').length){
       if($('input[name="davi_input_file"]').prop('files').length > 0){
       if(data.file){
           davi_input_file['value'] = data.file;
@@ -316,8 +316,8 @@ function form_submit(){
       }
     }
 
-    if($('input[name="davi_input_files"]').is(":visible")){
-      if($('input[name="davi_input_file"]').prop('files').length > 0){
+    if($('input[name="davi_input_files"]').length){
+      if($('input[name="davi_input_files"]').prop('files').length > 0){
       if(data.files){
           davi_input_files['value'] = data.files;
           field_settings.push(davi_input_files);
