@@ -793,9 +793,13 @@
         <div class="custom-flex-item">
       {% for block in section.blocks %}    
         {% if block.settings.davi_field_show == 'step1' %}
-          {% unless block.settings.davi_field_type == "pdf" or block.settings.davi_field_type == "file" or block.settings.davi_field_type == "multiplefile" or block.settings.davi_field_type == "hidden" %}
+          {% unless block.settings.davi_field_type == "pdf" or block.settings.davi_field_type == "file" or block.settings.davi_field_type == "multiplefile" %}
             <div class="custom-form-group">
-            <label class="custom-form-label">{{ block.settings.davi_field_label }}</label>
+            {%if  block.settings.davi_field_type == "images" or block.settings.davi_field_type == "hidden"%}
+              <label class="custom-form-label" style="display:none">{{ block.settings.davi_field_label }}</label>
+            {% else %}
+              <label class="custom-form-label">{{ block.settings.davi_field_label }}</label>
+            {% endif %}
           {% endunless %}
         {% endif %}
         {% if block.settings.davi_field_show == 'step1' and block.settings.davi_field_type == "phone" %}
@@ -963,10 +967,15 @@
     <div class="custom-flex-item">
           {% for block in section.blocks %}    
             {% if block.settings.davi_field_show == 'step2' %}
-            {% unless block.settings.davi_field_type == "pdf" or block.settings.davi_field_type == "file" or block.settings.davi_field_type == "multiplefile" %}
+            
+          {% unless block.settings.davi_field_type == "pdf" or block.settings.davi_field_type == "file" or block.settings.davi_field_type == "multiplefile" %}
             <div class="custom-form-group">
-            <label class="custom-form-label">{{ block.settings.davi_field_label }}</label>
-            {% endunless %}
+            {%if  block.settings.davi_field_type == "images" or block.settings.davi_field_type == "hidden"%}
+              <label class="custom-form-label" style="display:none">{{ block.settings.davi_field_label }}</label>
+            {% else %}
+              <label class="custom-form-label">{{ block.settings.davi_field_label }}</label>
+            {% endif %}
+          {% endunless %}
             {% endif %}
 
             {% if block.settings.davi_field_show == 'step2' and block.settings.davi_field_type == "phone" %}
@@ -1136,10 +1145,15 @@
         <div class="custom-flex-item">
               {% for block in section.blocks %}    
         {% if block.settings.davi_field_show == 'step3' %}
-        {% unless block.settings.davi_field_type == "pdf" or block.settings.davi_field_type == "file" or block.settings.davi_field_type == "multiplefile" %}
-        <div class="custom-form-group">
-        <label class="custom-form-label">{{ block.settings.davi_field_label }}</label>
-        {% endunless %}
+        
+          {% unless block.settings.davi_field_type == "pdf" or block.settings.davi_field_type == "file" or block.settings.davi_field_type == "multiplefile" %}
+            <div class="custom-form-group">
+            {%if  block.settings.davi_field_type == "images" or block.settings.davi_field_type == "hidden"%}
+              <label class="custom-form-label" style="display:none">{{ block.settings.davi_field_label }}</label>
+            {% else %}
+              <label class="custom-form-label">{{ block.settings.davi_field_label }}</label>
+            {% endif %}
+          {% endunless %}
         {% endif %}
 
         {% if block.settings.davi_field_show == 'step3' and block.settings.davi_field_type == "phone" %}
