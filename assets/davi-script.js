@@ -269,8 +269,8 @@ function form_submit(){
     }
     // for file end
     // for files start
-    if($('input[name="davi_input_file"]').length){
-    if($('input[name="davi_input_file"]').prop('files').length > 0){
+    if($('input[name="davi_input_files"]').length){
+    if($('input[name="davi_input_files"]').prop('files').length > 0){
 
       var davi_input_files = {};
       jQuery( "input[name=davi_input_files]" ).each(function( index ) {
