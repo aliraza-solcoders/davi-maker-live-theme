@@ -7,7 +7,6 @@
     },
     "527a217c-222d-4aca-8dab-9ab4964c2f86": {
       "type": "davi-multistep-form",
-      "disabled": true,
       "blocks": {
         "8430d9bf-7f97-4e01-8b02-50eb9b257f24": {
           "type": "davi_field",
