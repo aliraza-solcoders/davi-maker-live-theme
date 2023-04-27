@@ -4,6 +4,7 @@
   "sections": {
     "c79e069b-5433-47f7-bcb6-ef2b68f07574": {
       "type": "davi-multistep-form",
+      "disabled": true,
       "blocks": {
         "8430d9bf-7f97-4e01-8b02-50eb9b257f24": {
           "type": "davi_field",
