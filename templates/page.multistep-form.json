@@ -169,7 +169,7 @@
           "settings": {
             "davi_field_label": "Phone number",
             "davi_field_show": "step1",
-            "davi_field_type": "text",
+            "davi_field_type": "phone",
             "davi_field_value": "",
             "davi_field_image": "",
             "davi_field_max_file_upload": "",
