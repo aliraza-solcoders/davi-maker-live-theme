@@ -57,14 +57,14 @@
         "template--15932770091148__6576f0c2-7dae-46d9-984a-ce8d77a0636b-168288253888b4016a-0": {
           "type": "item",
           "settings": {
-            "title": "",
-            "content": "<p>Write content to help your customers to better understand your products or policies.<\/p>"
+            "title": "Shop our catalog",
+            "content": "<p>Explore our diverse collection of stunning jewelry pieces, crafted with precision and care. Send a quotation request for any items that catch your eye.<\/p>"
           }
         },
         "template--15932770091148__6576f0c2-7dae-46d9-984a-ce8d77a0636b-168288253888b4016a-1": {
           "type": "item",
           "settings": {
-            "title": "Question 2",
+            "title": "Custom manufacturing",
             "content": "<p>Write content to help your customers to better understand your products or policies.<\/p>"
           }
         },
