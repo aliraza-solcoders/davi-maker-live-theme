@@ -280,6 +280,66 @@
         "button_background": "",
         "button_text_color": ""
       }
+    },
+    "3ff4785c-99ba-4c9e-87d3-dc005d8b2b90": {
+      "type": "revealed-image-on-scroll",
+      "settings": {
+        "subheading": "",
+        "title": "Reveal text on scroll",
+        "background": "",
+        "text_color_inside": "#ffffff",
+        "text_color_outside": "#000000"
+      }
+    },
+    "e666b3c9-69b6-46c8-9015-72233a9eac97": {
+      "type": "scrolling-text",
+      "settings": {
+        "full_width": true,
+        "text": "Promotion text",
+        "text_size": "large",
+        "text_style": "fill",
+        "scrolling_mode": "auto",
+        "scrolling_speed": 10,
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "text_gradient": ""
+      }
+    },
+    "b764e47e-2d7a-472a-be95-b04682c05996": {
+      "type": "media-with-text",
+      "blocks": {
+        "0da1c85e-5400-4ae4-b15d-498fb33d484b": {
+          "type": "video",
+          "settings": {
+            "external_video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+            "autoplay": true,
+            "media_width": 50,
+            "media_position": "start",
+            "text_position": "place-self-center text-center",
+            "icon": "none",
+            "icon_width": 48,
+            "subheading": "",
+            "title": "Heading",
+            "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p>",
+            "link_text": "",
+            "link_url": "",
+            "background": "#000000",
+            "background_gradient": "",
+            "text_color": "#ffffff",
+            "text_gradient": "",
+            "button_background": "",
+            "button_text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "0da1c85e-5400-4ae4-b15d-498fb33d484b"
+      ],
+      "settings": {
+        "full_width": false,
+        "spacing": "small"
+      }
     }
   },
   "order": [
@@ -288,6 +348,9 @@
     "40ae4fc9-344b-4fa2-a4af-083e4681776c",
     "7407c32d-f17f-468c-b2b1-6bd6b6b0ce8e",
     "8140d705-3cd1-4fd9-bfb3-4439d7557730",
-    "df142380-b082-4165-ade0-d59813141bb5"
+    "df142380-b082-4165-ade0-d59813141bb5",
+    "3ff4785c-99ba-4c9e-87d3-dc005d8b2b90",
+    "e666b3c9-69b6-46c8-9015-72233a9eac97",
+    "b764e47e-2d7a-472a-be95-b04682c05996"
   ]
 }
