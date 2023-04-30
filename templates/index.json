@@ -20,12 +20,36 @@
           "settings": {
             "content": "<p>Choose, customize, or create from scratch.<\/p>"
           }
+        },
+        "179a57e5-ccd4-4416-b0c1-422a9aa1554a": {
+          "type": "button",
+          "settings": {
+            "style": "outline",
+            "size": "xl",
+            "text": "Shop Our Catalog",
+            "url": "",
+            "background": "",
+            "text_color": "#ffffff"
+          }
+        },
+        "da493bc8-f91d-45ee-a24a-53f35ea9dfd0": {
+          "type": "button",
+          "settings": {
+            "style": "fill",
+            "size": "xl",
+            "text": "Request a Quote",
+            "url": "",
+            "background": "{{ shop.brand.colors.secondary[1].background }}",
+            "text_color": "{{ shop.brand.colors.primary[0].background }}"
+          }
         }
       },
       "block_order": [
         "template--15879442137228__82c41476-e8c6-432a-868c-a465363f5d98-1676117300d1d056d5-0",
         "template--15879442137228__82c41476-e8c6-432a-868c-a465363f5d98-1676117300d1d056d5-1",
-        "f707aa4f-eab4-4b09-ad4d-217acd2df2b0"
+        "f707aa4f-eab4-4b09-ad4d-217acd2df2b0",
+        "179a57e5-ccd4-4416-b0c1-422a9aa1554a",
+        "da493bc8-f91d-45ee-a24a-53f35ea9dfd0"
       ],
       "settings": {
         "full_width": true,
