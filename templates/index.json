@@ -21,6 +21,17 @@
             "content": "<p>Choose, customize, or create from scratch.<\/p>"
           }
         },
+        "766bc9ce-38ae-44d1-83ee-8b1a4c960047": {
+          "type": "button",
+          "settings": {
+            "style": "outline",
+            "size": "xl",
+            "text": "See our catalog",
+            "url": "",
+            "background": "",
+            "text_color": "#ffffff"
+          }
+        },
         "da493bc8-f91d-45ee-a24a-53f35ea9dfd0": {
           "type": "button",
           "settings": {
@@ -37,6 +48,7 @@
         "template--15879442137228__82c41476-e8c6-432a-868c-a465363f5d98-1676117300d1d056d5-0",
         "template--15879442137228__82c41476-e8c6-432a-868c-a465363f5d98-1676117300d1d056d5-1",
         "f707aa4f-eab4-4b09-ad4d-217acd2df2b0",
+        "766bc9ce-38ae-44d1-83ee-8b1a4c960047",
         "da493bc8-f91d-45ee-a24a-53f35ea9dfd0"
       ],
       "settings": {
