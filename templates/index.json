@@ -198,6 +198,28 @@
         "testimonial_card_text_color": ""
       }
     },
+    "8140d705-3cd1-4fd9-bfb3-4439d7557730": {
+      "type": "before-after-image",
+      "settings": {
+        "full_width": true,
+        "subheading": "",
+        "title": "Before\/after",
+        "content": "<p>Showcase your product benefit by using before\/after image comparison.<\/p>",
+        "expand_image": false,
+        "text_position": "start",
+        "before_after_text_position": "top",
+        "before_text": "Before",
+        "after_text": "After",
+        "drag_initial_position": 50,
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "before_text_color": "#ffffff",
+        "after_text_color": "#ffffff",
+        "drag_cursor_background": "#ffffff",
+        "drag_cursor_color": "#000000"
+      }
+    },
     "df142380-b082-4165-ade0-d59813141bb5": {
       "type": "impact-text",
       "blocks": {
@@ -265,6 +287,7 @@
     "6576f0c2-7dae-46d9-984a-ce8d77a0636b",
     "40ae4fc9-344b-4fa2-a4af-083e4681776c",
     "7407c32d-f17f-468c-b2b1-6bd6b6b0ce8e",
+    "8140d705-3cd1-4fd9-bfb3-4439d7557730",
     "df142380-b082-4165-ade0-d59813141bb5"
   ]
 }
