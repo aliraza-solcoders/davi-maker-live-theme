@@ -11,7 +11,7 @@
         "template--15879442137228__82c41476-e8c6-432a-868c-a465363f5d98-1676117300d1d056d5-1": {
           "type": "heading",
           "settings": {
-            "text": "Jewelry solutions for your business.",
+            "text": "Jewelry solutions for your business",
             "heading_tag": "h1"
           }
         },
@@ -96,8 +96,8 @@
       "settings": {
         "full_width": true,
         "subheading": "",
-        "title": "How may we help?",
-        "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p>",
+        "title": "Our services",
+        "content": "<p>Discover our extensive catalog, submit a custom manufacturing request or bring your own 3D design to life with Davi Makers.<\/p>",
         "button_text": "",
         "button_url": "",
         "text_position": "start",
@@ -123,7 +123,7 @@
             "rating": 5,
             "author": "John S.",
             "title": "Testimonial 1",
-            "content": "<p>Share what your customers are saying about your products, customer service or shipping rates.<\/p>"
+            "content": "<p>Discover our extensive catalog, submit a custom manufacturing request or bring your own 3D design to life with Davi Makers.<\/p>"
           }
         },
         "template--15932770091148__7407c32d-f17f-468c-b2b1-6bd6b6b0ce8e-16828841903b51ac2f-1": {
