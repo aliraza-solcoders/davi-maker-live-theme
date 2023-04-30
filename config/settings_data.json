@@ -39,9 +39,21 @@
         "settings": {
         }
       },
+      "13768625480086291342": {
+        "type": "shopify:\/\/apps\/forms\/blocks\/forms\/8744a304-fcb1-4347-b211-bb6b4759a76a",
+        "disabled": false,
+        "settings": {
+        }
+      },
+      "9208002335245216200": {
+        "type": "shopify:\/\/apps\/retentia-whatsapp-chat-button\/blocks\/app-embed\/7f0f31d4-e6fe-4359-855f-fb9e097bf05a",
+        "disabled": false,
+        "settings": {
+        }
+      },
       "1719258415465956688": {
         "type": "shopify:\/\/apps\/b2b-portal-net-terms\/blocks\/r4q-extension\/0c13e75b-92f5-4200-98c1-50c1fdb201bc",
-        "disabled": true,
+        "disabled": false,
         "settings": {
         }
       }
