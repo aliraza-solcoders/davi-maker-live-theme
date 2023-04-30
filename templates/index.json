@@ -197,12 +197,110 @@
         "testimonial_card_background": "",
         "testimonial_card_text_color": ""
       }
+    },
+    "df142380-b082-4165-ade0-d59813141bb5": {
+      "type": "impact-text",
+      "blocks": {
+        "template--15932770091148__df142380-b082-4165-ade0-d59813141bb5-168288544462565cbc-0": {
+          "type": "item",
+          "settings": {
+            "title": "100%",
+            "subheading": "Showcase a benefit of your product",
+            "content": "",
+            "button_text": "",
+            "button_url": "",
+            "animate_impact_text": true,
+            "animate_impact_text_duration": 2
+          }
+        },
+        "5d8c76d2-43b1-4de8-9475-22e916645fe7": {
+          "type": "item",
+          "settings": {
+            "title": "100%",
+            "subheading": "Showcase a benefit of your product",
+            "content": "",
+            "button_text": "",
+            "button_url": "",
+            "animate_impact_text": false,
+            "animate_impact_text_duration": 2
+          }
+        },
+        "6013edee-5251-47de-9981-d27656ccab0f": {
+          "type": "item",
+          "settings": {
+            "title": "100%",
+            "subheading": "Showcase a benefit of your product",
+            "content": "",
+            "button_text": "",
+            "button_url": "",
+            "animate_impact_text": false,
+            "animate_impact_text_duration": 2
+          }
+        }
+      },
+      "block_order": [
+        "template--15932770091148__df142380-b082-4165-ade0-d59813141bb5-168288544462565cbc-0",
+        "5d8c76d2-43b1-4de8-9475-22e916645fe7",
+        "6013edee-5251-47de-9981-d27656ccab0f"
+      ],
+      "settings": {
+        "full_width": true,
+        "stack_mobile": true,
+        "text_alignment": "center",
+        "impact_text_style": "fill",
+        "text_divider": "line",
+        "impact_text_size_ratio": 1,
+        "background": "",
+        "background_gradient": "",
+        "heading_text_color": "",
+        "heading_gradient": "",
+        "text_color": "",
+        "button_background": "",
+        "button_text_color": ""
+      }
+    },
+    "1fb4ad94-ad3d-492e-8f64-c671c7133b64": {
+      "type": "impact-text",
+      "blocks": {
+        "template--15932770091148__1fb4ad94-ad3d-492e-8f64-c671c7133b64-168288544462565cbc-0": {
+          "type": "item",
+          "settings": {
+            "title": "100%",
+            "subheading": "Showcase a benefit of your product",
+            "content": "",
+            "button_text": "",
+            "button_url": "",
+            "animate_impact_text": false,
+            "animate_impact_text_duration": 2
+          }
+        }
+      },
+      "block_order": [
+        "template--15932770091148__1fb4ad94-ad3d-492e-8f64-c671c7133b64-168288544462565cbc-0"
+      ],
+      "settings": {
+        "full_width": true,
+        "stack_mobile": true,
+        "text_alignment": "center",
+        "impact_text_style": "fill",
+        "text_divider": "square",
+        "impact_text_size_ratio": 1,
+        "background": "",
+        "background_gradient": "",
+        "heading_text_color": "",
+        "heading_gradient": "",
+        "text_color": "",
+        "button_background": "",
+        "button_text_color": ""
+      }
     }
   },
   "order": [
     "82c41476-e8c6-432a-868c-a465363f5d98",
     "6576f0c2-7dae-46d9-984a-ce8d77a0636b",
     "40ae4fc9-344b-4fa2-a4af-083e4681776c",
-    "7407c32d-f17f-468c-b2b1-6bd6b6b0ce8e"
+    "7407c32d-f17f-468c-b2b1-6bd6b6b0ce8e",
+    "df142380-b082-4165-ade0-d59813141bb5",
+    "1fb4ad94-ad3d-492e-8f64-c671c7133b64"
   ]
 }
