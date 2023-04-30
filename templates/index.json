@@ -14,11 +14,35 @@
             "text": "Video",
             "heading_tag": "h1"
           }
+        },
+        "4dceec5d-9de5-4aff-b06b-3db857181e75": {
+          "type": "button",
+          "settings": {
+            "style": "outline",
+            "size": "lg",
+            "text": "Button text",
+            "url": "",
+            "background": "",
+            "text_color": "#ffffff"
+          }
+        },
+        "24c0910e-aa22-4809-84c6-cb42c28bf13b": {
+          "type": "button",
+          "settings": {
+            "style": "outline",
+            "size": "lg",
+            "text": "Button text",
+            "url": "",
+            "background": "",
+            "text_color": "#ffffff"
+          }
         }
       },
       "block_order": [
         "template--15879442137228__82c41476-e8c6-432a-868c-a465363f5d98-1676117300d1d056d5-0",
-        "template--15879442137228__82c41476-e8c6-432a-868c-a465363f5d98-1676117300d1d056d5-1"
+        "template--15879442137228__82c41476-e8c6-432a-868c-a465363f5d98-1676117300d1d056d5-1",
+        "4dceec5d-9de5-4aff-b06b-3db857181e75",
+        "24c0910e-aa22-4809-84c6-cb42c28bf13b"
       ],
       "settings": {
         "full_width": true,
