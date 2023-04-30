@@ -198,6 +198,42 @@
         "testimonial_card_text_color": ""
       }
     },
+    "b764e47e-2d7a-472a-be95-b04682c05996": {
+      "type": "media-with-text",
+      "blocks": {
+        "0da1c85e-5400-4ae4-b15d-498fb33d484b": {
+          "type": "video",
+          "settings": {
+            "video": "shopify:\/\/files\/videos\/ezgif.com-gif-maker.mp4",
+            "external_video_url": "",
+            "autoplay": true,
+            "media_width": 45,
+            "media_position": "start",
+            "text_position": "place-self-center text-center",
+            "icon": "none",
+            "icon_width": 48,
+            "subheading": "",
+            "title": "Private label jewelry manufacturing",
+            "content": "<p>At Davi Makers, we specialize in private label jewelry manufacturing, offering you the opportunity to create exceptional jewelry pieces that reflect your brand's unique identity. Our dedicated team of designers, craftsmen, and production experts work tirelessly to ensure that your exclusive collection meets the highest standards of quality, style, and innovation.<\/p><p>Our skilled artisans bring a wealth of experience and passion to each piece they create, ensuring that your private label collection is crafted to perfection. Our talented design team works closely with you to understand your vision and brand identity, creating unique and captivating jewelry designs that resonate with your target audience.<\/p>",
+            "link_text": "Discover",
+            "link_url": "",
+            "background": "#000000",
+            "background_gradient": "",
+            "text_color": "#ffffff",
+            "text_gradient": "",
+            "button_background": "",
+            "button_text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "0da1c85e-5400-4ae4-b15d-498fb33d484b"
+      ],
+      "settings": {
+        "full_width": false,
+        "spacing": "none"
+      }
+    },
     "8140d705-3cd1-4fd9-bfb3-4439d7557730": {
       "type": "before-after-image",
       "settings": {
@@ -305,41 +341,6 @@
         "text_color": "",
         "text_gradient": ""
       }
-    },
-    "b764e47e-2d7a-472a-be95-b04682c05996": {
-      "type": "media-with-text",
-      "blocks": {
-        "0da1c85e-5400-4ae4-b15d-498fb33d484b": {
-          "type": "video",
-          "settings": {
-            "external_video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
-            "autoplay": true,
-            "media_width": 50,
-            "media_position": "start",
-            "text_position": "place-self-center text-center",
-            "icon": "none",
-            "icon_width": 48,
-            "subheading": "",
-            "title": "Heading",
-            "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p>",
-            "link_text": "",
-            "link_url": "",
-            "background": "#000000",
-            "background_gradient": "",
-            "text_color": "#ffffff",
-            "text_gradient": "",
-            "button_background": "",
-            "button_text_color": ""
-          }
-        }
-      },
-      "block_order": [
-        "0da1c85e-5400-4ae4-b15d-498fb33d484b"
-      ],
-      "settings": {
-        "full_width": false,
-        "spacing": "small"
-      }
     }
   },
   "order": [
@@ -347,10 +348,10 @@
     "6576f0c2-7dae-46d9-984a-ce8d77a0636b",
     "40ae4fc9-344b-4fa2-a4af-083e4681776c",
     "7407c32d-f17f-468c-b2b1-6bd6b6b0ce8e",
+    "b764e47e-2d7a-472a-be95-b04682c05996",
     "8140d705-3cd1-4fd9-bfb3-4439d7557730",
     "df142380-b082-4165-ade0-d59813141bb5",
     "3ff4785c-99ba-4c9e-87d3-dc005d8b2b90",
-    "e666b3c9-69b6-46c8-9015-72233a9eac97",
-    "b764e47e-2d7a-472a-be95-b04682c05996"
+    "e666b3c9-69b6-46c8-9015-72233a9eac97"
   ]
 }
