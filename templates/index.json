@@ -12,7 +12,7 @@
           "type": "heading",
           "settings": {
             "text": "Jewelry solutions for your business",
-            "heading_tag": "h1"
+            "heading_tag": "h2"
           }
         },
         "f707aa4f-eab4-4b09-ad4d-217acd2df2b0": {
@@ -55,7 +55,7 @@
         "full_width": true,
         "allow_transparent_header": false,
         "autoplay": true,
-        "video_size": "auto",
+        "video_size": "lg",
         "video": "shopify:\/\/files\/videos\/jewelry-manufacturing-wholesale-supplier-gold-turkey-mobile.mp4",
         "external_video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
         "text_color": "#ffffff",
