@@ -25,7 +25,7 @@
           "type": "button",
           "settings": {
             "style": "outline",
-            "size": "xl",
+            "size": "lg",
             "text": "See our catalog",
             "url": "",
             "background": "",
@@ -36,7 +36,7 @@
           "type": "button",
           "settings": {
             "style": "fill",
-            "size": "xl",
+            "size": "lg",
             "text": "Request a quote",
             "url": "",
             "background": "{{ shop.brand.colors.secondary[1].background }}",
@@ -60,7 +60,7 @@
         "external_video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
         "text_color": "#ffffff",
         "overlay_color": "#000000",
-        "overlay_opacity": 30
+        "overlay_opacity": 50
       }
     },
     "6576f0c2-7dae-46d9-984a-ce8d77a0636b": {
