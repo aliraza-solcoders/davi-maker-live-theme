@@ -101,9 +101,9 @@
         "button_text": "",
         "button_url": "",
         "text_position": "start",
-        "background": "",
+        "background": "{{ shop.brand.colors.primary[0].background }}",
         "background_gradient": "",
-        "text_color": "",
+        "text_color": "{{ shop.brand.colors.secondary[1].background }}",
         "heading_color": "",
         "heading_gradient": "",
         "button_background": "",
@@ -122,11 +122,11 @@
         "full_width": true,
         "stack_products": false,
         "show_progress_bar": true,
-        "products_count": 6,
+        "products_count": 7,
         "products_per_row_mobile": "2",
-        "products_per_row_desktop": 3,
+        "products_per_row_desktop": 4,
         "subheading": "",
-        "title": "Featured collection",
+        "title": "Looking for something unique?",
         "content": "",
         "link_url": "",
         "link_text": "View all",
@@ -258,41 +258,6 @@
         "button_background": "",
         "button_text_color": ""
       }
-    },
-    "1fb4ad94-ad3d-492e-8f64-c671c7133b64": {
-      "type": "impact-text",
-      "blocks": {
-        "template--15932770091148__1fb4ad94-ad3d-492e-8f64-c671c7133b64-168288544462565cbc-0": {
-          "type": "item",
-          "settings": {
-            "title": "100%",
-            "subheading": "Showcase a benefit of your product",
-            "content": "",
-            "button_text": "",
-            "button_url": "",
-            "animate_impact_text": false,
-            "animate_impact_text_duration": 2
-          }
-        }
-      },
-      "block_order": [
-        "template--15932770091148__1fb4ad94-ad3d-492e-8f64-c671c7133b64-168288544462565cbc-0"
-      ],
-      "settings": {
-        "full_width": true,
-        "stack_mobile": true,
-        "text_alignment": "center",
-        "impact_text_style": "fill",
-        "text_divider": "square",
-        "impact_text_size_ratio": 1,
-        "background": "",
-        "background_gradient": "",
-        "heading_text_color": "",
-        "heading_gradient": "",
-        "text_color": "",
-        "button_background": "",
-        "button_text_color": ""
-      }
     }
   },
   "order": [
@@ -300,7 +265,6 @@
     "6576f0c2-7dae-46d9-984a-ce8d77a0636b",
     "40ae4fc9-344b-4fa2-a4af-083e4681776c",
     "7407c32d-f17f-468c-b2b1-6bd6b6b0ce8e",
-    "df142380-b082-4165-ade0-d59813141bb5",
-    "1fb4ad94-ad3d-492e-8f64-c671c7133b64"
+    "df142380-b082-4165-ade0-d59813141bb5"
   ]
 }
