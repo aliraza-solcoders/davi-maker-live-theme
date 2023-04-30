@@ -150,7 +150,7 @@
             "rating": 5,
             "author": "John S.",
             "title": "Testimonial 1",
-            "content": "<p>Discover our extensive catalog, submit a custom manufacturing request or bring your own 3D design to life with Davi Makers.<\/p>"
+            "content": "<p>Share what your customers are saying about your products, customer service or shipping rates.<\/p>"
           }
         },
         "template--15932770091148__7407c32d-f17f-468c-b2b1-6bd6b6b0ce8e-16828841903b51ac2f-1": {
@@ -169,7 +169,7 @@
           "settings": {
             "round_avatar": true,
             "show_rating": true,
-            "rating": 4,
+            "rating": 5,
             "author": "Joshua A.",
             "title": "Testimonial 3",
             "content": "<p>Share what your customers are saying about your products, customer service or shipping rates.<\/p>"
