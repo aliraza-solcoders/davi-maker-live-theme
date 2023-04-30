@@ -15,6 +15,12 @@
             "heading_tag": "h1"
           }
         },
+        "f707aa4f-eab4-4b09-ad4d-217acd2df2b0": {
+          "type": "richtext",
+          "settings": {
+            "content": "<p>Choose, customize, or create from scratch.<\/p>"
+          }
+        },
         "4dceec5d-9de5-4aff-b06b-3db857181e75": {
           "type": "button",
           "disabled": true,
@@ -43,6 +49,7 @@
       "block_order": [
         "template--15879442137228__82c41476-e8c6-432a-868c-a465363f5d98-1676117300d1d056d5-0",
         "template--15879442137228__82c41476-e8c6-432a-868c-a465363f5d98-1676117300d1d056d5-1",
+        "f707aa4f-eab4-4b09-ad4d-217acd2df2b0",
         "4dceec5d-9de5-4aff-b06b-3db857181e75",
         "24c0910e-aa22-4809-84c6-cb42c28bf13b"
       ],
@@ -65,7 +72,7 @@
           "type": "item",
           "settings": {
             "column_size": "3",
-            "title": "Column title",
+            "title": "Shop Our Catalog",
             "heading_tag": "h4",
             "content": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
             "link_url": "shopify:\/\/products\/double-band-diamond-ring-dzd0715-cn-1141-r",
