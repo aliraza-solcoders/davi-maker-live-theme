@@ -62,9 +62,69 @@
         "overlay_color": "#000000",
         "overlay_opacity": 30
       }
+    },
+    "7407c32d-f17f-468c-b2b1-6bd6b6b0ce8e": {
+      "type": "testimonials",
+      "blocks": {
+        "template--15932770091148__7407c32d-f17f-468c-b2b1-6bd6b6b0ce8e-16828841903b51ac2f-0": {
+          "type": "testimonial",
+          "settings": {
+            "round_avatar": true,
+            "show_rating": true,
+            "rating": 5,
+            "author": "John S.",
+            "title": "Testimonial 1",
+            "content": "<p>Share what your customers are saying about your products, customer service or shipping rates.<\/p>"
+          }
+        },
+        "template--15932770091148__7407c32d-f17f-468c-b2b1-6bd6b6b0ce8e-16828841903b51ac2f-1": {
+          "type": "testimonial",
+          "settings": {
+            "round_avatar": true,
+            "show_rating": true,
+            "rating": 5,
+            "author": "Mary U.",
+            "title": "Testimonial 2",
+            "content": "<p>Share what your customers are saying about your products, customer service or shipping rates.<\/p>"
+          }
+        },
+        "template--15932770091148__7407c32d-f17f-468c-b2b1-6bd6b6b0ce8e-16828841903b51ac2f-2": {
+          "type": "testimonial",
+          "settings": {
+            "round_avatar": true,
+            "show_rating": true,
+            "rating": 4,
+            "author": "Joshua A.",
+            "title": "Testimonial 3",
+            "content": "<p>Share what your customers are saying about your products, customer service or shipping rates.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--15932770091148__7407c32d-f17f-468c-b2b1-6bd6b6b0ce8e-16828841903b51ac2f-0",
+        "template--15932770091148__7407c32d-f17f-468c-b2b1-6bd6b6b0ce8e-16828841903b51ac2f-1",
+        "template--15932770091148__7407c32d-f17f-468c-b2b1-6bd6b6b0ce8e-16828841903b51ac2f-2"
+      ],
+      "settings": {
+        "full_width": true,
+        "stack_testimonials": true,
+        "subheading": "",
+        "title": "Testimonials",
+        "content": "",
+        "link_url": "",
+        "link_text": "",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": "",
+        "testimonial_card_background": "",
+        "testimonial_card_text_color": ""
+      }
     }
   },
   "order": [
-    "82c41476-e8c6-432a-868c-a465363f5d98"
+    "82c41476-e8c6-432a-868c-a465363f5d98",
+    "7407c32d-f17f-468c-b2b1-6bd6b6b0ce8e"
   ]
 }
