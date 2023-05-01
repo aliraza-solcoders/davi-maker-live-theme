@@ -60,7 +60,7 @@ function nextPrev(n) {
         const extensions = inputFile.attr('data-extension');
         const singleFile = inputFile.prop('files');
         //const allowedTypesFile = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'image/jpeg'];
-        const maxFileSizeFile = 1024 * 1024; // 1MB in bytes
+        const maxFileSizeFile = 1024 * 1024 * max_upload; // 1MB in bytes
         var shouldProceed = true;
         jQuery.each(singleFile, function(index, file) {
           if (jQuery.inArray(file.type, allowedTypesFile) === -1) {
