@@ -40,14 +40,14 @@ function nextPrev(n) {
         const maxFileSizePdf = 1024 * 1024 * maxUploadPDF; // 1MB in bytes
         jQuery.each(pdf, function(index, file) {
           if (jQuery.inArray(file.type, allowedTypesPdf) === -1) {
-            alert('Invalid file type. Please select only PDF Label:('+labelPDF+')');
+            alert('Invalid file type. Please select only PDF for this ('+file.name+')  Label:('+labelPDF+')');
             inputPDF.val(''); // Clear the input field
             shouldProceed = false;
             currentTab = currentTab-1;
             return false; // Exit the loop
           }
           if (file.size > maxFileSizePdf) {
-            alert('File size exceeds '+maxUploadPDF+'MB limit. Please select a smaller file. Label:('+labelPDF+')');
+            alert('File size exceeds '+maxUploadPDF+'MB limit. Please select a smaller file. for this ('+file.name+')  Label:('+labelPDF+')');
             inputPDF.val(''); // Clear the input field
             shouldProceed = false;
             currentTab = currentTab-1;
