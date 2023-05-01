@@ -34,10 +34,10 @@ function nextPrev(n) {
         var shouldProceed = true;
         const inputPDF = jQuery('input[name="davi_input_pdf"]');
         const labelPDF = inputPDF.parent().prev().text();
-        const max_upload = inputPDF.attr('data-max_upload');
+        const maxUploadPDF = inputPDF.attr('data-max_upload');
         const pdf = inputPDF.prop('files');
         const allowedTypesPdf = ['application/pdf'];
-        const maxFileSizePdf = 1024 * 1024 * max_upload; // 1MB in bytes
+        const maxFileSizePdf = 1024 * 1024 * maxUploadPDF; // 1MB in bytes
         jQuery.each(pdf, function(index, file) {
           if (jQuery.inArray(file.type, allowedTypesPdf) === -1) {
             alert('Invalid file type. Please select only PDF Label:('+labelPDF+')');
@@ -47,7 +47,7 @@ function nextPrev(n) {
             return false; // Exit the loop
           }
           if (file.size > maxFileSizePdf) {
-            alert('File size exceeds '+max_upload+'MB limit. Please select a smaller file. Label:('+labelPDF+')');
+            alert('File size exceeds '+maxUploadPDF+'MB limit. Please select a smaller file. Label:('+labelPDF+')');
             inputPDF.val(''); // Clear the input field
             shouldProceed = false;
             currentTab = currentTab-1;
@@ -56,11 +56,11 @@ function nextPrev(n) {
         });
         const inputFile = jQuery('input[name="davi_input_file"]');
         const labelFile = inputFile.parent().prev().text();
-        const max_upload = inputFile.attr('data-max_upload');
+        const maxUploadFile = inputFile.attr('data-max_upload');
         const extensions = inputFile.attr('data-extension');
         const singleFile = inputFile.prop('files');
         //const allowedTypesFile = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'image/jpeg'];
-        const maxFileSizeFile = 1024 * 1024 * max_upload; // 1MB in bytes
+        const maxFileSizeFile = 1024 * 1024 * maxUploadFile; // 1MB in bytes
         jQuery.each(singleFile, function(index, file) {
           
           if (jQuery.inArray(file.type, allowedTypesFile) === -1) {
@@ -71,7 +71,7 @@ function nextPrev(n) {
             return false; // Exit the loop
           }
           if (file.size > maxFileSizeFile) {
-            alert('File size exceeds '+max_upload+'MB limit. Please select a smaller file. Label:('+labelFile+')');
+            alert('File size exceeds '+maxUploadFile+'MB limit. Please select a smaller file. Label:('+labelFile+')');
             inputFile.val(''); // Clear the input field
             shouldProceed = false;
             currentTab = currentTab-1;
@@ -80,11 +80,11 @@ function nextPrev(n) {
         });
         const inputFiles = jQuery('input[name="davi_input_files[]"]');
         const labelFiles = inputFiles.parent().prev().text();
-        const max_upload = inputFiles.attr('data-max_upload');
+        const maxUploadFiles = inputFiles.attr('data-max_upload');
         const extensions = inputFiles.attr('data-extension');
         const files = inputFiles.prop('files');
         const allowedTypes = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'image/jpeg'];
-        const maxFileSize = 1024 * 1024 * max_upload; // 1MB in bytes
+        const maxFileSize = 1024 * 1024 * maxUploadFiles; // 1MB in bytes
         jQuery.each(files, function(index, file) {
           console.log(file);
           if (jQuery.inArray(file.type, allowedTypes) === -1) {
@@ -95,7 +95,7 @@ function nextPrev(n) {
             return false; // Exit the loop
           }
           if (file.size > maxFileSize) {
-            alert('File size exceeds '+max_upload+'MB limit. Please select a smaller file. Label:('+labelFiles+')');
+            alert('File size exceeds '+maxUploadFiles+'MB limit. Please select a smaller file. Label:('+labelFiles+')');
             inputFiles.val(''); // Clear the input field
             shouldProceed = false;
             currentTab = currentTab-1;
