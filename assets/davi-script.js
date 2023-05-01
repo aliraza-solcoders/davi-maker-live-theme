@@ -32,8 +32,8 @@ function nextPrev(n) {
   var x = document.getElementsByClassName("tab");
   // Exit the function if any field in the current tab is invalid:
         const inputPDF = jQuery('input[name="davi_input_pdf"]');
-        console.log(inputPDF);
-        console.log(inputPDF);
+        console.log(inputPDF.attr('data-extension'));
+        console.log(inputPDF.attr('data-max_upload'));
         const pdf = inputPDF.prop('files');
         const allowedTypesPdf = ['application/pdf'];
         const maxFileSizePdf = 1024 * 1024; // 1MB in bytes
