@@ -65,7 +65,7 @@ function nextPrev(n) {
         jQuery.each(singleFile, function(index, file) {
           
           if (jQuery.inArray(file.type, allowedTypesFile) === -1) {
-            alert('Invalid file type. Please select a '+extensions+'Label:('+label+')');;
+            alert('Invalid file type. Please select a '+extensions+'Label:('+label+')');
             inputFile.val(''); // Clear the input field
             shouldProceed = false;
             currentTab = currentTab-1;
@@ -80,20 +80,22 @@ function nextPrev(n) {
           }
         });
         const inputFiles = jQuery('input[name="davi_input_files[]"]');
+        const label = inputFiles.parent().prev().text();
+        const max_upload = inputFiles.attr('data-max_upload');
+        const extensions = inputFiles.attr('data-extension');
         const files = inputFiles.prop('files');
         const allowedTypes = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'image/jpeg'];
-        const maxFileSize = 1024 * 1024; // 1MB in bytes
-        var shouldProceed = true;
+        const maxFileSize = 1024 * 1024 * max_upload; // 1MB in bytes
         jQuery.each(files, function(index, file) {
           if (jQuery.inArray(file.type, allowedTypes) === -1) {
-            alert('Invalid file type. Please select only PDF.');
+            alert('Invalid file type. Please select a '+extensions+'Label:('+label+')');
             inputFiles.val(''); // Clear the input field
             shouldProceed = false;
             currentTab = currentTab-1;
             return false; // Exit the loop
           }
           if (file.size > maxFileSize) {
-            alert('File size exceeds 1MB limit. Please select a smaller file.');
+            alert('File size exceeds '+max_upload+'MB limit. Please select a smaller file. Label:('+label+')');
             inputFiles.val(''); // Clear the input field
             shouldProceed = false;
             currentTab = currentTab-1;
