@@ -167,7 +167,6 @@
                       else{
                         var filesArray = value.value;
                         $(filesArray).each(function( key, value ) {
-                          
                           var extension = value.split(".");
                           var iconsArray = ["pdf", "csv", "docx", "xlsx"];
                           var link = '';
@@ -176,8 +175,6 @@
                           } else {
                               link += "<a href='"+value+"' target='_blank'><img src='https://daviapp.solcoder.com/public/images/unknown-icon.png' alt=''></a>";
                           }
-  
-
                         });
                           file += '<div class="col-md-3 p-3 border-bottom"><strong>'+value.label+'</strong></div><div class="col-md-9 p-3 border-bottom">'+link+'</div>';
                         
