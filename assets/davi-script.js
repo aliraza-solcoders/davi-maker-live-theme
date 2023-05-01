@@ -33,21 +33,21 @@ function nextPrev(n) {
   // Exit the function if any field in the current tab is invalid:
         var shouldProceed = true;
         const inputPDF = jQuery('input[name="davi_input_pdf"]');
-        const label = inputPDF.parent().prev().text();
+        const labelPDF = inputPDF.parent().prev().text();
         const max_upload = inputPDF.attr('data-max_upload');
         const pdf = inputPDF.prop('files');
         const allowedTypesPdf = ['application/pdf'];
         const maxFileSizePdf = 1024 * 1024 * max_upload; // 1MB in bytes
         jQuery.each(pdf, function(index, file) {
           if (jQuery.inArray(file.type, allowedTypesPdf) === -1) {
-            alert('Invalid file type. Please select only PDF Label:('+label+')');
+            alert('Invalid file type. Please select only PDF Label:('+labelPDF+')');
             inputPDF.val(''); // Clear the input field
             shouldProceed = false;
             currentTab = currentTab-1;
             return false; // Exit the loop
           }
           if (file.size > maxFileSizePdf) {
-            alert('File size exceeds '+max_upload+'MB limit. Please select a smaller file. Label:('+label+')');
+            alert('File size exceeds '+max_upload+'MB limit. Please select a smaller file. Label:('+labelPDF+')');
             inputPDF.val(''); // Clear the input field
             shouldProceed = false;
             currentTab = currentTab-1;
@@ -55,7 +55,7 @@ function nextPrev(n) {
           }
         });
         const inputFile = jQuery('input[name="davi_input_file"]');
-        const label = inputFile.parent().prev().text();
+        const labelFile = inputFile.parent().prev().text();
         const max_upload = inputFile.attr('data-max_upload');
         const extensions = inputFile.attr('data-extension');
         const singleFile = inputFile.prop('files');
@@ -64,14 +64,14 @@ function nextPrev(n) {
         jQuery.each(singleFile, function(index, file) {
           
           if (jQuery.inArray(file.type, allowedTypesFile) === -1) {
-            alert('Invalid file type. Please select a '+extensions+'Label:('+label+')');
+            alert('Invalid file type. Please select a '+extensions+'Label:('+labelFile+')');
             inputFile.val(''); // Clear the input field
             shouldProceed = false;
             currentTab = currentTab-1;
             return false; // Exit the loop
           }
           if (file.size > maxFileSizeFile) {
-            alert('File size exceeds '+max_upload+'MB limit. Please select a smaller file. Label:('+label+')');
+            alert('File size exceeds '+max_upload+'MB limit. Please select a smaller file. Label:('+labelFile+')');
             inputFile.val(''); // Clear the input field
             shouldProceed = false;
             currentTab = currentTab-1;
@@ -79,7 +79,7 @@ function nextPrev(n) {
           }
         });
         const inputFiles = jQuery('input[name="davi_input_files[]"]');
-        const label = inputFiles.parent().prev().text();
+        const labelFiles = inputFiles.parent().prev().text();
         const max_upload = inputFiles.attr('data-max_upload');
         const extensions = inputFiles.attr('data-extension');
         const files = inputFiles.prop('files');
@@ -88,14 +88,14 @@ function nextPrev(n) {
         jQuery.each(files, function(index, file) {
           console.log(file);
           if (jQuery.inArray(file.type, allowedTypes) === -1) {
-            alert('Invalid file type. Please select a '+extensions+'Label:('+label+')');
+            alert('Invalid file type. Please select a '+extensions+'Label:('+labelFiles+')');
             inputFiles.val(''); // Clear the input field
             shouldProceed = false;
             currentTab = currentTab-1;
             return false; // Exit the loop
           }
           if (file.size > maxFileSize) {
-            alert('File size exceeds '+max_upload+'MB limit. Please select a smaller file. Label:('+label+')');
+            alert('File size exceeds '+max_upload+'MB limit. Please select a smaller file. Label:('+labelFiles+')');
             inputFiles.val(''); // Clear the input field
             shouldProceed = false;
             currentTab = currentTab-1;
