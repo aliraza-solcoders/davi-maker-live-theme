@@ -347,8 +347,8 @@ function form_submit(){
       }
     }
 
-    if($('input[name="davi_input_files"]').length){
-      if($('input[name="davi_input_files"]').prop('files').length > 0){
+    if($('input[name="davi_input_files[]"]').length){
+      if($('input[name="davi_input_files[]"]').prop('files').length > 0){
       if(data.files){
           davi_input_files['value'] = data.files;
           field_settings.push(davi_input_files);
