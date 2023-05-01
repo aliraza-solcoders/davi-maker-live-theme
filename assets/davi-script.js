@@ -1,5 +1,6 @@
 
 var currentTab = 0; // Current tab is set to be the first tab (0)
+var shouldProceed = true;
 showTab(currentTab); // Display the current tab
 
 
@@ -32,7 +33,7 @@ function nextPrev(n) {
   // This function will figure out which tab to display
   var x = document.getElementsByClassName("tab");
   // Exit the function if any field in the current tab is invalid:
-        var shouldProceed = true;
+        
         const inputPDF = jQuery('input[name="davi_input_pdf"]');
         const labelPDF = inputPDF.parent().prev().text();
         const maxUploadPDF = inputPDF.attr('data-max_upload');
