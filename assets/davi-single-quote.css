@@ -5,7 +5,7 @@
 #davi_theme button{-webkit-appearance:button;text-align:inherit;background-color:#0000;background-image:none;}
 #davi_theme button,label{-webkit-tap-highlight-color:transparent;touch-action:manipulation;cursor:pointer;}
 #davi_theme p{margin:0;}
-#davi_theme img{vertical-align:middle;display:block;}
+#davi_theme img{vertical-align:middle;display:inline;}
 #davi_theme img{color:#0000;max-width:min(var(--image-mobile-max-width, var(--image-max-width, 100%)),100%);height:auto;}
 
 #davi_theme .container{--container-inner-width:min((100vw - var(--scrollbar-width, 0px)) - var(--container-gutter) * 2, var(--container-max-width));--container-outer-width:calc(((100vw - var(--scrollbar-width, 0px)) - var(--container-inner-width)) / 2);margin-inline-start:max(var(--container-gutter),50% - var(--container-max-width) / 2);margin-inline-end:max(var(--container-gutter),50% - var(--container-max-width) / 2);}
