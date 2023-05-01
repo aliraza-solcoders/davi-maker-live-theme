@@ -189,7 +189,7 @@ function form_submit(){
     var davi_input_phone = {};
     davi_input_phone['label'] = label;
     davi_input_phone['type'] = 'phone';
-    davi_input_phone['value'] = $( this ).val();
+    davi_input_phone['value'] = $(this).prev().prev().attr('data-code')+$( this ).val();
     field_settings.push(davi_input_phone);
   });
   jQuery( "select[name=davi_products]" ).each(function( index ) {
