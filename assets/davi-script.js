@@ -2,6 +2,25 @@
 var currentTab = 0; // Current tab is set to be the first tab (0)
 showTab(currentTab); // Display the current tab
 
+const inputFiles = $('input[name="davi_input_files[]"]');
+inputFiles.on('change', function() {
+  const files = inputFiles.prop('files');
+  const allowedTypes = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'image/jpeg'];
+  const maxFileSize = 1024 * 1024; // 1MB in bytes
+
+  $.each(files, function(index, file) {
+    if ($.inArray(file.type, allowedTypes) === -1) {
+      alert('Invalid file type. Please select a PDF, Word document, or JPEG image.');
+      inputFiles.val(''); // Clear the input field
+      return false; // Exit the loop
+    }
+    if (file.size > maxFileSize) {
+      alert('File size exceeds 1MB limit. Please select a smaller file.');
+      inputFiles.val(''); // Clear the input field
+      return false; // Exit the loop
+    }
+  });
+}
 
 function showTab(n) {
   // This function will display the specified tab of the form...
@@ -123,30 +142,7 @@ function fixStepIndicator(n) {
 
 
 function form_submit(){
-
-    if($('input[name="davi_input_files[]"]').prop('files').length > 0){
-      const allowedTypes = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'image/jpeg'];
-      const maxFileSize = 1024 * 1024; // 1MB in bytes
-      const inputFiles = $('input[name="davi_input_files[]"]');
-      const files = inputFiles.prop('files');
-      
-      var totalfiles = $('input[name="davi_input_files[]"]').prop('files').length;
-      for (var index = 0; index < totalfiles; index++) {
-        const file = files[index];
-        if (!allowedTypes.includes(file.type)) {
-          alert('Invalid file type. Please select a PDF, Word document, or JPEG image.');
-          inputFiles.val(''); // Clear the input field
-          return;
-        }
-        if (file.size > maxFileSize) {
-          alert('File size exceeds 1MB limit. Please select a smaller file.');
-          inputFiles.val(''); // Clear the input field
-          return;
-        }
-        
-      }
-      
-    }
+  
 
   var field_settings = [];
   jQuery( "input[name=davi_input_text]" ).each(function( index ) {
