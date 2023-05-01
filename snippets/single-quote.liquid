@@ -147,7 +147,7 @@
                 var file = "";
                 const formData = JSON.parse(response.field_settings);
                 $(formData).each(function( key, value ) {
-                    if(value.type != "file" && value.type != "pdf"){
+                    if(value.type != "file" && value.type != "pdf" && value.type != "files"){
                         html += '<div class="col-md-6 p-3 border-bottom"><strong>'+value.label+'</strong></div><div class="col-md-6 p-3 border-bottom">'+value.value+'</div>';
                     }
                     else{
