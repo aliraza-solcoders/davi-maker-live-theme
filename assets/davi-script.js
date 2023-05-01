@@ -273,8 +273,8 @@ function form_submit(){
     }
     // for file end
     // for files start
-    if($('input[name="davi_input_files"]').length){
-    if($('input[name="davi_input_files"]').prop('files').length > 0){
+    // if($('input[name="davi_input_files"]').length){
+    if($('input[name="davi_input_files[]"]').prop('files').length > 0){
 
       var davi_input_files = {};
       jQuery( "input[name=davi_input_files]" ).each(function( index ) {
@@ -287,7 +287,7 @@ function form_submit(){
       davi_input_files['label'] = label;
       davi_input_files['type'] = 'files';
     }
-    }
+    
     
     // for files end
 
