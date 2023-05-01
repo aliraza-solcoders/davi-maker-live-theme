@@ -165,6 +165,9 @@
                       else{
                         var filesArray = value.value;
                         $(filesArray).each(function( key, file ) {
+
+                        console.log(file)
+                          
                           var extension = file.split(".");
                           var iconsArray = ["pdf", "csv", "docx", "xlsx"];
                           var link = '';
