@@ -91,7 +91,10 @@ function nextPrev(n) {
     }
   }
   else{
-      x[currentTab].style.display = "none";
+    if(currentTab == 3){
+        currentTab = currentTab-1;
+    }
+    x[currentTab].style.display = "none";
     // Increase or decrease the current tab by 1:
     currentTab = currentTab + n;
   }
