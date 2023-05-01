@@ -86,6 +86,7 @@ function nextPrev(n) {
         const allowedTypes = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'image/jpeg'];
         const maxFileSize = 1024 * 1024 * max_upload; // 1MB in bytes
         jQuery.each(files, function(index, file) {
+          console.log(file);
           if (jQuery.inArray(file.type, allowedTypes) === -1) {
             alert('Invalid file type. Please select a '+extensions+'Label:('+label+')');
             inputFiles.val(''); // Clear the input field
