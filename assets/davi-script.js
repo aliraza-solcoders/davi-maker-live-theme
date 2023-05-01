@@ -32,22 +32,23 @@ function nextPrev(n) {
   var x = document.getElementsByClassName("tab");
   // Exit the function if any field in the current tab is invalid:
         const inputPDF = jQuery('input[name="davi_input_pdf"]');
-        
+        console.log(inputPDF.attr('data-extension'));
+        console.log(inputPDF.attr('data-max_upload'));
         const pdf = inputPDF.prop('files');
         const allowedTypesPdf = ['application/pdf'];
         const maxFileSizePdf = 1024 * 1024; // 1MB in bytes
         var shouldProceed = true;
         jQuery.each(pdf, function(index, file) {
           if (jQuery.inArray(file.type, allowedTypesPdf) === -1) {
-            alert('Invalid file type. Please select a PDF, Word document, or JPEG image.');
-            inputFiles.val(''); // Clear the input field
+            alert('Invalid file type. Please select a PDF');
+            inputPDF.val(''); // Clear the input field
             shouldProceed = false;
             currentTab = currentTab-1;
             return false; // Exit the loop
           }
           if (file.size > maxFileSizePdf) {
             alert('File size exceeds 1MB limit. Please select a smaller file.');
-            inputFiles.val(''); // Clear the input field
+            inputPDF.val(''); // Clear the input field
             shouldProceed = false;
             currentTab = currentTab-1;
             return false; // Exit the loop
