@@ -77,11 +77,17 @@ function nextPrev(n) {
             shouldProceed = false;
             return false; // Exit the loop
           }
+          else{
+            shouldProceed = true;
+          }
           if (file.size > maxFileSizeFile) {
             alert('File size exceeds '+maxUploadFile+'MB limit. Please select a smaller file. Label:('+labelFile+')');
             inputFile.val(''); // Clear the input field
             shouldProceed = false;
             return false; // Exit the loop
+          }
+          else{
+            shouldProceed = true;
           }
         });
         const inputFiles = jQuery('input[name="davi_input_files[]"]');
@@ -100,11 +106,17 @@ function nextPrev(n) {
             shouldProceed = false;
             return false; // Exit the loop
           }
+          else{
+            shouldProceed = true;
+          }
           if (file.size > maxFileSize) {
             alert('File size exceeds '+maxUploadFiles+'MB limit. Please select a smaller file. Label:('+labelFiles+')');
             inputFiles.val(''); // Clear the input field
             shouldProceed = false;
             return false; // Exit the loop
+          }
+          else{
+            shouldProceed = true;
           }
         });
         if(!shouldProceed){
