@@ -168,13 +168,13 @@
                         var filesArray = value.value.split(".");
                         $(filesArray).each(function( key, value ) {
                           
-                          var extension = value.value.split(".");
+                          var extension = value.split(".");
                           var iconsArray = ["pdf", "csv", "docx", "xlsx"];
                           var link = '';
                           if(jQuery.inArray(extension[3],iconsArray) != -1){
-                              link += "<a href='"+value.value+"' target='_blank'><img src='https://daviapp.solcoder.com/public/images/"+extension[3]+"-icon.png' alt=''></a>";
+                              link += "<a href='"+value+"' target='_blank'><img src='https://daviapp.solcoder.com/public/images/"+extension[3]+"-icon.png' alt=''></a>";
                           } else {
-                              link += "<a href='"+value.value+"' target='_blank'><img src='https://daviapp.solcoder.com/public/images/unknown-icon.png' alt=''></a>";
+                              link += "<a href='"+value+"' target='_blank'><img src='https://daviapp.solcoder.com/public/images/unknown-icon.png' alt=''></a>";
                           }
   
 
