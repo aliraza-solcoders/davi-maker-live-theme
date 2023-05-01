@@ -93,7 +93,8 @@ function nextPrev(n) {
         const inputFiles = jQuery('input[name="davi_input_files[]"]');
         const labelFiles = inputFiles.parent().prev().text();
         const maxUploadFiles = inputFiles.attr('data-max_upload');
-        const extensions = inputFiles.attr('data-extension');
+        var extensions = inputFiles.attr('data-extension');
+        extensions = extensions.split(",");
         const files = inputFiles.prop('files');
         //const allowedTypes = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'image/jpeg'];
         const maxFileSize = 1024 * 1024 * maxUploadFiles; // 1MB in bytes
