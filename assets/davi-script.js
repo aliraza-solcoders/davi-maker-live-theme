@@ -83,11 +83,14 @@ function nextPrev(n) {
         const maxUploadFiles = inputFiles.attr('data-max_upload');
         const extensions = inputFiles.attr('data-extension');
         const files = inputFiles.prop('files');
-        const allowedTypes = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'image/jpeg'];
+        //const allowedTypes = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'image/jpeg'];
         const maxFileSize = 1024 * 1024 * maxUploadFiles; // 1MB in bytes
         jQuery.each(files, function(index, file) {
-          console.log(file);
-          if (jQuery.inArray(file.type, allowedTypes) === -1) {
+          var fileName = file.name.split(".");
+          console.log(fileName);
+          var fileExtension = fileName[1];
+          console.log(fileExtension);
+          if (jQuery.inArray(file.type, extensions) === -1) {
             alert('Invalid file type. Please select a '+extensions+'Label:('+labelFiles+')');
             inputFiles.val(''); // Clear the input field
             shouldProceed = false;
