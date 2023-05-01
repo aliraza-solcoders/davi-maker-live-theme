@@ -288,8 +288,7 @@ function form_submit(){
       davi_input_files['type'] = 'files';
     }
     }
-    const files = $('input[name="davi_input_files[]"]').prop('files');
-    formData.append('files', files);
+    
     // for files end
 
     formData.append('shop', shop);
