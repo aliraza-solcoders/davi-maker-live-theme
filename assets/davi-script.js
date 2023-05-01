@@ -109,7 +109,7 @@ function nextPrev(n) {
   if(n == 1){
     
     currentTab = currentTab + n;
-  
+    console.log(currentTab);
     if (currentTab >= x.length) {
           Swal.fire({
               title: 'Are you sure?',
