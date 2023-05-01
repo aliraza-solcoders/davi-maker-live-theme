@@ -275,13 +275,27 @@ function form_submit(){
     // for files start
     // if($('input[name="davi_input_files"]').length){
     if($('input[name="davi_input_files[]"]').prop('files').length > 0){
-
+      const allowedTypes = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'image/jpeg'];
+      const maxFileSize = 1024 * 1024; // 1MB in bytes
+      const inputFiles = $('input[name="davi_input_files[]"]');
+      const files = inputFiles.prop('files');
       var davi_input_files = {};
       jQuery( "input[name=davi_input_files]" ).each(function( index ) {
         label = $(this).parent().prev().text();
       })
       var totalfiles = $('input[name="davi_input_files[]"]').prop('files').length;
       for (var index = 0; index < totalfiles; index++) {
+        const file = files[index];
+        if (!allowedTypes.includes(file.type)) {
+          alert('Invalid file type. Please select a PDF, Word document, or JPEG image.');
+          inputFiles.val(''); // Clear the input field
+          return;
+        }
+        if (file.size > maxFileSize) {
+          alert('File size exceeds 1MB limit. Please select a smaller file.');
+          inputFiles.val(''); // Clear the input field
+          return;
+        }
         formData.append("files[]", $('input[name="davi_input_files[]"]').prop('files')[index]);
       }
       davi_input_files['label'] = label;
