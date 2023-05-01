@@ -43,14 +43,12 @@ function nextPrev(n) {
             alert('Invalid file type. Please select only PDF for this ('+file.name+')  Label:('+labelPDF+')');
             inputPDF.val(''); // Clear the input field
             shouldProceed = false;
-            currentTab = currentTab-1;
             return false; // Exit the loop
           }
           if (file.size > maxFileSizePdf) {
             alert('File size exceeds '+maxUploadPDF+'MB limit. Please select a smaller file. for this ('+file.name+')  Label:('+labelPDF+')');
             inputPDF.val(''); // Clear the input field
             shouldProceed = false;
-            currentTab = currentTab-1;
             return false; // Exit the loop
           }
         });
@@ -67,14 +65,12 @@ function nextPrev(n) {
             alert('Invalid file type. Please select a '+extensionsFile+'Label:('+labelFile+')');
             inputFile.val(''); // Clear the input field
             shouldProceed = false;
-            currentTab = currentTab-1;
             return false; // Exit the loop
           }
           if (file.size > maxFileSizeFile) {
             alert('File size exceeds '+maxUploadFile+'MB limit. Please select a smaller file. Label:('+labelFile+')');
             inputFile.val(''); // Clear the input field
             shouldProceed = false;
-            currentTab = currentTab-1;
             return false; // Exit the loop
           }
         });
@@ -94,14 +90,12 @@ function nextPrev(n) {
             alert('Invalid file type. Please select a '+extensions+' for this ('+file.name+') Label:('+labelFiles+')');
             inputFiles.val(''); // Clear the input field
             shouldProceed = false;
-            currentTab = currentTab-1;
             return false; // Exit the loop
           }
           if (file.size > maxFileSize) {
             alert('File size exceeds '+maxUploadFiles+'MB limit. Please select a smaller file. Label:('+labelFiles+')');
             inputFiles.val(''); // Clear the input field
             shouldProceed = false;
-            currentTab = currentTab-1;
             return false; // Exit the loop
           }
         });
