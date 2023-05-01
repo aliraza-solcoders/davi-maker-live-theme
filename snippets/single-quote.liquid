@@ -164,7 +164,9 @@
                         }
                       else{
                         var filesArray = value.value;
+                        console.log(filesArray.length)
                         $(filesArray).each(function( key, fileValue ) {
+                          console.log(key)
                           var extension = fileValue.split(".");
                           var iconsArray = ["pdf", "csv", "docx", "xlsx"];
                           var multiplefiles = '';
