@@ -37,72 +37,7 @@ function nextPrev(n) {
   }
   // Hide the current tab:
   if(n == 1){
-    var shouldProceed = true;
-        const inputPDF = jQuery('input[name="davi_input_pdf"]');
-        
-        const pdf = inputPDF.prop('files');
-        const allowedTypes = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'image/jpeg'];
-        const maxFileSize = 1024 * 1024; // 1MB in bytes
-
-        jQuery.each(pdf, function(index, file) {
-          if (jQuery.inArray(file.type, allowedTypes) === -1) {
-            alert('Invalid file type. Please select a PDF, Word document, or JPEG image.');
-            inputFiles.val(''); // Clear the input field
-            shouldProceed = false;
-            currentTab = currentTab-1;
-            return false; // Exit the loop
-          }
-          if (file.size > maxFileSize) {
-            alert('File size exceeds 1MB limit. Please select a smaller file.');
-            inputFiles.val(''); // Clear the input field
-            shouldProceed = false;
-            currentTab = currentTab-1;
-            return false; // Exit the loop
-          }
-        });
-        const inputFile = jQuery('input[name="davi_input_file"]');
-        const singleFile = inputFiles.prop('files');
-        const allowedTypes = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'image/jpeg'];
-        const maxFileSize = 1024 * 1024; // 1MB in bytes
-        jQuery.each(singleFile, function(index, file) {
-          if (jQuery.inArray(file.type, allowedTypes) === -1) {
-            alert('Invalid file type. Please select a PDF, Word document, or JPEG image.');
-            inputFiles.val(''); // Clear the input field
-            shouldProceed = false;
-            currentTab = currentTab-1;
-            return false; // Exit the loop
-          }
-          if (file.size > maxFileSize) {
-            alert('File size exceeds 1MB limit. Please select a smaller file.');
-            inputFiles.val(''); // Clear the input field
-            shouldProceed = false;
-            currentTab = currentTab-1;
-            return false; // Exit the loop
-          }
-        });
-        const inputFiles = jQuery('input[name="davi_input_files[]"]');
-        const files = inputFiles.prop('files');
-        const allowedTypes = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'image/jpeg'];
-        const maxFileSize = 1024 * 1024; // 1MB in bytes
-        jQuery.each(files, function(index, file) {
-          if (jQuery.inArray(file.type, allowedTypes) === -1) {
-            alert('Invalid file type. Please select a PDF, Word document, or JPEG image.');
-            inputFiles.val(''); // Clear the input field
-            shouldProceed = false;
-            currentTab = currentTab-1;
-            return false; // Exit the loop
-          }
-          if (file.size > maxFileSize) {
-            alert('File size exceeds 1MB limit. Please select a smaller file.');
-            inputFiles.val(''); // Clear the input field
-            shouldProceed = false;
-            currentTab = currentTab-1;
-            return false; // Exit the loop
-          }
-        });
-        if(!shouldProceed){
-          return;
-        }
+    
     currentTab = currentTab + n;
   
     if (currentTab >= x.length) {
