@@ -930,7 +930,7 @@
             <div class="custom-form-file">
               <img src="{{ 'fileDown.svg' | asset_url }}" />
               <p><strong>Browse File</strong> or drag and drop {{ block.settings.davi_field_file_extensions }} (max. {{ block.settings.davi_field_max_file_upload }}MB)</p>
-              <input type="file" id="{{ block.id }}" class="davi-theme" name="davi_input_pdf" accept="application/pdf"  {% if block.settings.davi_field_show == 'step1'  and block.settings.davi_field_type == "pdf" and block.settings.davi_field_required == true %}  required {% endif %}>
+              <input type="file" id="{{ block.id }}" class="davi-theme" name="davi_input_pdf" accept="application/pdf" data-max_upload="{{ block.settings.davi_field_max_file_upload }}" {% if block.settings.davi_field_show == 'step1'  and block.settings.davi_field_type == "pdf" and block.settings.davi_field_required == true %}  required {% endif %}>
             </div>
             <div class="custom-form-file-output"></div>
             </label>
