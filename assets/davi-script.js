@@ -45,20 +45,24 @@ function nextPrev(n) {
         const files = inputFiles.prop('files');
         const allowedTypes = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'image/jpeg'];
         const maxFileSize = 1024 * 1024; // 1MB in bytes
-      
+        const shouldProceed = true;
         jQuery.each(files, function(index, file) {
           if (jQuery.inArray(file.type, allowedTypes) === -1) {
             alert('Invalid file type. Please select a PDF, Word document, or JPEG image.');
             inputFiles.val(''); // Clear the input field
+            shouldProceed = false;
             return false; // Exit the loop
           }
           if (file.size > maxFileSize) {
             alert('File size exceeds 1MB limit. Please select a smaller file.');
             inputFiles.val(''); // Clear the input field
+            shouldProceed = false;
             return false; // Exit the loop
           }
         });
-      
+        if(!shouldProceed){
+          return;
+        }
           Swal.fire({
               title: 'Are you sure?',
               text: 'Do you want to submit the form',
