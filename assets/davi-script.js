@@ -31,21 +31,19 @@ function nextPrev(n) {
   // This function will figure out which tab to display
   var x = document.getElementsByClassName("tab");
   // Exit the function if any field in the current tab is invalid:
+  if
   if (n == 1 && !validateForm()) {
     return false;
   }
   // Hide the current tab:
   if(n == 1){
-    
-    currentTab = currentTab + n;
-  
-    if (currentTab >= x.length) {
+    var shouldProceed = true;
         const inputPDF = jQuery('input[name="davi_input_pdf"]');
         
         const pdf = inputPDF.prop('files');
         const allowedTypes = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'image/jpeg'];
         const maxFileSize = 1024 * 1024; // 1MB in bytes
-        var shouldProceed = true;
+
         jQuery.each(pdf, function(index, file) {
           if (jQuery.inArray(file.type, allowedTypes) === -1) {
             alert('Invalid file type. Please select a PDF, Word document, or JPEG image.');
@@ -66,7 +64,6 @@ function nextPrev(n) {
         const singleFile = inputFiles.prop('files');
         const allowedTypes = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'image/jpeg'];
         const maxFileSize = 1024 * 1024; // 1MB in bytes
-        var shouldProceed = true;
         jQuery.each(singleFile, function(index, file) {
           if (jQuery.inArray(file.type, allowedTypes) === -1) {
             alert('Invalid file type. Please select a PDF, Word document, or JPEG image.');
@@ -87,7 +84,6 @@ function nextPrev(n) {
         const files = inputFiles.prop('files');
         const allowedTypes = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'image/jpeg'];
         const maxFileSize = 1024 * 1024; // 1MB in bytes
-        var shouldProceed = true;
         jQuery.each(files, function(index, file) {
           if (jQuery.inArray(file.type, allowedTypes) === -1) {
             alert('Invalid file type. Please select a PDF, Word document, or JPEG image.');
@@ -105,10 +101,11 @@ function nextPrev(n) {
           }
         });
         if(!shouldProceed){
-          
-            currentTab = currentTab-1;
           return;
         }
+    currentTab = currentTab + n;
+  
+    if (currentTab >= x.length) {
           Swal.fire({
               title: 'Are you sure?',
               text: 'Do you want to submit the form',
