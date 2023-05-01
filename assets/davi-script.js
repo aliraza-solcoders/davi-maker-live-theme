@@ -47,7 +47,7 @@ function nextPrev(n) {
             return false; // Exit the loop
           }
           if (file.size > maxFileSizePdf) {
-            alert('File size exceeds '+max_upload+'MB limit. Please select a smaller file.');
+            alert('File size exceeds '+max_upload+'MB limit. Please select a smaller file. Label:('+label+')');
             inputPDF.val(''); // Clear the input field
             shouldProceed = false;
             currentTab = currentTab-1;
