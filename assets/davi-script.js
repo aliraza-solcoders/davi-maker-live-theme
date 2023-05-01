@@ -90,8 +90,8 @@ function nextPrev(n) {
           console.log(fileName);
           var fileExtension = fileName[1];
           console.log(fileExtension);
-          if (jQuery.inArray(file.type, extensions) === -1) {
-            alert('Invalid file type. Please select a '+extensions+'Label:('+labelFiles+')');
+          if (jQuery.inArray(fileExtension, extensions) === -1) {
+            alert('Invalid file type. Please select a '+extensions+' for this ('+file.name+') Label:('+labelFiles+')');
             inputFiles.val(''); // Clear the input field
             shouldProceed = false;
             currentTab = currentTab-1;
