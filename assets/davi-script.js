@@ -47,11 +47,17 @@ function nextPrev(n) {
             shouldProceed = false;
             return false; // Exit the loop
           }
+          else{
+            shouldProceed = true;
+          }
           if (file.size > maxFileSizePdf) {
             alert('File size exceeds '+maxUploadPDF+'MB limit. Please select a smaller file. for this ('+file.name+')  Label:('+labelPDF+')');
             inputPDF.val(''); // Clear the input field
             shouldProceed = false;
             return false; // Exit the loop
+          }
+          else{
+            shouldProceed = true;
           }
         });
         const inputFile = jQuery('input[name="davi_input_file"]');
