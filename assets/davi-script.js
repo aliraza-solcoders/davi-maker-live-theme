@@ -276,7 +276,6 @@ function form_submit(){
     var formData = new FormData();
 
     // for pdf start
-    if($('input[name="davi_input_pdf"]').length){
     if($('input[name="davi_input_pdf"]').prop('files').length > 0){
       var davi_input_pdf = {};
       jQuery( "input[name=davi_input_pdf]" ).each(function( index ) {
@@ -287,10 +286,8 @@ function form_submit(){
       const pdf = $('input[name="davi_input_pdf"]').prop('files')[0];
       formData.append('pdf', pdf);
     }
-    }
     // for pdf end
     // for file start
-    if($('input[name="davi_input_file"]').length){
     if($('input[name="davi_input_file"]').prop('files').length > 0){
 
       var davi_input_file = {};
@@ -302,10 +299,8 @@ function form_submit(){
       const file = $('input[name="davi_input_file"]').prop('files')[0];
       formData.append('file', file);
     }
-    }
     // for file end
     // for files start
-    // if($('input[name="davi_input_files"]').length){
     if($('input[name="davi_input_files[]"]').prop('files').length > 0){
       
       var davi_input_files = {};
