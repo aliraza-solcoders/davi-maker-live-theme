@@ -51,16 +51,20 @@ function nextPrev(n) {
             alert('Invalid file type. Please select a PDF, Word document, or JPEG image.');
             inputFiles.val(''); // Clear the input field
             shouldProceed = false;
+            currentTab = currentTab-1;
             return false; // Exit the loop
           }
           if (file.size > maxFileSize) {
             alert('File size exceeds 1MB limit. Please select a smaller file.');
             inputFiles.val(''); // Clear the input field
             shouldProceed = false;
+            currentTab = currentTab-1;
             return false; // Exit the loop
           }
         });
         if(!shouldProceed){
+          
+            currentTab = currentTab-1;
           return;
         }
           Swal.fire({
