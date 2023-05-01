@@ -55,21 +55,21 @@ function nextPrev(n) {
           }
         });
         const inputFile = jQuery('input[name="davi_input_file"]');
-        const singleFile = inputFiles.prop('files');
+        const singleFile = inputFile.prop('files');
         const allowedTypesFile = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'image/jpeg'];
         const maxFileSizeFile = 1024 * 1024; // 1MB in bytes
         var shouldProceed = true;
         jQuery.each(singleFile, function(index, file) {
           if (jQuery.inArray(file.type, allowedTypesFile) === -1) {
             alert('Invalid file type. Please select a PDF, Word document, or JPEG image.');
-            inputFiles.val(''); // Clear the input field
+            inputFile.val(''); // Clear the input field
             shouldProceed = false;
             currentTab = currentTab-1;
             return false; // Exit the loop
           }
           if (file.size > maxFileSizeFile) {
             alert('File size exceeds 1MB limit. Please select a smaller file.');
-            inputFiles.val(''); // Clear the input field
+            inputFile.val(''); // Clear the input field
             shouldProceed = false;
             currentTab = currentTab-1;
             return false; // Exit the loop
