@@ -151,16 +151,37 @@
                         html += '<div class="col-md-6 p-3 border-bottom"><strong>'+value.label+'</strong></div><div class="col-md-6 p-3 border-bottom">'+value.value+'</div>';
                     }
                     else{
-                        var extension = value.value.split(".");
-                        var iconsArray = ["pdf", "csv", "docx", "xlsx"];
-                        if(jQuery.inArray(extension[3],iconsArray) != -1){
-                            var link = "<a href='"+value.value+"' target='_blank'><img src='https://daviapp.solcoder.com/public/images/"+extension[3]+"-icon.png' alt=''></a>";
-                        } else {
-                            var link = "<a href='"+value.value+"' target='_blank'><img src='https://daviapp.solcoder.com/public/images/unknown-icon.png' alt=''></a>";
+                        if(value.type != "files"){
+                          
+                          var extension = value.value.split(".");
+                          var iconsArray = ["pdf", "csv", "docx", "xlsx"];
+                          if(jQuery.inArray(extension[3],iconsArray) != -1){
+                              var link = "<a href='"+value.value+"' target='_blank'><img src='https://daviapp.solcoder.com/public/images/"+extension[3]+"-icon.png' alt=''></a>";
+                          } else {
+                              var link = "<a href='"+value.value+"' target='_blank'><img src='https://daviapp.solcoder.com/public/images/unknown-icon.png' alt=''></a>";
+                          }
+  
+                          file += '<div class="col-md-3 p-3 border-bottom"><strong>'+value.label+'</strong></div><div class="col-md-9 p-3 border-bottom">'+link+'</div>';
+
                         }
+                      else{
+                        var filesArray = value.value.split(".");
+                        $(filesArray).each(function( key, value ) {
+                          
+                          var extension = value.value.split(".");
+                          var iconsArray = ["pdf", "csv", "docx", "xlsx"];
+                          var link = '';
+                          if(jQuery.inArray(extension[3],iconsArray) != -1){
+                              link += "<a href='"+value.value+"' target='_blank'><img src='https://daviapp.solcoder.com/public/images/"+extension[3]+"-icon.png' alt=''></a>";
+                          } else {
+                              link += "<a href='"+value.value+"' target='_blank'><img src='https://daviapp.solcoder.com/public/images/unknown-icon.png' alt=''></a>";
+                          }
+  
 
-                        file += '<div class="col-md-3 p-3 border-bottom"><strong>'+value.label+'</strong></div><div class="col-md-9 p-3 border-bottom">'+link+'</div>';
-
+                        });
+                          file += '<div class="col-md-3 p-3 border-bottom"><strong>'+value.label+'</strong></div><div class="col-md-9 p-3 border-bottom">'+link+'</div>';
+                        
+                      }
                     }
                 });
                 const services = JSON.parse(response.services);
