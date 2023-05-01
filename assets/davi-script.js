@@ -64,14 +64,14 @@ function nextPrev(n) {
         var shouldProceed = true;
         jQuery.each(singleFile, function(index, file) {
           if (jQuery.inArray(file.type, allowedTypesFile) === -1) {
-            alert('Invalid file type. Please select a PDF, Word document, or JPEG image.');
+            alert('Invalid file type. Please select a '+extensions+'Label:('+label+')');;
             inputFile.val(''); // Clear the input field
             shouldProceed = false;
             currentTab = currentTab-1;
             return false; // Exit the loop
           }
           if (file.size > maxFileSizeFile) {
-            alert('File size exceeds 1MB limit. Please select a smaller file.');
+            alert('File size exceeds '+max_upload+'MB limit. Please select a smaller file. Label:('+label+')');
             inputFile.val(''); // Clear the input field
             shouldProceed = false;
             currentTab = currentTab-1;
