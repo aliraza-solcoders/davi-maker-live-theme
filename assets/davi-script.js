@@ -55,8 +55,11 @@ function nextPrev(n) {
           }
         });
         const inputFile = jQuery('input[name="davi_input_file"]');
+        const label = inputFile.parent().prev().text();
+        const max_upload = inputFile.attr('data-max_upload');
+        const extensions = inputFile.attr('data-extension');
         const singleFile = inputFile.prop('files');
-        const allowedTypesFile = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'image/jpeg'];
+        //const allowedTypesFile = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'image/jpeg'];
         const maxFileSizeFile = 1024 * 1024; // 1MB in bytes
         var shouldProceed = true;
         jQuery.each(singleFile, function(index, file) {
