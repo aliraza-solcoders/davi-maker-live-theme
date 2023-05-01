@@ -28,6 +28,7 @@ document.querySelector(".custom-steps-wrapper").setAttribute("data-step", n+1);
 
 
 function nextPrev(n) {
+  console.log(currentTab)
   // This function will figure out which tab to display
   var x = document.getElementsByClassName("tab");
   // Exit the function if any field in the current tab is invalid:
