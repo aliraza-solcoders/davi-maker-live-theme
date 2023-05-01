@@ -170,14 +170,15 @@
                           
                           var extension = file.split(".");
                           var iconsArray = ["pdf", "csv", "docx", "xlsx"];
-                          var link = '';
+                          
                           if(jQuery.inArray(extension[3],iconsArray) != -1){
-                              link += "<a href='"+file+"' target='_blank'><img src='https://daviapp.solcoder.com/public/images/"+extension[3]+"-icon.png' alt=''></a>";
+                              var link = "<a href='"+file+"' target='_blank'><img src='https://daviapp.solcoder.com/public/images/"+extension[3]+"-icon.png' alt=''></a>";
                           } else {
-                              link += "<a href='"+file+"' target='_blank'><img src='https://daviapp.solcoder.com/public/images/unknown-icon.png' alt=''></a>";
+                              var link = "<a href='"+file+"' target='_blank'><img src='https://daviapp.solcoder.com/public/images/unknown-icon.png' alt=''></a>";
                           }
-                        });
                           file += '<div class="col-md-3 p-3 border-bottom"><strong>'+value.label+'</strong></div><div class="col-md-9 p-3 border-bottom">'+link+'</div>';
+                        });
+                          
                         
                       }
                     }
