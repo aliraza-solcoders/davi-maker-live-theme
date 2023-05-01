@@ -39,7 +39,7 @@ function nextPrev(n) {
         var shouldProceed = true;
         jQuery.each(pdf, function(index, file) {
           if (jQuery.inArray(file.type, allowedTypesPdf) === -1) {
-            alert('Invalid file type. Please select a PDF');
+            alert('Invalid file type. Please select only PDF Label:('+inputPDF.parent().prev().text();+')');
             inputPDF.val(''); // Clear the input field
             shouldProceed = false;
             currentTab = currentTab-1;
