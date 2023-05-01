@@ -57,14 +57,14 @@ function nextPrev(n) {
         const inputFile = jQuery('input[name="davi_input_file"]');
         const labelFile = inputFile.parent().prev().text();
         const maxUploadFile = inputFile.attr('data-max_upload');
-        const extensions = inputFile.attr('data-extension');
+        const extensionsFile = inputFile.attr('data-extension');
         const singleFile = inputFile.prop('files');
         //const allowedTypesFile = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'image/jpeg'];
         const maxFileSizeFile = 1024 * 1024 * maxUploadFile; // 1MB in bytes
         jQuery.each(singleFile, function(index, file) {
           
           if (jQuery.inArray(file.type, allowedTypesFile) === -1) {
-            alert('Invalid file type. Please select a '+extensions+'Label:('+labelFile+')');
+            alert('Invalid file type. Please select a '+extensionsFile+'Label:('+labelFile+')');
             inputFile.val(''); // Clear the input field
             shouldProceed = false;
             currentTab = currentTab-1;
