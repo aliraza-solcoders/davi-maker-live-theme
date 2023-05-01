@@ -45,7 +45,7 @@ function nextPrev(n) {
         const files = inputFiles.prop('files');
         const allowedTypes = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'image/jpeg'];
         const maxFileSize = 1024 * 1024; // 1MB in bytes
-        const shouldProceed = true;
+        var shouldProceed = true;
         jQuery.each(files, function(index, file) {
           if (jQuery.inArray(file.type, allowedTypes) === -1) {
             alert('Invalid file type. Please select a PDF, Word document, or JPEG image.');
