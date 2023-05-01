@@ -62,7 +62,9 @@ function nextPrev(n) {
         const maxFileSizeFile = 1024 * 1024 * maxUploadFile; // 1MB in bytes
         jQuery.each(singleFile, function(index, file) {
           
-          if (jQuery.inArray(file.type, allowedTypesFile) === -1) {
+          var fileName = file.name.split(".");
+          var fileExtension = fileName[1];
+          if (jQuery.inArray(fileExtension, extensionsFile) === -1) {
             alert('Invalid file type. Please select a '+extensionsFile+'Label:('+labelFile+')');
             inputFile.val(''); // Clear the input field
             shouldProceed = false;
@@ -84,9 +86,7 @@ function nextPrev(n) {
         const maxFileSize = 1024 * 1024 * maxUploadFiles; // 1MB in bytes
         jQuery.each(files, function(index, file) {
           var fileName = file.name.split(".");
-          console.log(fileName);
           var fileExtension = fileName[1];
-          console.log(fileExtension);
           if (jQuery.inArray(fileExtension, extensions) === -1) {
             alert('Invalid file type. Please select a '+extensions+' for this ('+file.name+') Label:('+labelFiles+')');
             inputFiles.val(''); // Clear the input field
