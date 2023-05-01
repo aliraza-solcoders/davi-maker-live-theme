@@ -100,7 +100,7 @@ function nextPrev(n) {
           }
         });
         if(!shouldProceed){
-          return;
+          return false;
         }
   if (n == 1 && !validateForm()) {
     return false;
