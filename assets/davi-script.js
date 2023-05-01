@@ -355,6 +355,7 @@ function form_submit(){
         }
       }
     }
+      console.log(field_settings);
         var form_type = $( 'input[name=davi_form_type]' ).val();
         var shop = $('#shop').val();
         var data = {
