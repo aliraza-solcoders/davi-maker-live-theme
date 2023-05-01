@@ -63,6 +63,7 @@ function nextPrev(n) {
         const maxFileSizeFile = 1024 * 1024 * max_upload; // 1MB in bytes
         var shouldProceed = true;
         jQuery.each(singleFile, function(index, file) {
+          
           if (jQuery.inArray(file.type, allowedTypesFile) === -1) {
             alert('Invalid file type. Please select a '+extensions+'Label:('+label+')');;
             inputFile.val(''); // Clear the input field
