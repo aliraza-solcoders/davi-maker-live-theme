@@ -31,13 +31,13 @@ function nextPrev(n) {
   // This function will figure out which tab to display
   var x = document.getElementsByClassName("tab");
   // Exit the function if any field in the current tab is invalid:
+        var shouldProceed = true;
         const inputPDF = jQuery('input[name="davi_input_pdf"]');
         const label = inputPDF.parent().prev().text();
         const max_upload = inputPDF.attr('data-max_upload');
         const pdf = inputPDF.prop('files');
         const allowedTypesPdf = ['application/pdf'];
         const maxFileSizePdf = 1024 * 1024 * max_upload; // 1MB in bytes
-        var shouldProceed = true;
         jQuery.each(pdf, function(index, file) {
           if (jQuery.inArray(file.type, allowedTypesPdf) === -1) {
             alert('Invalid file type. Please select only PDF Label:('+label+')');
@@ -61,7 +61,6 @@ function nextPrev(n) {
         const singleFile = inputFile.prop('files');
         //const allowedTypesFile = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'image/jpeg'];
         const maxFileSizeFile = 1024 * 1024 * max_upload; // 1MB in bytes
-        var shouldProceed = true;
         jQuery.each(singleFile, function(index, file) {
           
           if (jQuery.inArray(file.type, allowedTypesFile) === -1) {
