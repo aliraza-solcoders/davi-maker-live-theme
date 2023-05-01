@@ -81,7 +81,7 @@ function nextPrev(n) {
         var shouldProceed = true;
         jQuery.each(files, function(index, file) {
           if (jQuery.inArray(file.type, allowedTypes) === -1) {
-            alert('Invalid file type. Please select a PDF, Word document, or JPEG image.');
+            alert('Invalid file type. Please select only PDF.');
             inputFiles.val(''); // Clear the input field
             shouldProceed = false;
             currentTab = currentTab-1;
