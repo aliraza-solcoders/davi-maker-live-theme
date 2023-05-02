@@ -3,7 +3,8 @@ var currentTab = 0; // Current tab is set to be the first tab (0)
 var shouldProceed = true;
 showTab(currentTab); // Display the current tab
 
-jQuery("select[name=davi_products]").change(function($){
+jQuery(document).on('change', 'select[name=davi_products]', function() {
+
   var value = $(this).val();
   console.log(value);
   $('.'+value).show();
