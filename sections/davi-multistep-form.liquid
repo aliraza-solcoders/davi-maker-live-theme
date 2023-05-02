@@ -756,7 +756,7 @@
                 res.forEach((item) => {
 
                     const li = document.createElement("li");
-                    li.innerHTML = `${item.dial_code} <em>${item.flag}</em>`;
+                    li.innerHTML = `${item.dial_code} <em class="country-flags country-flags--${item.flag}"></em>`;
                     li.setAttribute("data-code", item.dial_code);
                     li.setAttribute("data-flag", item.flag);
                     fragment2.appendChild(li);
