@@ -269,7 +269,7 @@
                           jQuery("#total_price").next().html('');
                       }
                       jQuery('.loader').hide();
-                      jQuery("#single-quotation").show();
+                      jQuery("#single-quotation").toggle();
 
                       // const filteredHtml = $('#single-quotation').html();
                       // console.log(filteredHtml);
@@ -285,7 +285,7 @@
                       //     y: 15
                       //   });
 
-                    var element = $('#single-quotation').html();
+                    var element = document.getElementById('single-quotation');
                    console.log(element);
                     var opt = {
                         margin: 0.3,
