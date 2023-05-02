@@ -51,7 +51,7 @@ function nextPrev(n) {
         var email = jQuery('input[name="davi_input_email"]');
 
         jQuery.each(email, function (index,email) {
-            label = $(this).parent().parent().prev().text();
+           label = $(this).prev().text();
      
             var value = $( this ).val();
             if(value !== ''){
