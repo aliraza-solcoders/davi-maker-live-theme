@@ -103,7 +103,7 @@
           "type": "davi_field",
           "settings": {
             "davi_field_label": "Select Products",
-            "davi_field_show": "step2",
+            "davi_field_show": "step1",
             "davi_field_type": "products",
             "davi_field_value": "",
             "davi_field_image": "",
