@@ -1072,7 +1072,14 @@
                   <div class="custom-multiple-2-dropdown">
                 <select name="davi_products" class="custom-multiple-select davi-theme" {% if block.settings.davi_field_show == 'step2'  and block.settings.davi_field_type == "products"  and block.settings.davi_field_required == true %}  required {% endif %} multiple>
                   {% for product in collections['all'].products %}
-                    <option value="{{ product.title | escape }}" data-img="{{ product | img_url: '100x' }}">{{ product.title | escape }}</option>
+                     {% if product.variants.size > 0 %}
+                          {% for variant in product.variants %}
+                            <option value="{{ product.title | escape }}-{{ variant.title }}" data-img="{{ product | img_url: '100x' }}">{{ product.title | escape }} - {{ variant.title }}</option>
+                          {% endfor %}
+                        {% else %}
+                          <option value="{{ product.title | escape }}" data-img="{{ product | img_url: '100x' }}">{{ product.title | escape }}</option>
+                        {% endif %}
+                    
                   {% endfor %}
                 </select>
                     <button type="button" class="custom-multiple-2-dropdown-main">
