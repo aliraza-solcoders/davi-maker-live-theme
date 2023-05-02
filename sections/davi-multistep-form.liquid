@@ -877,7 +877,7 @@
                       {% endfor %}
                   {% endfor %}
                 </select>
-                <button type="button" class="custom-multiple-dropdown-main"><img {{ collections['all'].products[0].image | img_url: '100x' }} /><span></span></button>
+                <button type="button" class="custom-multiple-dropdown-main"><img {{ collections['all'].products[0] | img_url: '100x' }} /><span></span></button>
                 <ul class="custom-multiple-dropdown-list">
                   {% for product in collections['all'].products %}
                       {% for variant in product.variants  %}
