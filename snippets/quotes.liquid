@@ -150,6 +150,9 @@
           
          
            $('#quotes_table').on('click', '.download_pdf', function() {
+      
+              jQuery('.loader').show();
+              jQuery("#quotes_table").hide();
             // Get the ref_number attribute from the button's parent row
             const ref_number = $(this).data('ref_number');
             if ( ref_number != null ) {  
@@ -272,44 +275,30 @@
                       }
                       jQuery('.loader').hide();
                       jQuery("#single-quotation").toggle();
-
-                      // const filteredHtml = $('#single-quotation').html();
-                      // console.log(filteredHtml);
-                      // // Create a new jsPDF instance
-                      // const doc = new jsPDF();
-        
-                      //  doc.html(filteredHtml, {
-                      //     callback: function(doc) {
-                            
-                      //        doc.save(ref_number+".pdf");
-                      //     },
-                      //     x: 15,
-                      //     y: 15
-                      //   });
-
-                    var element = document.getElementById('single-quotation');
-                   console.log(element);
-                    var opt = {
-                        margin: 0.3,
-                        filename: ref_number+'.pdf',
-                        image: {
-                            type: 'pdf',
-                            quality: 1
-                        },
-                        html2canvas: {
-                            scale: 5,
-                            dpi: 300,
-                            letterRendering: true
-                        },
-                        jsPDF: {
-                            unit: 'in',
-                            format: 'A4'
-                        }
-                    };
-                    html2pdf(element, opt);
+                      var element = document.getElementById('single-quotation');
+                      var opt = {
+                          margin: 0.3,
+                          filename: ref_number+'.pdf',
+                          image: {
+                              type: 'pdf',
+                              quality: 1
+                          },
+                          html2canvas: {
+                              scale: 5,
+                              dpi: 300,
+                              letterRendering: true
+                          },
+                          jsPDF: {
+                              unit: 'in',
+                              format: 'A4'
+                          }
+                      };
+                      html2pdf(element, opt);
 
                       jQuery("#single-quotation").hide();
-      
+            
+                      jQuery('.loader').hide();
+                      jQuery("#quotes_table").show();
                   })
             }
         
