@@ -868,15 +868,18 @@
             {% endfor %}
         {% elsif block.settings.davi_field_show == 'step1' and block.settings.davi_field_type == "products" %}
           
-            <div class="custom-multiple-2-dropdown">
-           <select name="davi_products" class="custom-multiple-select davi-theme" {% if block.settings.davi_field_show == 'step1'  and block.settings.davi_field_type == "products"  and block.settings.davi_field_required == true %}  required {% endif %} multiple>
-            {% for product in collections['all'].products %}
-              <option value="{{ product.title | escape }}" data-img="{{ product | img_url: '100x' }}">{{ product.title | escape }}</option>
-            {% endfor %}
-          </select>
-              <button type="button" class="custom-multiple-2-dropdown-main">
-                <div class="custom-multiple-2-badge-wrapper"></div></button>
-              <ul class="custom-multiple-2-dropdown-list">
+              <div class="custom-multiple-2-dropdown">
+             <select name="davi_products" class="custom-multiple-select davi-theme" {% if block.settings.davi_field_show == 'step3'  and block.settings.davi_field_type == "products"  and block.settings.davi_field_required == true %}  required {% endif %} multiple>
+              {% for product in collections['all'].products %}
+                <option value="{{ product.title | escape }}" data-img="{{ product | img_url: '100x' }}">{{ product.title | escape }}</option>
+              {% endfor %}
+            </select>
+                <button type="button" class="custom-multiple-2-dropdown-main">
+                  <div class="custom-multiple-2-badge-wrapper">
+                  
+                  </div>
+                  </button>
+                <ul class="custom-multiple-2-dropdown-list">
                 {% for product in collections['all'].products %}
                   {% if product.variants %}
                     {% for variant in product.variants %}
@@ -887,8 +890,8 @@
                   {% endif %}
                   
                 {% endfor %}
-              </ul>
-            </div>
+                </ul>
+              </div>
             {% comment %}
   
                   <div class="custom-multiple-dropdown">
