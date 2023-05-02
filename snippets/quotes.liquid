@@ -20,6 +20,7 @@
 }
 </style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
 
 <link href="https://cdn.datatables.net/v/dt/dt-1.13.4/datatables.min.css" rel="stylesheet"/>
 <script src="https://cdn.datatables.net/v/dt/dt-1.13.4/datatables.min.js" defer></script>
@@ -42,6 +43,39 @@
     </div>
 <script>
     setTimeout(function(){
+        $(document).ready(function() {
+          // Attach event listener to download buttons
+          $('#quotes_table').on('click', '.downloa_pdf', function() {
+            // Get the ref_number attribute from the button's parent row
+            const refNumber = $(this).data('ref_number');
+        
+            // Build the URL with the ref_number parameter
+            const url = `https://davimakers.com/pages/quotation-view?ref_number=${refNumber}`;
+        
+            // Fetch the HTML content from the URL
+            $.get(url, function(data) {
+              // Filter out the content with id "davi_theme"
+              const filteredHtml = $(data).find('#davi_theme').html();
+        
+              // Create a new jsPDF instance
+              const doc = new jsPDF();
+        
+              // Convert the HTML content to PDF
+              doc.fromHTML(filteredHtml, 15, 15, {
+                'width': 170
+              });
+        
+              // Generate a data URL for the PDF file
+              const pdfData = doc.output('dataurl');
+        
+              // Create a link with the data URL and trigger the download
+              const link = document.createElement('a');
+              link.href = pdfData;
+              link.download = 'quotation.pdf';
+              link.click();
+            });
+          });
+        });
 
         console.log(jQuery('#davi_theme').attr('data-customer_email'));
         var shop = jQuery('#davi_theme').attr('data-shop');
