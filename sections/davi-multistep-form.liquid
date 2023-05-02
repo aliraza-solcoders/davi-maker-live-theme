@@ -909,24 +909,23 @@
                       {% endfor %}
                     </ul>
                   </div>
-      
-                  <div class="custom-multiple-2-dropdown">
-                    <select name="davi_products" class="custom-multiple-select davi-theme" {% if block.settings.davi_field_show == 'step1'  and block.settings.davi_field_type == "products"  and block.settings.davi_field_required == true %}  required {% endif %}>
-                      {% for product in collections['all'].products %}
-                          <option value="{{ product.title | escape}}" data-img="{{ product | img_url: '100x' }}">{{ product.title | escape }}</option>
+                  {% for product in collections['all'].products %}
+                  <div class="custom-multiple-2-dropdown {{ product.handle }}" style="display:none">
+                    <select name="davi_products_variants" class="custom-multiple-select davi-theme" {% if block.settings.davi_field_show == 'step1'  and block.settings.davi_field_type == "products"  and block.settings.davi_field_required == true %}  required {% endif %}>
+                      {% for variant in product.variants %}
+                          <option value="{{ variant.title | escape}}" data-img="{{ product | img_url: '100x' }}">{{ product.title | escape }}</option>
                       {% endfor %}
                     </select>
                     <button type="button" class="custom-multiple-2-dropdown-main">
                       <div class="custom-multiple-2-badge-wrapper"></div>
                     </button>
-                    {% for product in collections['all'].products %}
                         <ul class="custom-multiple-2-dropdown-list {{ product.handle }}" style="display:none">
                             {% for variant in product.variants %}
                               <li><img src="{{ product | img_url: '100x' }}" /> <span>{{ product.title | escape }} - {{ variant.title }}</span></li>
                             {% endfor %}
                         </ul>
-                    {% endfor %}
                   </div>
+                  {% endfor %}
         {% elsif block.settings.davi_field_show == 'step1' and block.settings.davi_field_type == "address" %}
           <input type="text" class="davi-theme custom-address" name="davi_input_address" placeholder="address"  {% if block.settings.davi_field_show == 'step1' and block.settings.davi_field_type == "address" and block.settings.davi_field_required == true %}  required {% endif %}><br>
           <input type="text" class="davi-theme custom-address" name="davi_input_appartment_no" placeholder="appartment_no"  {% if block.settings.davi_field_show == 'step1' and block.settings.davi_field_type == "address" and block.settings.davi_field_required == true %}  required {% endif %}> <input type="text" {% if block.settings.davi_field_show == 'step1' and block.settings.davi_field_type == "address" and block.settings.davi_field_required == true %}  required {% endif %} class="davi-theme custom-address" name="davi_input_zip_code" placeholder="zip_code" > <input type="text" class="davi-theme custom-address" {% if block.settings.davi_field_show == 'step1' and block.settings.davi_field_type == "address" and block.settings.davi_field_required == true %}  required {% endif %} name="davi_input_state" placeholder="state"  {% if block.settings.davi_field_show == 'step1' and block.settings.davi_field_required == true %}  required {% endif %}>
