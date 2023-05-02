@@ -1533,12 +1533,28 @@
   setTimeout(function(){
      jQuery(function() {
       
-        jQuery('.loader').hide();
-        jQuery( "#form" ).show();
-        jQuery( ".date" ).datepicker();
-        jQuery( ".select2" ).select2();
+      var shop = $('#shop').val();
+      var data = {
+        shop: shop,
+      };
+      fetch("/apps/sdta/get_settings", {
+          method: "POST",
+          body: JSON.stringify(data),
+          headers: {
+              "Content-Type": "application/json",
+          },
+      })
+      .then(function (response) {
+          return response.json();
+      })
+      .then(function (settings) {
+          jQuery('.loader').hide();
+          jQuery( "#form" ).show();
+          jQuery( ".date" ).datepicker();
+          jQuery( ".select2" ).select2();
+      });
      });
-     $('input').keyup(function() {
+     $('input,select').on("keyup change",function() {
       if($(this).hasClass('invalid')){
         $(this).removeClass('invalid');
       }
