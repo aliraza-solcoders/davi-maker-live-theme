@@ -221,6 +221,7 @@
                           
                           serviceshtml += '<div class="col-md-4 p-3"><strong>'+value.service+'</strong></div><div class="col-md-4 p-3 text-center"><p class="pr-3">'+value.quantity+'</p></div><div class="col-md-4 p-3 text-end"><p class="pr-3">'+value.price+'<span class="currency"></span></p></div>';
                       });
+                      
                       jQuery(".service_html").after(serviceshtml);
                       jQuery(".quotation_detail").after(html);
                       jQuery(".files").after(file);
@@ -233,16 +234,20 @@
                           jQuery(".expiry_date").show();
                           jQuery("#expiry_date").html(response.expiry_date);
                       }
-                      
-                      jQuery("#shipping").html(response.shipping);
-                      jQuery("#min_order").html(response.min_order);
-                      jQuery("#sub_total").html(response.sub_total);
-                      jQuery("#vat_price").html(response.vat_price);
-                      jQuery("#total").html(response.total);
+                      var min_order = response.min_order ? response.min_order : 0;
+                      var vat_price = response.vat_price ? response.vat_price : 0;
+                      var sub_total = response.sub_total ? response.sub_total : 0;
+                      var shipping = response.shipping ? response.shipping : 0;
+                      var total = response.total ? response.total : 0;
+                      jQuery("#shipping").html(shipping);
+                      jQuery("#min_order").html(min_order);
+                      jQuery("#sub_total").html(sub_total);
+                      jQuery("#vat_price").html(vat_price);
+                      jQuery("#total").html(total);
                       jQuery(".currency").html(response.currency);
                       var today = new Date();
                       var expiry_date = new Date(response.expiry_date)
-                      if(response.status  == 'quotation_ready' && expiry_date > today){
+                      if((response.status  == 'quotation_ready' || response.status  == 'quotation_revised') && expiry_date > today){
                           jQuery("#checkout").html('Accept Quotation');
                           jQuery("#checkout").show();
                       }
@@ -259,6 +264,8 @@
                           var status = '<span class="badge" style="background:'+response.settings.quotation_accepted+'">Quotation Accepted</span>';
                       } else if(response.status  == 'quotation_revised'){
                           var status = '<span class="badge" style="background:'+response.settings.quotation_revised+'">Quotation Revised</span>';
+                      } else if(response.status  == 'quotation_cancel'){
+                        var status = '<span class="badge" style="background:'+response.settings.quotation_canceled+'">Quotation Cancelled</span
                       } else if(response.status  == 'quotation_expired' ||  expiry_date < today){
                           var status = '<span class="badge" style="background:'+response.settings.quotation_expired+'">Quotation Expired</span>';
                       }
