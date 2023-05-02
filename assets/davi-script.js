@@ -43,6 +43,21 @@ function nextPrev(n) {
               shouldProceed = true;
             }
             
+        });
+
+        var email = jQuery('input[name="davi_input_email"]');
+
+        jQuery.each(email, function (index,email) {
+            label = $(this).parent().parent().prev().text();
+     
+            var value = $( this ).val();
+            if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)){
+                alert('Please enter valid email address for  Label:('+label+')');
+                shouldProceed = false;
+            }else{
+              shouldProceed = true;
+            }
+            
         })
         // This function will figure out which tab to display
         var x = document.getElementsByClassName("tab");
