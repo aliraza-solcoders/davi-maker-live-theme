@@ -234,6 +234,8 @@
                     var status = '<span class="badge" style="background:'+response.settings.quotation_accepted+'">Quotation Accepted</span>';
                 } else if(response.status  == 'quotation_revised'){
                     var status = '<span class="badge" style="background:'+response.settings.quotation_revised+'">Quotation Revised</span>';
+                } else if(response.status  == 'quotation_cancel'){
+                  var status = '<span class="badge" style="background:'+response.settings.quotation_cancelled+'">Quotation Cancelled</span
                 } else if(response.status  == 'quotation_expired' ||  expiry_date < today){
                     var status = '<span class="badge" style="background:'+response.settings.quotation_expired+'">Quotation Expired</span>';
                 }
