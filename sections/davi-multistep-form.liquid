@@ -897,7 +897,7 @@
                           <option value="{{ product.id | escape}}" data-img="{{ product | img_url: '100x' }}">{{ product.title | escape }}</option>
                       {% endfor %}
                     </select>
-                    <button type="button" class="custom-multiple-dropdown-main"><img/></button>
+                    <button type="button" class="custom-multiple-dropdown-main"><img src="{{ product | img_url: '100x' }}" /> <span>{{ product.title | escape }}</span></button>
                     <ul class="custom-multiple-dropdown-list">
                       {% for product in collections['all'].products %}
                           <li><img src="{{ product | img_url: '100x' }}" /> <span>{{ product.title | escape }}</span></li>
