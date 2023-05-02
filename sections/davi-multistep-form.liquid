@@ -868,7 +868,7 @@
             {% endfor %}
         {% elsif block.settings.davi_field_show == 'step1' and block.settings.davi_field_type == "products" %}
           
-            {% comment %}<div class="custom-multiple-2-dropdown">
+            <div class="custom-multiple-2-dropdown">
            <select name="davi_products" class="custom-multiple-select davi-theme" {% if block.settings.davi_field_show == 'step1'  and block.settings.davi_field_type == "products"  and block.settings.davi_field_required == true %}  required {% endif %} multiple>
             {% for product in collections['all'].products %}
               <option value="{{ product.title | escape }}" data-img="{{ product | img_url: '100x' }}">{{ product.title | escape }}</option>
@@ -889,7 +889,7 @@
                 {% endfor %}
               </ul>
             </div>
-            {% endcomment %}
+            {% comment %}
   
                   <div class="custom-multiple-dropdown">
                     <select name="davi_products" class="custom-multiple-select davi-theme" {% if block.settings.davi_field_show == 'step1'  and block.settings.davi_field_type == "products"  and block.settings.davi_field_required == true %}  required {% endif %}>
@@ -921,6 +921,7 @@
                         </ul>
                   </div>
                   {% endfor %}
+          {% endcomment %}
         {% elsif block.settings.davi_field_show == 'step1' and block.settings.davi_field_type == "address" %}
           <input type="text" class="davi-theme custom-address" name="davi_input_address" placeholder="address"  {% if block.settings.davi_field_show == 'step1' and block.settings.davi_field_type == "address" and block.settings.davi_field_required == true %}  required {% endif %}><br>
           <input type="text" class="davi-theme custom-address" name="davi_input_appartment_no" placeholder="appartment_no"  {% if block.settings.davi_field_show == 'step1' and block.settings.davi_field_type == "address" and block.settings.davi_field_required == true %}  required {% endif %}> <input type="text" {% if block.settings.davi_field_show == 'step1' and block.settings.davi_field_type == "address" and block.settings.davi_field_required == true %}  required {% endif %} class="davi-theme custom-address" name="davi_input_zip_code" placeholder="zip_code" > <input type="text" class="davi-theme custom-address" {% if block.settings.davi_field_show == 'step1' and block.settings.davi_field_type == "address" and block.settings.davi_field_required == true %}  required {% endif %} name="davi_input_state" placeholder="state"  {% if block.settings.davi_field_show == 'step1' and block.settings.davi_field_required == true %}  required {% endif %}>
