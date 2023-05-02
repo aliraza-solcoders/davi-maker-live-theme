@@ -69,6 +69,7 @@
 
                doc.html(filteredHtml, {
                   callback: function(doc) {
+                    console.log("working");
                      doc.save("newpdf.pdf");
                   },
                   x: 15,
