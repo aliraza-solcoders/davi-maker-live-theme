@@ -28,12 +28,13 @@
 <script src="https://cdn.datatables.net/v/dt/dt-1.13.4/datatables.min.js" defer></script>
 <div id="davi_theme" data-shop="{{ shop.domain }}" data-customer_email="{{ customer.email }}">
     {%if customer %}
+      
+      <h3>Customer Information: {{ customer.email }}</h3>
     <div class="loader" style="text-align:center; display:flex; justify-content:center"><img src="https://daviapp.solcoder.com/public/uploads/loader/Loader.gif" width="200" height="200"></div>
         <table id="quotes_table" style="display:none">
             <thead>
                 <th>S. no.</th>
                 <th>Referrence Number</th>
-                <th>Customer Email</th>
                 <th>Form</th>
                 <th>Status</th>
                 <th>Price</th>
@@ -45,6 +46,7 @@
         </table>
     </div>
     <div class="mt-4 mb-4" id="single-quotation">
+      <h3>Customer Information: {{ customer.email }}</h3>
         <div class="container my-4">
             <div class="row bg-light px-5 py-2">
                 <div class="col-md-4">
