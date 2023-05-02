@@ -36,12 +36,15 @@ function nextPrev(n) {
             label = $(this).parent().parent().prev().text();
      
             var value = $( this ).val();
-            if(!/^[0-9]+$/.test(value)){
+            if(value !== ''){
+              if(!/^[0-9]+$/.test(value)){
                 alert('Please enter valid phone number for  Label:('+label+')');
                 shouldProceed = false;
-            }else{
-              shouldProceed = true;
+              }else{
+                shouldProceed = true;
+              }
             }
+            
             
         });
 
@@ -51,12 +54,15 @@ function nextPrev(n) {
             label = $(this).parent().parent().prev().text();
      
             var value = $( this ).val();
-            if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)){
+            if(value !== ''){
+              if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)){
                 alert('Please enter valid email address for  Label:('+label+')');
                 shouldProceed = false;
-            }else{
-              shouldProceed = true;
+              }else{
+                shouldProceed = true;
+              }
             }
+            
             
         })
         // This function will figure out which tab to display
