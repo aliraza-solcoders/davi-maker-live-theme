@@ -26,10 +26,11 @@
 
 <link href="https://cdn.datatables.net/v/dt/dt-1.13.4/datatables.min.css" rel="stylesheet"/>
 <script src="https://cdn.datatables.net/v/dt/dt-1.13.4/datatables.min.js" defer></script>
+<h3 style="text-align:center">Customer Information: {{ customer.email }}</h3>
 <div id="davi_theme" data-shop="{{ shop.domain }}" data-customer_email="{{ customer.email }}">
     {%if customer %}
       
-      <h3>Customer Information: {{ customer.email }}</h3>
+      
     <div class="loader" style="text-align:center; display:flex; justify-content:center"><img src="https://daviapp.solcoder.com/public/uploads/loader/Loader.gif" width="200" height="200"></div>
         <table id="quotes_table" style="display:none">
             <thead>
