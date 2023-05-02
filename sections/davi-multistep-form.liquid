@@ -1548,6 +1548,7 @@
           return response.json();
       })
       .then(function (settings) {
+        console.log(settings);
           jQuery('.loader').hide();
           jQuery( "#form" ).show();
           jQuery( ".date" ).datepicker();
