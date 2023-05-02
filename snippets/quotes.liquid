@@ -21,10 +21,9 @@
 </style>
 {{ 'davi-single-quote.css' | asset_url | stylesheet_tag }}
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js" defer></script>
-{% comment %} <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" defer></script> {% endcomment %}
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.8.0/html2pdf.bundle.min.js" integrity="sha512-w3u9q/DeneCSwUDjhiMNibTRh/1i/gScBVp2imNVAMCt6cUHIw6xzhzcPFIaL3Q1EbI2l+nu17q2aLJJLo4ZYg==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
-{% comment %} <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.0.2/purify.min.js" integrity="sha512-UNx/heftzHGdkzGv6+EfpiDKjQreuyx5TkMMbhajPIhD/vURj+eNQSEnjK0ySGGS8qIR9cYpzYGSZY2LkUK07Q==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script> --> {% endcomment %}
-{% comment %} <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script> {% endcomment %}
+
 <link href="https://cdn.datatables.net/v/dt/dt-1.13.4/datatables.min.css" rel="stylesheet"/>
 <script src="https://cdn.datatables.net/v/dt/dt-1.13.4/datatables.min.js" defer></script>
 <div id="davi_theme" data-shop="{{ shop.domain }}" data-customer_email="{{ customer.email }}">
