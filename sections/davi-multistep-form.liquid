@@ -719,7 +719,7 @@
                 //let inp = e.currentTarget.closest(".custom-form-group").querySelector('[name="davi_input_phone"]');
                 //let inpV = e.currentTarget.closest(".custom-form-group").querySelector(".custom-phone-inp");
                 //inp.value = e.target.dataset.code + ' ' + inpV.value;
-                btn.innerHTML = `${e.target.dataset.code} <em>${e.target.dataset.flag}</em>`;
+                btn.innerHTML = `${e.target.dataset.code} <em class="${e.target.dataset.code}"></em>`;
                 btn.setAttribute("data-code", e.target.dataset.code);
                 btn.classList.remove("custom-open");
             }
@@ -748,17 +748,17 @@
                 });
 
                 button.forEach((item) => {
-                    item.innerHTML = `${res[0].dial_code} <em class="country-flags country-flags--${res[0].flag}"></em>`;
+                    item.innerHTML = `${res[0].dial_code} <em class="country-flags country-flags--${res[0].code}"></em>`;
                     item.setAttribute("data-code", res[0].dial_code)
-                    item.setAttribute("data-flag", res[0].flag)
+                    item.setAttribute("data-flag", res[0].code)
                 })
 
                 res.forEach((item) => {
 
                     const li = document.createElement("li");
-                    li.innerHTML = `${item.dial_code} <em class="country-flags country-flags--${item.flag}"></em>`;
+                    li.innerHTML = `${item.dial_code} <em class="country-flags country-flags--${item.code}"></em>`;
                     li.setAttribute("data-code", item.dial_code);
-                    li.setAttribute("data-flag", item.flag);
+                    li.setAttribute("data-flag", item.code);
                     fragment2.appendChild(li);
 
                 });
