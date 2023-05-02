@@ -321,13 +321,13 @@ function form_submit(){
     davi_input_address['value'] = $( this ).val();
   });
   jQuery( "input[name=davi_input_appartment_no]" ).each(function( index ) { davi_input_appartment_no = {};
-      davi_input_address['value'] += $( this ).val();
+      davi_input_address['value'] += " "+$( this ).val();
   });
   jQuery( "input[name=davi_input_zip_code]" ).each(function( index ) {  davi_input_zip_code = {};
-      davi_input_address['value'] += $( this ).val();
+      davi_input_address['value'] += " "+$( this ).val();
   });
   jQuery( "input[name=davi_input_state]" ).each(function( index ) { davi_input_state = {};
-      davi_input_address['value'] += $( this ).val();
+      davi_input_address['value'] += " "+$( this ).val();
   });
   field_settings.push(davi_input_address);
   var shop = $('#shop').val();
