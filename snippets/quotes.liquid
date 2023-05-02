@@ -19,6 +19,7 @@
   color: blue;
 }
 </style>
+{{ 'davi-single-quote.css' | asset_url | stylesheet_tag }}
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js" defer></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" defer></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.0.2/purify.min.js" integrity="sha512-UNx/heftzHGdkzGv6+EfpiDKjQreuyx5TkMMbhajPIhD/vURj+eNQSEnjK0ySGGS8qIR9cYpzYGSZY2LkUK07Q==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
@@ -43,25 +44,234 @@
 
         </table>
     </div>
-    
+    <div class="mt-4 mb-4" id="single-quotation">
+        <div class="container my-4">
+            <div class="row bg-light px-5 py-2">
+                <div class="col-md-4">
+                    Reference Number: <span id='ref_number'></span> 
+                </div>
+                <div class="col-md-4">
+                    <strong>Quotation Status</strong>: <span id='quotation_status'></span> 
+                </div>
+                <div class="col-md-4 d-flex justify-content-between">
+                    <span class="order_id" style="display:none"><strong>Order ID</strong>: <span id='order_id'></span>  </span>
+                    <span><strong>Total Price</strong>: <span id='total_price'></span> <span class='currency'></span>  </span>
+                    <button class="btn float-right btn-sm" style="display:none" id="checkout">Accept Quotation</button>
+                    <button class="btn float-right btn-sm" style="display:none" id="cancel_quotation">Cancel Quotation</button>
+                </div>
+            </div>
+            <div class="row p-3">
+                {% comment %} <div class="col-md-3">
+                    <h5><i class="fa fa-file-pdf"></i> Download PDF</h5>
+                </div>
+                <div class="col-md-3">
+                    <h5><i class="fa fa-envelope"></i> Share via Email</h5>
+                </div>
+                <div class="col-md-3">
+                    <h5><i class="fa fa-phone"></i> Contact Us</h5>
+                </div> {% endcomment %}
+                <p class="mt-3 expiry_date"><strong>Notice:</strong> This quote expires on <strong id="expiry_date"></strong>.<br/></p>
+                <p><strong>Notice:</strong> If there is more than 10% change in material prices after the quote is provided, it loses its validity. See our policy</p>
+                <div class="col-md-6 bg-light">
+                    <div class="row">
+                        <div class="col-md-12 p-3 quotation_detail"><strong>Quote Details</strong></div>
+                    </div>
+                </div>
+                <div class="col-md-6 p-3">
+                    <div class="row">
+                        <div class="col-md-12 mb-5">
+                            {% comment %} <h5>What are the payment options?</h5>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque velit enim laborum dolor? Corrupti sapiente rerum odit voluptates, iste ipsa recusandae totam perferendis harum nostrum sint, voluptate et quisquam explicabo.</p> {% endcomment %}
+                        </div>
+                        <div class="col-md-12 bg-light mt-5 ">
+                            <div class="row">
+                                <div class="col-md-12 p-3 files"><strong>File Uploaded</strong></div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 bg-light mt-4">
+                    <div class="row">
+                        <div class="col-md-12 p-3"><strong> Services and Prices</strong></div>
+                        <div class="col-md-4 p-3 "><strong> Services</strong></div>
+                        <div class="col-md-4 p-3 text-center"><strong> Quantity</strong></div>
+                        <div class="col-md-4 p-3 text-end service_html"><strong> Price</strong></div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 mt-4 offset-md-6">
+                    <div class="row">
+                        <div class="col-md-6 mb-3 border border-end-0">
+                            <label for="sub_total">Subtotal</label>
+                        </div>
+                        <div class="col-md-6 mb-3 text-end border">
+                            <span id="sub_total" ></span> <span class='currency'></span>
+                        </div>
+                        <div class="col-md-6 mb-3 border border-end-0">
+                            <label for="shipping">Shipping</label>
+                        </div>
+                        <div class="col-md-6 mb-3 text-end border">
+                            <span id="shipping"></span> <span class='currency'></span>
+                        </div>
+                        <div class="col-md-6 mb-3 border border-end-0">
+                            <label for="min_order">Minimum order value surchange</label>
+                        </div>
+                        <div class="col-md-6 mb-3 text-end border">
+                            <span id="min_order"></span> <span class='currency'></span>
+                        </div>
+                        <div class="col-md-6 mb-3 border border-end-0">
+                            <label for="vat_price">VAT </label>
+                        </div>
+                        <div class="col-md-6 text-end border">
+                            <span id="vat_price" ></span> <span class='currency'></span>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="total">Total</label>
+                        </div>
+                        <div class="col-md-6 text-end">
+                            <span id="total" ></span> <span class='currency'></span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
 
 <script>
     setTimeout(function(){
         $(document).ready(function() {
+          jQuery("#single-quotation").hide();
           const { jsPDF } = window.jspdf;
-          
-          // Attach event listener to download buttons
-          $('#quotes_table').on('click', '.downloa_pdf', function() {
+           $('#quotes_table').on('click', '.downloa_pdf', function() {
             // Get the ref_number attribute from the button's parent row
-            const refNumber = $(this).data('ref_number');
+            const ref_number = $(this).data('ref_number');
+            if ( ref_number != null ) {  
+                  var data = {
+                      shop: "{{ shop.domain }}",
+                      ref_number: ref_number,
+                  };
+                  fetch("/apps/sdta/get_single_quote", {
+                      method: "POST",
+                      body: JSON.stringify(data),
+                      headers: {
+                          "Content-Type": "application/json",
+                      },
+                  })
+                  .then(function (response) {
+                      return response.json();
+                  })
+                  .then(function (response) {
+      
+                      var html = "";
+                      var file = "";
+                      const formData = JSON.parse(response.field_settings);
+                      $(formData).each(function( key, value ) {
+                          if(value.type != "file" && value.type != "pdf" && value.type != "files"){
+                              html += '<div class="col-md-6 p-3 border-bottom"><strong>'+value.label+'</strong></div><div class="col-md-6 p-3 border-bottom">'+value.value+'</div>';
+                          }
+                          else{
+                              if(value.type != "files"){
+                                
+                                var extension = value.value.split(".");
+                                var iconsArray = ["pdf", "csv", "docx", "xlsx"];
+                                if(jQuery.inArray(extension[3],iconsArray) != -1){
+                                    var link = "<a href='"+value.value+"' target='_blank'><img src='https://daviapp.solcoder.com/public/images/"+extension[3]+"-icon.png' alt=''></a>";
+                                } else {
+                                    var link = "<a href='"+value.value+"' target='_blank'><img src='https://daviapp.solcoder.com/public/images/unknown-icon.png' alt=''></a>";
+                                }
         
-            // Build the URL with the ref_number parameter
-            const url = `https://davimakers.com/pages/quotation-view?ref_number=${refNumber}`;
+                                file += '<div class="col-md-3 p-3 border-bottom"><strong>'+value.label+'</strong></div><div class="col-md-9 p-3 border-bottom">'+link+'</div>';
+      
+                              }
+                            else{
+                              var filesArray = value.value;
+                              console.log(filesArray.length)
+                                var multiplefiles = '';
+                              $(filesArray).each(function( key, fileValue ) {
+                                console.log(key)
+                                var extension = fileValue.split(".");
+                                var iconsArray = ["pdf", "csv", "docx", "xlsx"];
+                                if(jQuery.inArray(extension[3],iconsArray) != -1){
+                                    multiplefiles += "<a href='"+fileValue+"' target='_blank'><img src='https://daviapp.solcoder.com/public/images/"+extension[3]+"-icon.png' alt=''></a>";
+                                } else {
+                                    multiplefiles += "<a href='"+fileValue+"' target='_blank'><img src='https://daviapp.solcoder.com/public/images/unknown-icon.png' alt=''></a>";
+                                }
+                                
+                                if(key == (filesArray.length-1)){
+                                  file += '<div class="col-md-3 p-3 border-bottom"><strong>'+value.label+'</strong></div><div class="col-md-9 p-3 border-bottom">'+multiplefiles+'</div>';  
+                                }                        
+                              });
+                                
+                            }
+                          }
+                      });
+                      const services = JSON.parse(response.services);
+                      var serviceshtml = "";
+                      $(services).each(function( key, value ) {
+                          
+                          serviceshtml += '<div class="col-md-4 p-3"><strong>'+value.service+'</strong></div><div class="col-md-4 p-3 text-center"><p class="pr-3">'+value.quantity+'</p></div><div class="col-md-4 p-3 text-end"><p class="pr-3">'+value.price+'<span class="currency"></span></p></div>';
+                      });
+                      jQuery(".service_html").after(serviceshtml);
+                      jQuery(".quotation_detail").after(html);
+                      jQuery(".files").after(file);
+                      jQuery("#ref_number").html(response.referrence_number);
+                      jQuery(".expiry_date").hide();
+                      if(response.expiry_date == undefined || response.expiry_date == ''){
+                          jQuery(".expiry_date").hide();
+                      }
+                      else{
+                          jQuery(".expiry_date").show();
+                          jQuery("#expiry_date").html(response.expiry_date);
+                      }
+                      
+                      jQuery("#shipping").html(response.shipping);
+                      jQuery("#min_order").html(response.min_order);
+                      jQuery("#sub_total").html(response.sub_total);
+                      jQuery("#vat_price").html(response.vat_price);
+                      jQuery("#total").html(response.total);
+                      jQuery(".currency").html(response.currency);
+                      var today = new Date();
+                      var expiry_date = new Date(response.expiry_date)
+                      if(response.status  == 'quotation_ready' && expiry_date > today){
+                          jQuery("#checkout").html('Accept Quotation');
+                          jQuery("#checkout").show();
+                      }
+                      if((response.status  == 'pending' || response.status  == 'quotation_ready' || response.status  == 'quotation_revised') && expiry_date > today){
+                          
+                          jQuery("#cancel_quotation").show();   
+                      }
+                      var status ;
+                      if(response.status  == 'pending'){
+                          var status = '<span class="badge" style="background:'+response.settings.quotation_pending+'">Quotation Pending</span>';
+                      } else if(response.status  == 'quotation_ready'){
+                          var status = '<span class="badge" style="background:'+response.settings.quotation_ready+'">Quotation Ready</span>';
+                      } else if(response.status  == 'quotation_accepted'){
+                          var status = '<span class="badge" style="background:'+response.settings.quotation_accepted+'">Quotation Accepted</span>';
+                      } else if(response.status  == 'quotation_revised'){
+                          var status = '<span class="badge" style="background:'+response.settings.quotation_revised+'">Quotation Revised</span>';
+                      } else if(response.status  == 'quotation_expired' ||  expiry_date < today){
+                          var status = '<span class="badge" style="background:'+response.settings.quotation_expired+'">Quotation Expired</span>';
+                      }
+                      jQuery("#quotation_status").html(status);
+                      jQuery("#total_price").html(response.total);
+                      if(response.status  == 'quotation_accepted'){
+                          jQuery(".order_id").show();
+                          jQuery("#order_id").html(response.order_id);
+                      }
+                      
+                      if(response.status  == 'pending'){
+                          jQuery("#total_price").html('----');
+                          jQuery("#total_price").next().html('');
+                      }
+                      jQuery('.loader').hide();
+                      jQuery("#single-quotation").show();
+      
+                  })
+            }
         
-            // Fetch the HTML content from the URL
-            $.get(url, function(data) {
-              // Filter out the content with id "davi_theme"
-              const filteredHtml = $(data).find('#davi_theme').html();
+              const filteredHtml = $('#single-quotation').html();
               console.log(filteredHtml);
               // Create a new jsPDF instance
               const doc = new jsPDF();
@@ -69,13 +279,12 @@
                doc.html(filteredHtml, {
                   callback: function(doc) {
                     
-                     doc.save("newpdf.pdf");
+                     doc.save(ref_number+".pdf");
                   },
                   x: 15,
                   y: 15
                 });   
         
-              
         
               
             });
