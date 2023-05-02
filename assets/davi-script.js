@@ -454,6 +454,7 @@ function form_submit(){
       console.log(field_settings);
         var form_type = $( 'input[name=davi_form_type]' ).val();
         var shop = $('#shop').val();
+        var customer_email = $('#customer_email').val();
         var data = {
           shop: shop,
           form_type: form_type,
