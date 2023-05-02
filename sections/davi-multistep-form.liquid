@@ -913,9 +913,7 @@
                           <option value="{{ variant.title | escape}}" data-img="{{ product | img_url: '100x' }}">{{ variant.title  | escape }}</option>
                       {% endfor %}
                     </select>
-                    <button type="button" class="custom-multiple-dropdown-main">
-                      <div class="custom-multiple-badge-wrapper"></div>
-                    </button>
+                    <button type="button" class="custom-multiple-dropdown-main"><img /> <span></span></button>
                         <ul class="custom-multiple-dropdown-list">
                             {% for variant in product.variants %}
                               <li><img src="{{ variant | img_url: '100x' }}" /> <span>{{ variant.title }}</span></li>
