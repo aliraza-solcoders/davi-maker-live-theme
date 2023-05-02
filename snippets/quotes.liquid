@@ -69,14 +69,7 @@
 
                doc.html(filteredHtml, {
                   callback: function(doc) {
-                     // Generate a data URL for the PDF file
-                      const pdfData = doc.output('dataurl');
-                
-                      // Create a link with the data URL and trigger the download
-                      const link = document.createElement('a');
-                      link.href = pdfData;
-                      link.download = 'quotation.pdf';
-                      link.click();
+                     doc.save("newpdf.pdf");
                   },
                   x: 15,
                   y: 15
