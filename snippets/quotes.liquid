@@ -140,9 +140,10 @@
     </div>
 
 <script>
+    jQuery("#single-quotation").hide();
     setTimeout(function(){
         $(document).ready(function() {
-          jQuery("#single-quotation").hide();
+          
           const { jsPDF } = window.jspdf;
            $('#quotes_table').on('click', '.downloa_pdf', function() {
             // Get the ref_number attribute from the button's parent row
@@ -287,7 +288,7 @@
         
         
               
-            });
+           
           });
         });
 
