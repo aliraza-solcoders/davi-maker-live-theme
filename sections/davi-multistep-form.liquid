@@ -905,7 +905,9 @@
                     </ul>
                   </div>
                   {% for product in collections['all'].products %}
+                    
                   <div class="custom-multiple-dropdown {{ product.id }}" style="display:none">
+                    Select {{ product.title }}} Variants 
                     <select name="davi_products_variants" class="custom-multiple-select davi-theme" {% if block.settings.davi_field_show == 'step1'  and block.settings.davi_field_type == "products"  and block.settings.davi_field_required == true %}  required {% endif %}>
                       {% for variant in product.variants %}
                           <option value="{{ variant.title | escape}}" data-img="{{ product | img_url: '100x' }}">{{ variant.title  | escape }}</option>
@@ -916,7 +918,7 @@
                     </button>
                         <ul class="custom-multiple-dropdown-list">
                             {% for variant in product.variants %}
-                              <li><img src="{{ product | img_url: '100x' }}" /> <span>{{ variant.title }}</span></li>
+                              <li><img src="{{ variant | img_url: '100x' }}" /> <span>{{ variant.title }}</span></li>
                             {% endfor %}
                         </ul>
                   </div>
