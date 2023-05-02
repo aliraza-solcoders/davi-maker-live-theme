@@ -1548,7 +1548,9 @@
           return response.json();
       })
       .then(function (settings) {
-        console.log(settings);
+        $(".custom-steps-circle span").css("font-size", settings.settings.font_size+"px");
+        $("#contactForm").css("background", settings.settings.background_color);
+        console.log(settings.settings.background_color);
           jQuery('.loader').hide();
           jQuery( "#form" ).show();
           jQuery( ".date" ).datepicker();
