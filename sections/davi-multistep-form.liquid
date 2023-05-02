@@ -716,7 +716,7 @@
         item.addEventListener("click", function(e) {
             if (e.target.tagName == 'LI') {
                 let btn = e.currentTarget.closest(".custom-multiple-dropdown").querySelector(".custom-phone-button");
-                btn.innerHTML = `${e.target.dataset.code} <em class="${e.target.dataset.code}"></em>`;
+                btn.innerHTML = `${e.target.dataset.code} <em class="${e.target.dataset.flag}"></em>`;
                 btn.setAttribute("data-code", e.target.dataset.code);
                 btn.classList.remove("custom-open");
             }
