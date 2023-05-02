@@ -872,13 +872,17 @@
               <div class="custom-multiple-dropdown">
                  <select name="davi_products" class="custom-multiple-select davi-theme" {% if block.settings.davi_field_show == 'step1'  and block.settings.davi_field_type == "products"  and block.settings.davi_field_required == true %}  required {% endif %} multiple>
                   {% for product in collections['all'].products %}
-                    <option value="{{ product.title | escape }}" data-img="{{ product | img_url: '100x' }}">{{ product.title | escape }}</option>
+                      {% for variant in product.variants  %}
+                        <option value="{{ product.title | escape }}" data-img="{{ product | img_url: '100x' }}">{{ variant.title | escape }} - {{ product.title | escape }}</option>
+                      {% endfor %}
                   {% endfor %}
                 </select>
-                <button type="button" class="custom-multiple-dropdown-main"><img {{ collections['all'].products[0].image }} /><span></span></button>
+                <button type="button" class="custom-multiple-dropdown-main"><img {{ collections['all'].products[0].image | img_url: '100x' }} /><span></span></button>
                 <ul class="custom-multiple-dropdown-list">
                   {% for product in collections['all'].products %}
-                      <li><img src="{{ product | img_url: '100x' }}" /> <span>{{ product.title | escape }}</span></li>
+                      {% for variant in product.variants  %}
+                          <li><img src="{{ product | img_url: '100x' }}" /> <span>{{ product.title | escape }}</span></li>
+                      {% endfor %}
                   {% endfor %}
                 </ul>
               </div>
