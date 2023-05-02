@@ -716,24 +716,12 @@
         item.addEventListener("click", function(e) {
             if (e.target.tagName == 'LI') {
                 let btn = e.currentTarget.closest(".custom-multiple-dropdown").querySelector(".custom-phone-button");
-                //let inp = e.currentTarget.closest(".custom-form-group").querySelector('[name="davi_input_phone"]');
-                //let inpV = e.currentTarget.closest(".custom-form-group").querySelector(".custom-phone-inp");
-                //inp.value = e.target.dataset.code + ' ' + inpV.value;
                 btn.innerHTML = `${e.target.dataset.code} <em class="${e.target.dataset.code}"></em>`;
                 btn.setAttribute("data-code", e.target.dataset.code);
                 btn.classList.remove("custom-open");
             }
         })
     })
-
-    //document.querySelectorAll(".custom-phone-inp").forEach(function(item) {
-       // item.addEventListener("input", function(e) {
-          //  let inp = e.target.closest(".custom-form-group").querySelector('[name="davi_input_phone"]');
-         //   let btn = e.target.closest(".custom-form-group").querySelector('.custom-phone-button');
-        //    inp.value = btn.dataset.code + ' ' + this.value;
-      //  })
-//    })
-
     fetch('https://gist.githubusercontent.com/DmytroLisitsyn/1c31186e5b66f1d6c52da6b5c70b12ad/raw/2bc71083a77106afec2ec37cf49d05ee54be1a22/country_dial_info.json')
         .then(response => response.json())
         .then(res => {
