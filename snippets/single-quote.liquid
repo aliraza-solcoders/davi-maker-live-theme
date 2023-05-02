@@ -17,7 +17,7 @@
 }
 </style>
 <div id="davi_theme" data-shop="{{ shop.domain }}" data-customer_email="{{ customer.email }}" data-customer_first_name="{{ customer.first_name }}" data-customer_last_name="{{ customer.last_name }}">
-    <div class="mt-4 mb-4" id="single-quotation" style="display:none">
+    <div class="mt-4 mb-4" id="single-quotation">
         <div class="container my-4">
             <div class="row bg-light px-5 py-2">
                 <div class="col-md-4">
@@ -117,6 +117,7 @@
 <script>
   setTimeout(function(){
 
+                jQuery("#single-quotation").hide();
       var url = new URL(location.href);
       var params = new URLSearchParams(url.search);
       var shop = jQuery('#davi_theme').attr('data-shop');
