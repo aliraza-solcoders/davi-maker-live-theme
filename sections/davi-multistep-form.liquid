@@ -1084,7 +1084,7 @@
                       {% for product in collections['all'].products %}
                         {% if product.variants.size > 0 %}
                           {% for variant in product.variants %}
-                            <li><img src="{{ product | img_url: '100x' }}" /> <span>{{ product.title | escape }} - {{ variant.sku }}</span></li>
+                            <li><img src="{{ product | img_url: '100x' }}" /> <span>{{ product.title | escape }} - {{ variant.title }}</span></li>
                           {% endfor %}
                         {% else %}
                           <li><img src="{{ product | img_url: '100x' }}" /> <span>{{ product.title | escape }}</span></li>
