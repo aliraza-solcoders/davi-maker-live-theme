@@ -269,23 +269,27 @@
                       }
                       jQuery('.loader').hide();
                       jQuery("#single-quotation").show();
+
+                      const filteredHtml = $('#single-quotation').html();
+                      console.log(filteredHtml);
+                      // Create a new jsPDF instance
+                      const doc = new jsPDF();
+        
+                       doc.html(filteredHtml, {
+                          callback: function(doc) {
+                            
+                             doc.save(ref_number+".pdf");
+                          },
+                          x: 15,
+                          y: 15
+                        });
+
+                      jQuery("#single-quotation").hide();
       
                   })
             }
         
-              const filteredHtml = $('#single-quotation').html();
-              console.log(filteredHtml);
-              // Create a new jsPDF instance
-              const doc = new jsPDF();
-
-               doc.html(filteredHtml, {
-                  callback: function(doc) {
-                    
-                     doc.save(ref_number+".pdf");
-                  },
-                  x: 15,
-                  y: 15
-                });   
+              
         
         
               
