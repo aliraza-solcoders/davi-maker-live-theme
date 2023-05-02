@@ -1549,8 +1549,10 @@
       })
       .then(function (settings) {
         $(".custom-steps-circle span").css("font-size", settings.settings.font_size+"px");
+        $(".custom-steps-circle span").css("color", settings.settings.heading_color);
         $("#contactForm").css("background", settings.settings.background_color);
-        console.log(settings.settings.background_color);
+        $("#contactForm").css("width", settings.settings.form_width);
+        $("#button.davi-theme").css("background", settings.settings.button_color);
           jQuery('.loader').hide();
           jQuery( "#form" ).show();
           jQuery( ".date" ).datepicker();
