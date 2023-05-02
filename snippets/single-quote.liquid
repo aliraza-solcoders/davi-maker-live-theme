@@ -206,11 +206,14 @@
                 }
                 var min_order = response.min_order ? response.min_order : 0;
                 var vat_price = response.vat_price ? response.vat_price : 0;
-                jQuery("#shipping").html(response.shipping);
+                var sub_total = response.sub_total ? response.sub_total : 0;
+                var shipping = response.shipping ? response.shipping : 0;
+                var total = response.total ? response.total : 0;
+                jQuery("#shipping").html(shipping);
                 jQuery("#min_order").html(min_order);
-                jQuery("#sub_total").html(response.sub_total);
+                jQuery("#sub_total").html(sub_total);
                 jQuery("#vat_price").html(vat_price);
-                jQuery("#total").html(response.total);
+                jQuery("#total").html(total);
                 jQuery(".currency").html(response.currency);
                 var today = new Date();
                 var expiry_date = new Date(response.expiry_date)
