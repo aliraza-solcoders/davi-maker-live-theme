@@ -748,7 +748,7 @@
                 });
 
                 button.forEach((item) => {
-                    item.innerHTML = `${res[0].dial_code} <em>${res[0].flag}</em>`;
+                    item.innerHTML = `${res[0].dial_code} <em class="country-flags country-flags--${res[0].flag}"></em>`;
                     item.setAttribute("data-code", res[0].dial_code)
                     item.setAttribute("data-flag", res[0].flag)
                 })
