@@ -815,7 +815,7 @@
         {% assign dropdown =  block.settings.davi_field_value | split: "," %}
         <select name="davi_dropdown" class="form-control select2 davi-theme" {% if block.settings.davi_field_show == 'step1'  and block.settings.davi_field_type == "dropdown" and block.settings.davi_field_required == true %}  required {% endif %}>
             {% for option in dropdown %}
-              <option>{{ option }}1</option>
+              <option>{{ option }}</option>
             {% endfor %}
           </select>
           {% elsif block.settings.davi_field_show == 'step1' and block.settings.davi_field_type == "multipledropdown" %}
