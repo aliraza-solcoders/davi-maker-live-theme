@@ -423,6 +423,7 @@ function form_submit(){
           shop: shop,
           form_type: form_type,
           field_settings: field_settings,
+          customer_email: customer_email,
         };
         fetch("/apps/sdta/save_form", {
             method: "POST",
