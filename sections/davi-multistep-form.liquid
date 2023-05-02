@@ -880,7 +880,7 @@
                 {% for product in collections['all'].products %}
                   {% if product.variants %}
                     {% for variant in product.variants %}
-                      <li><img src="{{ variant | img_url: '100x' }}" /> <span>{{ product.title | concat: " - " | append : variant.sku | escape }}</span></li>
+                      <li><img src="{{ product | img_url: '100x' }}" /> <span>{{ product.title | concat: " - " | append : variant.sku | escape }}</span></li>
                     {% endfor %}
                   {% else %}
                     <li><img src="{{ product | img_url: '100x' }}" /> <span>{{ product.title | escape }}</span></li>
