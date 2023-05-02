@@ -22,6 +22,7 @@
 {{ 'davi-single-quote.css' | asset_url | stylesheet_tag }}
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js" defer></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.8.0/html2pdf.bundle.min.js" integrity="sha512-w3u9q/DeneCSwUDjhiMNibTRh/1i/gScBVp2imNVAMCt6cUHIw6xzhzcPFIaL3Q1EbI2l+nu17q2aLJJLo4ZYg==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.0.2/purify.min.js" integrity="sha512-UNx/heftzHGdkzGv6+EfpiDKjQreuyx5TkMMbhajPIhD/vURj+eNQSEnjK0ySGGS8qIR9cYpzYGSZY2LkUK07Q==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
 <link href="https://cdn.datatables.net/v/dt/dt-1.13.4/datatables.min.css" rel="stylesheet"/>
@@ -270,19 +271,40 @@
                       jQuery('.loader').hide();
                       jQuery("#single-quotation").show();
 
-                      const filteredHtml = $('#single-quotation').html();
-                      console.log(filteredHtml);
-                      // Create a new jsPDF instance
-                      const doc = new jsPDF();
+                      // const filteredHtml = $('#single-quotation').html();
+                      // console.log(filteredHtml);
+                      // // Create a new jsPDF instance
+                      // const doc = new jsPDF();
         
-                       doc.html(filteredHtml, {
-                          callback: function(doc) {
+                      //  doc.html(filteredHtml, {
+                      //     callback: function(doc) {
                             
-                             doc.save(ref_number+".pdf");
-                          },
-                          x: 15,
-                          y: 15
-                        });
+                      //        doc.save(ref_number+".pdf");
+                      //     },
+                      //     x: 15,
+                      //     y: 15
+                      //   });
+
+                    var element = document.getElementById('single-quotation');
+                   
+                    var opt = {
+                        margin: 0.3,
+                        filename: ref_number+'.pdf',
+                        image: {
+                            type: 'pdf',
+                            quality: 1
+                        },
+                        html2canvas: {
+                            scale: 4,
+                            dpi: 72,
+                            letterRendering: true
+                        },
+                        jsPDF: {
+                            unit: 'in',
+                            format: 'A4'
+                        }
+                    };
+                    html2pdf().set(opt).from(element).save();
 
                       jQuery("#single-quotation").hide();
       
