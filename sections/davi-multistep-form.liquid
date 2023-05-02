@@ -881,7 +881,7 @@
                 <ul class="custom-multiple-dropdown-list">
                   {% for product in collections['all'].products %}
                       {% for variant in product.variants  %}
-                          <li><img src="{{ product | img_url: '100x' }}" /> <span>{{ product.title | escape }}</span></li>
+                          <li><img src="{{ product | img_url: '100x' }}" /> <span>{{ variant.title | escape }} - {{ product.title | escape }}</span></li>
                       {% endfor %}
                   {% endfor %}
                 </ul>
