@@ -334,17 +334,6 @@ function form_submit(){
   var data = {
     shop: shop,
   };
-  fetch("/apps/sdta/get_settings", {
-      method: "POST",
-      body: JSON.stringify(data),
-      headers: {
-          "Content-Type": "application/json",
-      },
-  })
-  .then(function (response) {
-      return response.json();
-  })
-  .then(function (settings) {
     var formData = new FormData();
 
     // for pdf start
@@ -453,5 +442,4 @@ function form_submit(){
       .catch(error => {
         console.error(error);
       });
-  });       
 };
