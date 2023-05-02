@@ -46,8 +46,7 @@
     setTimeout(function(){
         $(document).ready(function() {
           const { jsPDF } = window.jspdf;
-          const doc = new jsPDF();
-          return;
+          
           // Attach event listener to download buttons
           $('#quotes_table').on('click', '.downloa_pdf', function() {
             // Get the ref_number attribute from the button's parent row
