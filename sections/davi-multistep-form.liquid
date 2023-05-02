@@ -1070,7 +1070,7 @@
       
                 {% assign imgs = block.settings.davi_field_image | split: ',' %}
                   <div class="custom-multiple-2-dropdown">
-                <select name="davi_products" class="custom-multiple-select davi-theme" {% if block.settings.davi_field_show == 'step2'  and block.settings.davi_field_type == "products"  and block.settings.davi_field_required == true %}  required {% endif %} multiple>
+                <select name="davi_products" class="custom-multiple-select davi-theme" {% if block.settings.davi_field_show == 'step2'  and block.settings.davi_field_type == "products"  and block.settings.davi_field_required == true %}  required {% endif %}>
                   {% for product in collections['all'].products %}
                      {% if product.variants.size > 0 %}
                           {% for variant in product.variants %}
