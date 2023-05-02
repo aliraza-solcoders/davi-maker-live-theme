@@ -875,10 +875,7 @@
             {% endfor %}
           </select>
               <button type="button" class="custom-multiple-2-dropdown-main">
-                <div class="custom-multiple-2-badge-wrapper">
-                
-                </div>
-                </button>
+                <div class="custom-multiple-2-badge-wrapper"></div></button>
               <ul class="custom-multiple-2-dropdown-list">
                 {% for product in collections['all'].products %}
                   {% if product.variants %}
@@ -900,9 +897,7 @@
                           <option value="{{ product.title | escape}}" data-img="{{ product | img_url: '100x' }}">{{ product.title | escape }}</option>
                       {% endfor %}
                     </select>
-                    <button type="button" class="custom-multiple-2-dropdown-main">
-                      <div class="custom-multiple-2-badge-wrapper"></div>
-                    </button>
+                    <button type="button" class="custom-multiple-2-dropdown-main"><div class="custom-multiple-2-badge-wrapper"></div></button>
                     <ul class="custom-multiple-2-dropdown-list">
                       {% for product in collections['all'].products %}
                           <li><img src="{{ product | img_url: '100x' }}" /> <span>{{ product.title | escape }}</span></li>
@@ -919,7 +914,7 @@
                     <button type="button" class="custom-multiple-2-dropdown-main">
                       <div class="custom-multiple-2-badge-wrapper"></div>
                     </button>
-                        <ul class="custom-multiple-2-dropdown-list {{ product.handle }}" style="display:none">
+                        <ul class="custom-multiple-2-dropdown-list">
                             {% for variant in product.variants %}
                               <li><img src="{{ product | img_url: '100x' }}" /> <span>{{ product.title | escape }} - {{ variant.title }}</span></li>
                             {% endfor %}
