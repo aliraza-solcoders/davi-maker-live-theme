@@ -29,10 +29,24 @@ document.querySelector(".custom-steps-wrapper").setAttribute("data-step", n+1);
 
 
 function nextPrev(n) {
-  console.log(currentTab)
-  // This function will figure out which tab to display
-  var x = document.getElementsByClassName("tab");
-  // Exit the function if any field in the current tab is invalid:
+
+        var phoneNum = jQuery('input[name="davi_input_phone"]');
+
+        jQuery.each(phoneNum, function (index,phone) {
+            label = $(this).parent().parent().prev().text();
+     
+            var value = $( this ).val();
+            if(!/^[0-9]+$/.test(value)){
+                alert('Please enter valid phone number for  Label:('+label+')');
+                shouldProceed = false;
+            }else{
+              shouldProceed = true;
+            }
+            
+        })
+        // This function will figure out which tab to display
+        var x = document.getElementsByClassName("tab");
+        // Exit the function if any field in the current tab is invalid:
         
         const inputPDF = jQuery('input[name="davi_input_pdf"]');
         const labelPDF = inputPDF.parent().prev().text();
