@@ -657,7 +657,8 @@
             let img = e.currentTarget.querySelector("img").getAttribute("src");
             let text = e.currentTarget.querySelector("span").innerText;
             var productid = e.currentTarget.getAttribute("data-productid");
-            console.log(productid)
+            var required = e.currentTarget.closest(".custom-multiple-dropdown").getAttribute("required");
+            console.log(required);
             jQuery('.variant-dropdown').hide();
             jQuery('.'+productid).show();
             let main = e.currentTarget.closest(".custom-multiple-dropdown").querySelector(".custom-multiple-dropdown-main");
@@ -898,6 +899,7 @@
   
                   <div class="custom-multiple-dropdown">
                     <select name="davi_products" class="custom-single-select davi-theme" {% if block.settings.davi_field_show == 'step1'  and block.settings.davi_field_type == "products"  and block.settings.davi_field_required == true %}  required {% endif %}>
+                      <option value="" selected disabled>Please Select</option>
                       {% for product in collections['all'].products %}
                           <option value="{{ product.id | escape}}" data-img="{{ product | img_url: '100x' }}">{{ product.title | escape }}</option>
                       {% endfor %}
