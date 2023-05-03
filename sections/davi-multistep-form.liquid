@@ -868,6 +868,7 @@
               <img src="{{ image }}"  /><br/>
             {% endfor %}
         {% elsif block.settings.davi_field_show == 'step1' and block.settings.davi_field_type == "products" %}
+          {% comment %}    
               <div class="custom-multiple-dropdown">
                  <select name="davi_products" class="custom-single-select davi-theme" {% if block.settings.davi_field_show == 'step1'  and block.settings.davi_field_type == "products"  and block.settings.davi_field_required == true %}  required {% endif %}>
                   {% for product in collections['all'].products %}
@@ -889,10 +890,10 @@
                   {% endfor %}
                 </ul>
               </div>
-            {% comment %}
+            {% endcomment %}
   
                   <div class="custom-multiple-dropdown">
-                    <select name="davi_products" class="custom-multiple-select davi-theme" {% if block.settings.davi_field_show == 'step1'  and block.settings.davi_field_type == "products"  and block.settings.davi_field_required == true %}  required {% endif %}>
+                    <select name="davi_products" class="custom-single-select davi-theme" {% if block.settings.davi_field_show == 'step1'  and block.settings.davi_field_type == "products"  and block.settings.davi_field_required == true %}  required {% endif %}>
                       {% for product in collections['all'].products %}
                           <option value="{{ product.id | escape}}" data-img="{{ product | img_url: '100x' }}">{{ product.title | escape }}</option>
                       {% endfor %}
@@ -908,7 +909,7 @@
                     
                   <div class="custom-multiple-dropdown {{ product.id }}" style="display:none">
                     Select {{ product.title }} Variants 
-                    <select name="davi_products_variants" class="custom-multiple-select davi-theme" {% if block.settings.davi_field_show == 'step1'  and block.settings.davi_field_type == "products"  and block.settings.davi_field_required == true %}  required {% endif %}>
+                    <select name="davi_products_variants" class="custom-single-select davi-theme" {% if block.settings.davi_field_show == 'step1'  and block.settings.davi_field_type == "products"  and block.settings.davi_field_required == true %}  required {% endif %}>
                       {% for variant in product.variants %}
                           <option value="{{ variant.title | escape}}" data-img="{{ product | img_url: '100x' }}">{{ variant.title  | escape }}</option>
                       {% endfor %}
@@ -921,7 +922,6 @@
                         </ul>
                   </div>
                   {% endfor %}
-          {% endcomment %}
         {% elsif block.settings.davi_field_show == 'step1' and block.settings.davi_field_type == "address" %}
           <input type="text" class="davi-theme custom-address" name="davi_input_address" placeholder="address"  {% if block.settings.davi_field_show == 'step1' and block.settings.davi_field_type == "address" and block.settings.davi_field_required == true %}  required {% endif %}><br>
           <input type="text" class="davi-theme custom-address" name="davi_input_appartment_no" placeholder="appartment_no"  {% if block.settings.davi_field_show == 'step1' and block.settings.davi_field_type == "address" and block.settings.davi_field_required == true %}  required {% endif %}> <input type="text" {% if block.settings.davi_field_show == 'step1' and block.settings.davi_field_type == "address" and block.settings.davi_field_required == true %}  required {% endif %} class="davi-theme custom-address" name="davi_input_zip_code" placeholder="zip_code" > <input type="text" class="davi-theme custom-address" {% if block.settings.davi_field_show == 'step1' and block.settings.davi_field_type == "address" and block.settings.davi_field_required == true %}  required {% endif %} name="davi_input_state" placeholder="state"  {% if block.settings.davi_field_show == 'step1' and block.settings.davi_field_required == true %}  required {% endif %}>
