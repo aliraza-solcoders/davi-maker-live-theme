@@ -923,7 +923,6 @@
                     </ul>
                   </div>
                   {% for product in collections['all'].products %}
-                    
                   <div class="custom-multiple-dropdown variant-dropdown {{ product.id }}" style="display:none">
                     Select {{ product.title }} Variants 
                     <select name="davi_products_variants" class="custom-single-select davi-theme" >
@@ -1091,39 +1090,38 @@
                   {% endfor %}                  
               {% elsif block.settings.davi_field_show == 'step2' and block.settings.davi_field_type == "products" %}      
                 
-                  <div class="custom-multiple-2-dropdown">
-                    <select name="davi_products" class="custom-multiple-select davi-theme" {% if block.settings.davi_field_show == 'step2'  and block.settings.davi_field_type == "products"  and block.settings.davi_field_required == true %}  required {% endif %}>
+  
+                  <div class="custom-multiple-dropdown">
+                    <select name="davi_products" class="custom-single-select davi-theme" {% if block.settings.davi_field_show == 'step2'  and block.settings.davi_field_type == "products"  and block.settings.davi_field_required == true %}  required {% endif %}>
+                      <option value="" selected disabled>Please Select</option>
                       {% for product in collections['all'].products %}
-                          <option value="{{ product.title | escape}}" data-img="{{ product | img_url: '100x' }}">{{ product.title | escape }}</option>
+                          <option value="{{ product.id | escape}}" data-img="{{ product | img_url: '100x' }}">{{ product.title | escape }}</option>
                       {% endfor %}
                     </select>
-                    <button type="button" class="custom-multiple-2-dropdown-main">
-                      <div class="custom-multiple-2-badge-wrapper"></div>
-                    </button>
-                    <ul class="custom-multiple-2-dropdown-list">
+                    <button type="button" class="custom-multiple-dropdown-main"><img src="{{ product | img_url: '100x' }}" /> <span>{{ product.title | escape }}</span></button>
+                    <ul class="custom-multiple-dropdown-list">
                       {% for product in collections['all'].products %}
-                          <li><img src="{{ product | img_url: '100x' }}" /> <span>{{ product.title | escape }}</span></li>
+                          <li data-productid="{{ product.id }}"  {% if block.settings.davi_field_show == 'step2'  and block.settings.davi_field_type == "products"  and block.settings.davi_field_required == true %}  required {% endif %}><img src="{{ product | img_url: '100x' }}" /> <span>{{ product.title | escape }}</span></li>
                       {% endfor %}
                     </ul>
                   </div>
-      
-                  <div class="custom-multiple-2-dropdown">
-                    <select name="davi_products" class="custom-multiple-select davi-theme" {% if block.settings.davi_field_show == 'step2'  and block.settings.davi_field_type == "products"  and block.settings.davi_field_required == true %}  required {% endif %}>
-                      {% for product in collections['all'].products %}
-                          <option value="{{ product.title | escape}}" data-img="{{ product | img_url: '100x' }}">{{ product.title | escape }}</option>
+                  {% for product in collections['all'].products %}
+                  <div class="custom-multiple-dropdown variant-dropdown {{ product.id }}" style="display:none">
+                    Select {{ product.title }} Variants 
+                    <select name="davi_products_variants" class="custom-single-select davi-theme" >
+                      <option value="" selected disabled>Please Select</option>  
+                      {% for variant in product.variants %}
+                          <option value="{{ variant.title | escape}} - {{ product.title | escape}}" data-img="{{ product | img_url: '100x' }}">{{ variant.title  | escape }}</option>
                       {% endfor %}
                     </select>
-                    <button type="button" class="custom-multiple-2-dropdown-main">
-                      <div class="custom-multiple-2-badge-wrapper"></div>
-                    </button>
-                    <ul class="custom-multiple-2-dropdown-list">
-                      {% for product in collections['all'].products %}
-                          {% for variant in product.variants %}
-                            <li><img src="{{ product | img_url: '100x' }}" /> <span>{{ product.title | escape }} - {{ variant.title }}</span></li>
-                          {% endfor %}
-                      {% endfor %}
-                    </ul>
+                    <button type="button" class="custom-multiple-dropdown-main"><img src="{{ product | img_url: '100x' }}" /> <span>Please Select</span></button>
+                        <ul class="custom-multiple-dropdown-list">
+                            {% for variant in product.variants %}
+                              <li><img src="{{ variant | img_url: '100x' }}" /> <span>{{ variant.title }}</span></li>
+                            {% endfor %}
+                        </ul>
                   </div>
+                  {% endfor %}
             {% elsif block.settings.davi_field_show == 'step2' and block.settings.davi_field_type == "address" %}
               <input type="text" class="davi-theme custom-address" name="davi_input_address" placeholder="address"  {% if block.settings.davi_field_show == 'step2' and block.settings.davi_field_type == "address" and block.settings.davi_field_required == true %}  required {% endif %}>
               <input type="text" class="davi-theme custom-address" name="davi_input_appartment_no" placeholder="appartment_no"  {% if block.settings.davi_field_show == 'step2' and block.settings.davi_field_type == "address" and block.settings.davi_field_required == true %}  required {% endif %}>
@@ -1280,7 +1278,7 @@
                   <option title="{{ product.sku }}">{{ product.title }}</option>
               {% endfor %}
             </select> {% endcomment %}
-  
+   {% comment %}
              {% assign imgs = block.settings.davi_field_image | split: ',' %}
               <div class="custom-multiple-2-dropdown">
              <select name="davi_products" class="custom-multiple-select davi-theme" {% if block.settings.davi_field_show == 'step3'  and block.settings.davi_field_type == "products"  and block.settings.davi_field_required == true %}  required {% endif %} multiple>
@@ -1299,8 +1297,40 @@
                   {% endfor %}
                 </ul>
               </div>
-  
+   {% endcomment %}
 
+  
+                  <div class="custom-multiple-dropdown">
+                    <select name="davi_products" class="custom-single-select davi-theme" {% if block.settings.davi_field_show == 'step3'  and block.settings.davi_field_type == "products"  and block.settings.davi_field_required == true %}  required {% endif %}>
+                      <option value="" selected disabled>Please Select</option>
+                      {% for product in collections['all'].products %}
+                          <option value="{{ product.id | escape}}" data-img="{{ product | img_url: '100x' }}">{{ product.title | escape }}</option>
+                      {% endfor %}
+                    </select>
+                    <button type="button" class="custom-multiple-dropdown-main"><img src="{{ product | img_url: '100x' }}" /> <span>{{ product.title | escape }}</span></button>
+                    <ul class="custom-multiple-dropdown-list">
+                      {% for product in collections['all'].products %}
+                          <li data-productid="{{ product.id }}"  {% if block.settings.davi_field_show == 'step3'  and block.settings.davi_field_type == "products"  and block.settings.davi_field_required == true %}  required {% endif %}><img src="{{ product | img_url: '100x' }}" /> <span>{{ product.title | escape }}</span></li>
+                      {% endfor %}
+                    </ul>
+                  </div>
+                  {% for product in collections['all'].products %}
+                  <div class="custom-multiple-dropdown variant-dropdown {{ product.id }}" style="display:none">
+                    Select {{ product.title }} Variants 
+                    <select name="davi_products_variants" class="custom-single-select davi-theme" >
+                      <option value="" selected disabled>Please Select</option>  
+                      {% for variant in product.variants %}
+                          <option value="{{ variant.title | escape}} - {{ product.title | escape}}" data-img="{{ product | img_url: '100x' }}">{{ variant.title  | escape }}</option>
+                      {% endfor %}
+                    </select>
+                    <button type="button" class="custom-multiple-dropdown-main"><img src="{{ product | img_url: '100x' }}" /> <span>Please Select</span></button>
+                        <ul class="custom-multiple-dropdown-list">
+                            {% for variant in product.variants %}
+                              <li><img src="{{ variant | img_url: '100x' }}" /> <span>{{ variant.title }}</span></li>
+                            {% endfor %}
+                        </ul>
+                  </div>
+                  {% endfor %}
   
         {% elsif block.settings.davi_field_show == 'step3' and block.settings.davi_field_type == "address" %}
           <input type="text" class="davi-theme custom-address" name="davi_input_address" placeholder="address"  {% if block.settings.davi_field_show == 'step3' and block.settings.davi_field_type == "address" and block.settings.davi_field_required == true %}  required {% endif %}><br>
