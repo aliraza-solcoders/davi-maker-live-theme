@@ -659,7 +659,7 @@
             if(e.currentTarget.hasAttribute("data-productid")){
             
               var productid = e.currentTarget.getAttribute("data-productid");
-              var required = e.currentTarget.closest(".custom-multiple-dropdown").find('select').getAttribute("required");
+              var required = e.currentTarget.hasAttribute("required");
               console.log(required)
               jQuery('.variant-dropdown').hide();
               jQuery('.variant-dropdown select').removeAttr('required');
@@ -918,7 +918,7 @@
                     <button type="button" class="custom-multiple-dropdown-main"><img src="{{ product | img_url: '100x' }}" /> <span>{{ product.title | escape }}</span></button>
                     <ul class="custom-multiple-dropdown-list">
                       {% for product in collections['all'].products %}
-                          <li data-productid="{{ product.id }}"><img src="{{ product | img_url: '100x' }}" /> <span>{{ product.title | escape }}</span></li>
+                          <li data-productid="{{ product.id }}"  {% if block.settings.davi_field_show == 'step1'  and block.settings.davi_field_type == "products"  and block.settings.davi_field_required == true %}  required {% endif %}><img src="{{ product | img_url: '100x' }}" /> <span>{{ product.title | escape }}</span></li>
                       {% endfor %}
                     </ul>
                   </div>
