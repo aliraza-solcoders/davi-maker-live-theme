@@ -659,7 +659,7 @@
             if(e.currentTarget.hasAttribute("data-productid")){
             
               var productid = e.currentTarget.getAttribute("data-productid");
-              var required = e.currentTarget.closest(".custom-multiple-dropdown").getAttribute("required");
+              var required = e.currentTarget.closest(".custom-multiple-dropdown select").getAttribute("required");
               console.log(required)
               jQuery('.variant-dropdown').hide();
               jQuery('.variant-dropdown select').removeAttr('required');
