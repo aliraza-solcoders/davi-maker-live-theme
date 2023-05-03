@@ -237,7 +237,7 @@ function validateForm() {
       // If a field is empty...
       
       if (select[i].hasAttribute('required')) {
-        if (select[i].value == "" && select[i].is(':visible')) {
+        if (select[i].value == "") {
           // add an "invalid" class to the field:
           select[i].className += " invalid";
           // and set the current valid status to false
