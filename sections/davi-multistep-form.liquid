@@ -656,6 +656,8 @@
         item.addEventListener("click", function(e) {
             let img = e.currentTarget.querySelector("img").getAttribute("src");
             let text = e.currentTarget.querySelector("span").innerText;
+            console.log(img)
+            console.log(text)
             let main = e.currentTarget.closest(".custom-multiple-dropdown").querySelector(".custom-multiple-dropdown-main");
             main.querySelector("img").setAttribute("src", img);
             main.querySelector("span").innerText = text;
