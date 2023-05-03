@@ -909,7 +909,7 @@
                   </div>
                   {% for product in collections['all'].products %}
                     
-                  <div class="custom-multiple-dropdown {{ product.id }}" style="display:none">
+                  <div class="custom-multiple-dropdown variant-dropdown {{ product.id }}" style="display:none">
                     Select {{ product.title }} Variants 
                     <select name="davi_products_variants" class="custom-single-select davi-theme" {% if block.settings.davi_field_show == 'step1'  and block.settings.davi_field_type == "products"  and block.settings.davi_field_required == true %}  required {% endif %}>
                       {% for variant in product.variants %}
