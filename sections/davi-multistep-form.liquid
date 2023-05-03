@@ -656,7 +656,7 @@
         item.addEventListener("click", function(e) {
             let img = e.currentTarget.querySelector("img").getAttribute("src");
             let text = e.currentTarget.querySelector("span").innerText;
-            var productid = e.currentTarget..getAttribute("data-productid");
+            var productid = e.currentTarget.getAttribute("data-productid");
             console.log(productid)
             jQuery('.variant-dropdown').hide();
             jQuery('.'+productid).show();
