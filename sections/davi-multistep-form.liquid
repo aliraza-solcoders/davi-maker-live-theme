@@ -911,7 +911,7 @@
                     Select {{ product.title }} Variants 
                     <select name="davi_products_variants" class="custom-single-select davi-theme" {% if block.settings.davi_field_show == 'step1'  and block.settings.davi_field_type == "products"  and block.settings.davi_field_required == true %}  required {% endif %}>
                       {% for variant in product.variants %}
-                          <option value="{{ variant.title | escape}}" data-img="{{ product | img_url: '100x' }}">{{ variant.title  | escape }}</option>
+                          <option value="{{ variant.title | escape}} - {{ product.title | escape}}" data-img="{{ product | img_url: '100x' }}">{{ variant.title  | escape }}</option>
                       {% endfor %}
                     </select>
                     <button type="button" class="custom-multiple-dropdown-main"><img /> <span></span></button>
