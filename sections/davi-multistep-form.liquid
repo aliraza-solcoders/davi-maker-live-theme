@@ -662,6 +662,7 @@
               var required = e.currentTarget.closest(".custom-multiple-dropdown").getAttribute("required");
               console.log(required)
               jQuery('.variant-dropdown').hide();
+              jQuery('.variant-dropdown select').removeAttr('required');
               jQuery('.'+productid).show();
               if(required){
               
