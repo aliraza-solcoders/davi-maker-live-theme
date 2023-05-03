@@ -903,7 +903,7 @@
                     <button type="button" class="custom-multiple-dropdown-main"><img src="{{ product | img_url: '100x' }}" /> <span>{{ product.title | escape }}</span></button>
                     <ul class="custom-multiple-dropdown-list">
                       {% for product in collections['all'].products %}
-                          <li><img src="{{ product | img_url: '100x' }}" /> <span>{{ product.title | escape }}</span></li>
+                          <li data-productid="{{ product.id }}"><img src="{{ product | img_url: '100x' }}" /> <span>{{ product.title | escape }}</span></li>
                       {% endfor %}
                     </ul>
                   </div>
