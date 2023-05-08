@@ -249,18 +249,31 @@
                           jQuery("#cancel_quotation").show();   
                       }
                       var status ;
+                      // if(response.status  == 'pending'){
+                      //     var status = '<span class="badge" style="background:'+response.settings.quotation_pending+'">Quotation Pending</span>';
+                      // } else if(response.status  == 'quotation_ready'){
+                      //     var status = '<span class="badge" style="background:'+response.settings.quotation_ready+'">Quotation Ready</span>';
+                      // } else if(response.status  == 'quotation_accepted'){
+                      //     var status = '<span class="badge" style="background:'+response.settings.quotation_accepted+'">Quotation Accepted</span>';
+                      // } else if(response.status  == 'quotation_revised'){
+                      //     var status = '<span class="badge" style="background:'+response.settings.quotation_revised+'">Quotation Revised</span>';
+                      // } else if(response.status  == 'quotation_cancel'){
+                      //   var status = '<span class="badge" style="background:'+response.settings.quotation_canceled+'">Quotation Cancelled</span>';
+                      // } else if(response.status  == 'quotation_expired' ||  expiry_date < today){
+                      //     var status = '<span class="badge" style="background:'+response.settings.quotation_expired+'">Quotation Expired</span>';
+                      // }
                       if(response.status  == 'pending'){
-                          var status = '<span class="badge" style="background:'+response.settings.quotation_pending+'">Quotation Pending</span>';
+                          var status = '<span>Quotation Pending</span>';
                       } else if(response.status  == 'quotation_ready'){
-                          var status = '<span class="badge" style="background:'+response.settings.quotation_ready+'">Quotation Ready</span>';
+                          var status = '<span>Quotation Ready</span>';
                       } else if(response.status  == 'quotation_accepted'){
-                          var status = '<span class="badge" style="background:'+response.settings.quotation_accepted+'">Quotation Accepted</span>';
+                          var status = '<span>Quotation Accepted</span>';
                       } else if(response.status  == 'quotation_revised'){
-                          var status = '<span class="badge" style="background:'+response.settings.quotation_revised+'">Quotation Revised</span>';
+                          var status = '<span>Quotation Revised</span>';
                       } else if(response.status  == 'quotation_cancel'){
-                        var status = '<span class="badge" style="background:'+response.settings.quotation_canceled+'">Quotation Cancelled</span>';
+                        var status = '<span>Quotation Cancelled</span>';
                       } else if(response.status  == 'quotation_expired' ||  expiry_date < today){
-                          var status = '<span class="badge" style="background:'+response.settings.quotation_expired+'">Quotation Expired</span>';
+                          var status = '<span>Quotation Expired</span>';
                       }
                       jQuery("#quotation_status").html(status);
                       jQuery("#total_price").html(response.total);
