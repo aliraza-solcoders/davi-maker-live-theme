@@ -823,7 +823,7 @@
           <input type="text" class="davi-theme date" name="davi_input_date" class="date" {% if block.settings.davi_field_show == 'step1'  and block.settings.davi_field_type == "date" and block.settings.davi_field_required == true %}  required {% endif %}>
         {% elsif block.settings.davi_field_show == 'step1' and block.settings.davi_field_type == "dropdown" %}
         {% assign dropdown =  block.settings.davi_field_value | split: "," %}
-        <select name="davi_dropdown" class="form-control select select--native davi-theme" {% if block.settings.davi_field_show == 'step1'  and block.settings.davi_field_type == "dropdown" and block.settings.davi_field_required == true %}  required {% endif %}>
+        <select name="davi_dropdown" class="form-control select select--native" {% if block.settings.davi_field_show == 'step1'  and block.settings.davi_field_type == "dropdown" and block.settings.davi_field_required == true %}  required {% endif %}>
             {% for option in dropdown %}
               <option>{{ option }}</option>
             {% endfor %}
@@ -1027,7 +1027,7 @@
               <input type="text" class="davi-theme date" name="davi_input_date" class="date" {% if block.settings.davi_field_show == 'step2'  and block.settings.davi_field_type == "date" and block.settings.davi_field_required == true %}  required {% endif %}>
               {% elsif block.settings.davi_field_show == 'step2' and block.settings.davi_field_type == "dropdown" %}
               {% assign dropdown =  block.settings.davi_field_value | split: "," %}
-              <select name="davi_dropdown" class="form-control select select--native davi-theme" {% if block.settings.davi_field_show == 'step2'  and block.settings.davi_field_type == "dropdown" and block.settings.davi_field_required == true %}  required {% endif %}>
+              <select name="davi_dropdown" class="form-control select select--native" {% if block.settings.davi_field_show == 'step2'  and block.settings.davi_field_type == "dropdown" and block.settings.davi_field_required == true %}  required {% endif %}>
                   {% for option in dropdown %}
                     <option>{{ option }}</option>
                   {% endfor %}
@@ -1211,7 +1211,7 @@
           <input type="text" class="davi-theme date" name="davi_input_date" class="date" {% if block.settings.davi_field_show == 'step3'  and block.settings.davi_field_type == "date" and block.settings.davi_field_required == true %}  required {% endif %}>
           {% elsif block.settings.davi_field_show == 'step3' and block.settings.davi_field_type == "dropdown" %}
           {% assign dropdown =  block.settings.davi_field_value | split: "," %}
-          <select name="davi_dropdown" class="form-control select select--native davi-theme" {% if block.settings.davi_field_show == 'step3'  and block.settings.davi_field_type == "dropdown" and block.settings.davi_field_required == true %}  required {% endif %}>
+          <select name="davi_dropdown" class="form-control select select--native" {% if block.settings.davi_field_show == 'step3'  and block.settings.davi_field_type == "dropdown" and block.settings.davi_field_required == true %}  required {% endif %}>
               {% for option in dropdown %}
                 <option>{{ option }}</option>
               {% endfor %}
