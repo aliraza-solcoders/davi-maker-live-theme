@@ -16,6 +16,7 @@
   color: blue;
 }
 </style>
+{%if customer %}
 <div id="davi_theme" data-shop="{{ shop.domain }}" data-customer_email="{{ customer.email }}" data-customer_first_name="{{ customer.first_name }}" data-customer_last_name="{{ customer.last_name }}">
     <div class="mt-4 mb-4" id="single-quotation"style="display:none">
       <h3>Customer Information: {{ customer.email }}</h3>
@@ -114,6 +115,12 @@
     </div>
 </div>
 
+{% else %}     
+<script>
+  
+          window.location = 'https://'+window.location.host+'/account';
+</script>
+{% endif %}
 <div class="loader" style="display:flex; justify-content:center"><img src="https://daviapp.solcoder.com/public/uploads/loader/Loader.gif" width="200" height="200"></div>
 <script>
   setTimeout(function(){
