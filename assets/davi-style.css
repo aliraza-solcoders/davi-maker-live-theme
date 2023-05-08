@@ -49,7 +49,7 @@ select.davi-theme{
     justify-content: center;
     min-width: 200px;
         margin: 10px;
-    border-radius: 5px;
+    /*border-radius: 5px;*/
   }
   
   button.davi-theme:hover {
