@@ -145,7 +145,7 @@
 <script>
     
     setTimeout(function(){
-      jQuery("#single-quotation").show();
+      jQuery("#single-quotation").hide();
         $(document).ready(function() {
           
          
@@ -281,7 +281,7 @@
                           jQuery("#total_price").next().html('');
                       }
                       jQuery('.loader').hide();
-                      jQuery("#single-quotation").toggle();
+                      jQuery("#single-quotation").show();
                       var element = document.getElementById('single-quotation');
                       var opt = {
                           margin: 0.3,
@@ -300,9 +300,9 @@
                               format: 'A4'
                           }
                       };
-                      html2pdf(element, opt);
-
-                      jQuery("#single-quotation").hide();
+                      //html2pdf(element, opt);
+                      
+                      //jQuery("#single-quotation").hide();
             
                       jQuery('.loader').hide();
                       jQuery("#quotes_table").show();
