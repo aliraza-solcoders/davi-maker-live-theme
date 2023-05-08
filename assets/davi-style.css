@@ -1,6 +1,8 @@
 
 
-
+:is(.input,.textarea):focus~.floating-label, :is(.input,.textarea):not(:placeholder-shown)~.floating-label, :is(.input,.textarea,.select):-webkit-autofill~.floating-label, .select:valid~.floating-label {
+    transform: scale(.65) translateY(calc(-1 * var(--spacing-4)));
+}
 
 .select2-container{
   width: 100% !important;
@@ -10,7 +12,7 @@ select.davi-theme{
 }
 
 #contactForm {
-    background-color: #ffffff;
+    /*background-color: #ffffff;*/
     margin: 100px auto;
     padding: 0;
     width: 70%;
