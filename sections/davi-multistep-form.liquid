@@ -4,13 +4,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
 {{ 'davi-style.css' | asset_url | stylesheet_tag }}
 <style>
-  .davi-customize {
-    font-family: 'Inter', sans-serif;
-  }
-  
-  .davi-customize * {
-    font-family: 'Inter', sans-serif;
-  }
   
   .custom-flex-wrapper {
     display: flex;
@@ -830,7 +823,7 @@
           <input type="text" class="davi-theme date" name="davi_input_date" class="date" {% if block.settings.davi_field_show == 'step1'  and block.settings.davi_field_type == "date" and block.settings.davi_field_required == true %}  required {% endif %}>
         {% elsif block.settings.davi_field_show == 'step1' and block.settings.davi_field_type == "dropdown" %}
         {% assign dropdown =  block.settings.davi_field_value | split: "," %}
-        <select name="davi_dropdown" class="form-control select2 davi-theme" {% if block.settings.davi_field_show == 'step1'  and block.settings.davi_field_type == "dropdown" and block.settings.davi_field_required == true %}  required {% endif %}>
+        <select name="davi_dropdown" class="form-control davi-theme" {% if block.settings.davi_field_show == 'step1'  and block.settings.davi_field_type == "dropdown" and block.settings.davi_field_required == true %}  required {% endif %}>
             {% for option in dropdown %}
               <option>{{ option }}</option>
             {% endfor %}
