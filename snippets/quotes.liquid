@@ -14,7 +14,9 @@
     .bg-success{
         background-color: #198754 !important;
     }
-  
+  #form_type{
+    font-size:32px !important;
+  }
 #customer_login_link{
   color: blue;
 }
@@ -47,27 +49,21 @@
         </table>
     </div>
     <div class="mt-4 mb-4" id="single-quotation" style="display:none">
-      <h3>Customer Information: {{ customer.email }}</h3>
         <div class="container my-4">
             <h1 id="form_type">Invoice</h1>
             <div class="row bg-light px-5 py-2">
                 <div class="col-md-4">
-                    <strong>Reference Number</strong> <br><span id='ref_number'></span> <br>
+                    <strong>Reference Number</strong> <br><span id='ref_number'></span>
+                </div>
+                <div class="col-md-4">
                     <strong>Quotation Status</strong> <br><span id='quotation_status'></span>
-                    <span><strong>Total Price</strong><br> <span id='total_price'></span> <span class='currency'></span></span><br>
+                </div>
+                <div class="col-md-4">
+                    <span><strong>Total Price</strong><br> <span id='total_price'></span> <span class='currency'></span></span>
                     <span class="order_id" style="display:none"><strong>Order ID</strong> <span id='order_id'></span></span>
                 </div>
             </div>
-            <div class="row p-3">
-                {% comment %} <div class="col-md-3">
-                    <h5><i class="fa fa-file-pdf"></i> Download PDF</h5>
-                </div>
-                <div class="col-md-3">
-                    <h5><i class="fa fa-envelope"></i> Share via Email</h5>
-                </div>
-                <div class="col-md-3">
-                    <h5><i class="fa fa-phone"></i> Contact Us</h5>
-                </div> {% endcomment %}
+            <div class="row p-3 mt-3">
                 <p class="mt-3 expiry_date"><strong>Notice:</strong> This quote expires on <strong id="expiry_date"></strong>.<br/></p>
                 <p><strong>Notice:</strong> If there is more than 10% change in material prices after the quote is provided, it loses its validity. See our policy</p>
                 <div class="col-md-6 bg-light">
