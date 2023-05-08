@@ -357,6 +357,9 @@
         })
     }, 2000);
 </script>
-{% else %}
-    <p>To see list of Quotes, Please {{ 'Login' | customer_login_link }}  now and visit here again.</p>
+{% else %}     
+<script>
+  
+          window.location = 'https://'+window.location.host+'/account';
+</script>
 {% endif %}
