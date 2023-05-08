@@ -25,6 +25,7 @@ select.davi-theme{
     width: 100%;
     font-size: 17px;
     border: 1px solid #aaaaaa;
+    background-color: transparent;
   }
   
   /* Mark input boxes that gets an error on validation: */
