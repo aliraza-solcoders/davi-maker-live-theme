@@ -144,12 +144,13 @@
         $(document).ready(function() {
           
          
-           $('#quotes_table').on('click', '.download_pdf', function() {
+           //$('#quotes_table').on('click', '.download_pdf', function() {
       
               jQuery('.loader').show();
               jQuery("#quotes_table").hide();
             // Get the ref_number attribute from the button's parent row
-            const ref_number = $(this).data('ref_number');
+            // const ref_number = $(this).data('ref_number');
+            const ref_number = 'DMR9V6RDUL';
             if ( ref_number != null ) {  
                   var data = {
                       shop: "{{ shop.domain }}",
@@ -309,7 +310,7 @@
         
               
            
-          });
+          //});
         });
 
         console.log(jQuery('#davi_theme').attr('data-customer_email'));
