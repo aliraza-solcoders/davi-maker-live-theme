@@ -1,1 +1,55 @@
-{"sections":{"main":{"type":"main-page","disabled":true,"settings":{}},"contact":{"type":"contact","settings":{}}},"order":["main","contact"]}
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "content_width": "80ch"
+      }
+    },
+    "contact": {
+      "type": "contact",
+      "blocks": {
+        "96126002-08eb-4f41-ba8c-a7ed3645f322": {
+          "type": "text",
+          "settings": {
+            "title": "Custom field",
+            "use_long_text": false
+          }
+        },
+        "3690a113-c46d-4c6c-82c2-81427ca565f4": {
+          "type": "dropdown",
+          "settings": {
+            "title": "Custom field",
+            "values": "value 1, value 2, value 3"
+          }
+        }
+      },
+      "block_order": [
+        "96126002-08eb-4f41-ba8c-a7ed3645f322",
+        "3690a113-c46d-4c6c-82c2-81427ca565f4"
+      ],
+      "settings": {
+        "full_width": true,
+        "subheading": "Contact Us",
+        "title": "Do you have any question?",
+        "content": "",
+        "text_position": "start",
+        "contact_form_size": "large",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": "",
+        "contact_background": "",
+        "contact_text_color": "",
+        "button_background": "",
+        "button_text_color": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "contact"
+  ]
+}
