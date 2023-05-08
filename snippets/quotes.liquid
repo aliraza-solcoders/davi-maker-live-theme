@@ -49,16 +49,17 @@
     <div class="mt-4 mb-4" id="single-quotation" style="display:none">
       <h3>Customer Information: {{ customer.email }}</h3>
         <div class="container my-4">
+            <h1 id="form_type">Invoice</h1>
             <div class="row bg-light px-5 py-2">
                 <div class="col-md-4">
-                    Reference Number: <span id='ref_number'></span> 
+                    Reference Number <br><span id='ref_number'></span> 
                 </div>
                 <div class="col-md-4">
-                    <strong>Quotation Status</strong>: <span id='quotation_status'></span> 
+                    <strong>Quotation Status</strong> <br><span id='quotation_status'></span> 
                 </div>
                 <div class="col-md-4 d-flex justify-content-between">
-                    <span class="order_id" style="display:none"><strong>Order ID</strong>: <span id='order_id'></span>  </span>
-                    <span><strong>Total Price</strong>: <span id='total_price'></span> <span class='currency'></span>  </span>
+                    <span class="order_id" style="display:none"><strong>Order ID</strong>b <span id='order_id'></span>  </span>
+                    <span><strong>Total Price</strong><br> <span id='total_price'></span> <span class='currency'></span>  </span>
                     <button class="btn float-right btn-sm" style="display:none" id="checkout">Accept Quotation</button>
                     <button class="btn float-right btn-sm" style="display:none" id="cancel_quotation">Cancel Quotation</button>
                 </div>
