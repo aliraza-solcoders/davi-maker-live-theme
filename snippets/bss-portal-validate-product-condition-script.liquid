@@ -397,6 +397,8 @@ const validatePurchaseLate = function(cartData, isFirstLoad = true) {
                                     handleRemoveProductOnPortalRule(invalidNtProduct, validNtProductNtRule);
                                 }
 
+                            } else if (document.querySelector('.bss-modal-amo.active')) {
+                                    // do nothing, OL warning popup show
                             } else if (validNtProductNtRule.length) {
                                 handleRemoveProductOnPortalRule(invalidNtProduct, validNtProductNtRule);
                             } else if (document.getElementsByClassName('modalWarningQI').length) {
