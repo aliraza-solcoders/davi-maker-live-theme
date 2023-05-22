@@ -1,7 +1,7 @@
 {
   "sections": {
     "main": {
-      "type": "quotes",
+      "type": "main-customers-quotes",
       "settings": {
       }
     }
