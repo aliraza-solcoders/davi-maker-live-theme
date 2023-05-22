@@ -30,7 +30,7 @@
       {%- if request.page_type == 'customers/account' or request.page_type == 'customers/order' -%}
         {%- assign orders_tab_active = true -%}
       {%- elsif request.page_type == 'customers/quotes' -%}
-        {%- assign addresses_tab_active = true -%}
+        {%- assign quotes_tab_active = true -%}
       {%- elsif request.page_type == 'customers/addresses' -%}
         {%- assign addresses_tab_active = true -%}
       {%- endif -%}
@@ -41,8 +41,8 @@
         </a>
       </li>
 
-      <li class="account-nav__item" {% if orders_tab_active %}aria-current="page"{% endif %}>
-        <a href="/pages/quotes" class="bold {% unless orders_tab_active %}link-faded{% endunless %}">
+      <li class="account-nav__item" {% if quotes_tab_active %}aria-current="page"{% endif %}>
+        <a href="/pages/quotes" class="bold {% unless quotes_tab_active %}link-faded{% endunless %}">
           Quotes
         </a>
       </li>
