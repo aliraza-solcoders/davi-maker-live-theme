@@ -54,23 +54,25 @@
 <!-- <h3>Customer Information: {{ customer.email }}</h3> -->
 <div id="davi_theme" data-shop="{{ shop.domain }}" data-customer_email="{{ customer.email }}">
 {%if customer %}
-      
-      
+  <div class="container">
+  <div class="page-spacer">
     <div class="loader" style="text-align:center; display:flex; justify-content:center"><img src="https://daviapp.solcoder.com/public/uploads/loader/Loader.gif" width="200" height="200"></div>
         <table id="quotes_table" style="display:none">
             <thead>
                 <th>S. no.</th>
                 <th>Referrence Number</th>
-                <th>Form</th>
+                <th>Quotation Type</th>
                 <th>Status</th>
-                <th>Price</th>
+                <th>Request Date</th>
+                <th>Amount</th>
                 <th></th>
             </thead>
             <tbody id="quotes" style='text-align:center'>
             </tbody>
 
         </table>
-    </div>
+    </div>    
+  </div>
     <div class="mt-4 mb-4" id="single-quotation" style="display:none">
         <div class="container my-4">
             <h1 id="form_type">Invoice</h1>
