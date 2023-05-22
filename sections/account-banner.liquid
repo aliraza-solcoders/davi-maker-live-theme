@@ -29,7 +29,7 @@
     <ul class="h-stack justify-center gap-8" role="list">
       {%- if request.page_type == 'customers/account' or request.page_type == 'customers/order' -%}
         {%- assign orders_tab_active = true -%}
-      {%- elsif request.page_type == 'customers/quotes' -%}
+      {%- elsif request.path == '/pages/quotes' -%}
         {%- assign quotes_tab_active = true -%}
       {%- elsif request.page_type == 'customers/addresses' -%}
         {%- assign addresses_tab_active = true -%}
