@@ -39,6 +39,11 @@
         </a>
       </li>
 
+      <li class="account-nav__item" {% if orders_tab_active %}aria-current="page"{% endif %}>
+        <a href="/account/quotes" class="bold {% unless orders_tab_active %}link-faded{% endunless %}">
+          Quotes
+        </a>
+      </li>
       <li class="account-nav__item" {% if addresses_tab_active %}aria-current="page"{% endif %}>
         <a href="{{ routes.account_addresses_url }}" class="bold {% unless addresses_tab_active %}link-faded{% endunless %}">
           {{- 'customer.account.addresses' | t -}}
