@@ -20,6 +20,7 @@
 <div id="davi_theme" data-shop="{{ shop.domain }}" data-customer_email="{{ customer.email }}" data-customer_first_name="{{ customer.first_name }}" data-customer_last_name="{{ customer.last_name }}">
     <div class="mt-4 mb-4" id="single-quotation"style="display:none">
       <h3>Customer Information: {{ customer.email }}</h3>
+      <span id="form_type" style="display:none"></span> 
         <div class="container my-4">
             <div class="row bg-light px-5 py-2">
                 <div class="col-md-4">
@@ -292,11 +293,12 @@
       $('#checkout').on('click', function(){
         $('#single-quotation').hide();
         jQuery('.loader').show();
+        var form_type = jQuery('#form_type').text();
         var total_price = jQuery('#sub_total').text();
         var shipping = jQuery('#shipping').text();
         var vat_price = jQuery('#vat_price').text();
         var order = {
-            title: 'custom-order'+ ref_number,
+            title: form_type+ ref_number,
             ref_number : ref_number,
             price : total_price,
             shipping : shipping,
