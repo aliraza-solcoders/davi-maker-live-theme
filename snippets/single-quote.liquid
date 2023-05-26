@@ -217,6 +217,7 @@
                 var sub_total = response.sub_total ? response.sub_total : 0;
                 var shipping = response.shipping ? response.shipping : 0;
                 var total = response.total ? response.total : 0;
+                jQuery("#form_type").html(response.form_type);
                 jQuery("#shipping").html(shipping);
                 jQuery("#min_order").html(min_order);
                 jQuery("#sub_total").html(sub_total);
