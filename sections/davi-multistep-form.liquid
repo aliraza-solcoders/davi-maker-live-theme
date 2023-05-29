@@ -1408,6 +1408,10 @@
   </div>
   </div>
   {% else %}
+  <script>
+  
+          window.location = 'https://'+window.location.host+'/account/register';
+  </script>
     <div  style="justify-content:center; display:flex">To view your quote, Please&nbsp; {{ 'Login' | customer_login_link }}.</div>
 {% endif %}
 {% schema %}
