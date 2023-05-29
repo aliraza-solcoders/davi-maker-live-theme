@@ -171,7 +171,7 @@
       var ref_number = title[1];
       if ( ref_number != null ) {  
             var data = {
-                shop: shop,
+                shop: '{{ shop.domain }}',
                 ref_number: ref_number,
             };
             fetch("/apps/sdta/get_single_quote", {
