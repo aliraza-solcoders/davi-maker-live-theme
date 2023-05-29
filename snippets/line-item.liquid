@@ -33,7 +33,7 @@ Supported variables
           <span class="reversed-link hover:show">{{ line_item.product.title | default: line_item.title }}</span>
         </a>
       {%- else -%}
-        <p class="bold">{{ line_item.product.title | default: line_item.title }}</p>
+        <p class="bold quotation_detail">{{ line_item.product.title | default: line_item.title }}</p>
       {%- endif -%}
 
       {%- render 'price-list', line_item: line_item -%}
