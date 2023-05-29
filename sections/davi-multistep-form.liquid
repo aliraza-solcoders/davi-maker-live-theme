@@ -921,7 +921,11 @@
                     <select name="davi_products_variants" class="custom-single-select davi-theme" >
                       <option value="" selected disabled>Please Select</option>  
                       {% for variant in product.variants %}
-                          <option value="{{ variant.title | escape}} - {{ product.title | escape}}" data-img="{{ product | img_url: '100x' }}">{{ variant.title  | escape }}</option>
+                          {% if variant.image == blank %}
+                            <option value="{{ variant.title | escape}} - {{ product.title | escape}}" data-img="{{ product | img_url: '100x' }}">{{ variant.title  | escape }}</option>
+                          {% else %}
+                            <option value="{{ variant.title | escape}} - {{ product.title | escape}}" data-img="{{ variant | img_url: '100x' }}">{{ variant.title  | escape }}</option>
+                          {% endif %}
                       {% endfor %}
                     </select>
                     <button type="button" class="custom-multiple-dropdown-main"><img src="{{ product | img_url: '100x' }}" /> <span>Please Select</span></button>
