@@ -188,7 +188,7 @@
             })
             .then(function (response) {
 
-                var html = "";
+                var html = "<div class='row' id='davi_theme' >";
                 var file = "";
                 const formData = JSON.parse(response.field_settings);
                 $(formData).each(function( key, value ) {
@@ -238,7 +238,7 @@
                     serviceshtml += '<div class="col-md-4 p-3"><strong>'+value.service+'</strong></div><div class="col-md-4 p-3 text-center"><p class="pr-3">'+value.quantity+'</p></div><div class="col-md-4 p-3 text-end"><p class="pr-3">'+value.price+'<span class="currency"></span></p></div>';
                 });
                 jQuery(".service_html").after(serviceshtml);
-                jQuery(".quotation_detail").after(html);
+                jQuery(".quotation_detail").after(html+"</div>");
                 jQuery(".files").after(file);
                 jQuery("#ref_number").html(response.referrence_number);
                 jQuery(".expiry_date").hide();
