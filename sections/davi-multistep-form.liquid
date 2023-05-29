@@ -932,9 +932,9 @@
                         <ul class="custom-multiple-dropdown-list">
                             {% for variant in product.variants %}
                               {% if variant.image == blank %}
-                                <li><img src="{{ variant | img_url: '100x' }}" /> <span>{{ variant.title }}</span></li>
+                                <li><img src="{{ variant | img_url: '100x' }}" /> <span>fdsa{{ variant.title }}</span></li>
                               {% else %}
-                                <li><img src="{{ product | img_url: '100x' }}" /> <span>{{ variant.title }}</span></li>
+                                <li><img src="{{ product | img_url: '100x' }}" /> <span>asdf{{ variant.title }}</span></li>
                               {% endif %}
                             {% endfor %}
                         </ul>
