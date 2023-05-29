@@ -164,6 +164,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js" defer></script>
 
 <script>
+    setTimeout(function() { 
       var title = jQuery(".quotationTitle").text();
       title = title.split(":");
       console.log(title);
@@ -299,6 +300,7 @@
 
             })
       }
+    },2000);
 </script>
 {% schema %}
 {
