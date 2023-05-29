@@ -15,6 +15,14 @@
         </div>
       </div>
 
+      <div id="davi_theme" class="row p-3 customStatus" style="display:none">
+          <div class="col-md-4">
+              <strong>Quotation Status</strong>: <span id='quotation_status'></span> 
+          </div>
+          <p class="mt-3 expiry_date"><strong>Notice:</strong> This quote expires on <strong id="expiry_date"></strong>.<br/></p>
+          <p><strong>Notice:</strong> If there is more than 10% change in material prices after the quote is provided, it loses its validity. See our policy</p>
+      </div>
+
       <div class="order">
         <div class="v-stack gap-6">
           {%- comment -%}
@@ -298,6 +306,8 @@
                     jQuery("#total_price").next().html('');
                 }
                 jQuery('.loader').hide();
+
+                jQuery(".customStatus").show();
                 jQuery("#single-quotation").show();
 
             })
