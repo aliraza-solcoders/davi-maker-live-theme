@@ -27,13 +27,13 @@ Supported variables
   {%- endif -%}
 
   <div class="line-item__info">
-    <div class="v-stack gap-0.5">
+    <div class="v-stack gap-0.5 quotation_detail">
       {%- if line_item.url != blank -%}
         <a href="{{ line_item.url }}" class="bold">
           <span class="reversed-link hover:show">{{ line_item.product.title | default: line_item.title }}</span>
         </a>
       {%- else -%}
-        <p class="bold quotation_detail">{{ line_item.product.title | default: line_item.title }}</p>
+        <p class="bold">{{ line_item.product.title | default: line_item.title }}</p>
       {%- endif -%}
 
       {%- render 'price-list', line_item: line_item -%}
