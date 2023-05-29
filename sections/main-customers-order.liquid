@@ -164,8 +164,10 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js" defer></script>
 
 <script>
-        var title = jQuery(".quotationTitle").text();
-        var ref_number = params.get('ref_number');
+      var title = jQuery(".quotationTitle").text();
+      title = title.split(":");
+      console.log(title);
+      var ref_number = title[1];
       if ( ref_number != null ) {  
             var data = {
                 shop: shop,
