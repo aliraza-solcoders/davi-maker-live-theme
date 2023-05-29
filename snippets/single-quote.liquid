@@ -227,7 +227,7 @@
                 var today = new Date();
                 var expiry_date = new Date(response.expiry_date)
                 if((response.status  == 'quotation_ready' || response.status  == 'quotation_revised') && expiry_date > today){
-                    jQuery("#checkout").html('Accept Quotation');
+                    jQuery("#checkout").html('Pay by Invoice');
                     jQuery("#checkout").show();
                 }
                 if((response.status  == 'pending' || response.status  == 'quotation_ready' || response.status  == 'quotation_revised') && expiry_date > today){
