@@ -17,12 +17,19 @@
 }
 </style>
 {%if customer %}
-<div id="davi_theme" data-shop="{{ shop.domain }}" data-customer_email="{{ customer.email }}" data-customer_first_name="{{ customer.first_name }}" data-customer_last_name="{{ customer.last_name }}">
-  
+<div class="container">
+  <div class="page-spacer">
+    <div class="account">
+      <div class="account-header account-header--back">
         <a href="/pages/quotes" class="back-button justify-self-start">
           {%- render 'icon' with 'chevron-left' -%}
           {{- 'customer.order.back' | t -}}
         </a>
+      </div>
+    </div>
+  </div>
+</div>
+  <div id="davi_theme" data-shop="{{ shop.domain }}" data-customer_email="{{ customer.email }}" data-customer_first_name="{{ customer.first_name }}" data-customer_last_name="{{ customer.last_name }}">
     <div class="mt-4 mb-4" id="single-quotation"style="display:none">
       <h3>Customer Information: {{ customer.email }}</h3>
       <span id="form_type" style="display:none"></span> 
