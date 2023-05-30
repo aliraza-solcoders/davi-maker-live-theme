@@ -210,23 +210,12 @@
                     }
                     else{
                         if(value.type != "files"){
-                          
-                          var extension = value.value.split(".");
-                          var iconsArray = ["pdf", "csv", "docx", "xlsx"];
-                          if(jQuery.inArray(extension[3],iconsArray) != -1){
-                              var link = "<a href='"+value.value+"' target='_blank'><img src='https://daviapp.solcoder.com/public/images/"+extension[3]+"-icon.png' alt=''></a>";
-                          } else {
-                              var link = "<a href='"+value.value+"' target='_blank'><img src='https://daviapp.solcoder.com/public/images/unknown-icon.png' alt=''></a>";
-                          }
-  
-                          file += '<div class="col-md-3 p-3 border-bottom"><strong>'+value.label+'</strong></div><div class="col-md-9 p-3 border-bottom">'+link+'</div>';
-
+                          file += value.value' ,';
                         }
                       else{
                         var filesArray = value.value;
-                          var multiplefiles = '';
                         $(filesArray).each(function( key, fileValue ) {
-                          multiplefiles += fileValue+',';                
+                           file += value.value' ,';
                         });
                           
                       }
@@ -240,7 +229,7 @@
                 });
                 jQuery(".service_html").after(serviceshtml);
                 jQuery(".quotation_detail").after(html+"</div>");
-                jQuery(".files").value(multiplefiles);
+                jQuery(".files").value(file);
                 jQuery("#ref_number").html(response.referrence_number);
                 jQuery(".expiry_date").hide();
                 if(response.expiry_date == undefined || response.expiry_date == ''){
