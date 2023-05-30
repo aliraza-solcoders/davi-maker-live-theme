@@ -185,11 +185,11 @@
       console.log(title);
       var ref_number = title[1];
       if ( ref_number != null ) {  
+        $('#downloadButton').on('click', function() { 
+          
           var fileUrls = jQuery('#files').val();
             fileUrls = fileUrls.split(",");
             var currentIndex = 0;
-        $('#downloadButton').on('click', function() { 
-          
             var data = {
                 shop: '{{ shop.domain }}',
                 filenames: JSON.stringify(fileUrls),
