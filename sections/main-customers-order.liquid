@@ -188,19 +188,24 @@
           var fileUrls = jQuery('#files').val();
             fileUrls = fileUrls.split(",");
             var currentIndex = 0;
-        $('#downloadButton').on('click', function() {    
-            if (currentIndex < fileUrls.length) {
-                var link = document.createElement('a');
-                link.href = fileUrls[currentIndex];
-                link.download = 'file' + currentIndex + '.pdf'; 
-                link.style.display = 'none';
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
-                currentIndex++;
-            } else {
-                alert('All files have been downloaded.');
-            }
+        $('#downloadButton').on('click', function() { 
+          
+            var data = {
+                shop: '{{ shop.domain }}',
+                filenames: JSON.stringify(fileUrls),
+            };
+            fetch("/apps/sdta/download", {
+                method: "POST",
+                body: JSON.stringify(data),
+                headers: {
+                    "Content-Type": "application/json",
+                },
+            })
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (response) {
+            });
         });
         
             var data = {
