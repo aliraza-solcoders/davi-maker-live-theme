@@ -21,6 +21,11 @@
               <p class="mt-3 expiry_date"><strong>Notice:</strong> This quote expires on <strong id="expiry_date"></strong>.<br/></p>
               <p><strong>Notice:</strong> If there is more than 10% change in material prices after the quote is provided, it loses its validity. See our policy</p>
           </div>
+        <div class="col-md-12">
+          
+              <button id='download_file'>Download All Files</button> 
+              <input type="hidden" id="files" value="">
+        </div>
       </div>
 
       <div class="order">
@@ -219,21 +224,19 @@
                         }
                       else{
                         var filesArray = value.value;
-                        console.log(filesArray.length)
                           var multiplefiles = '';
                         $(filesArray).each(function( key, fileValue ) {
-                          console.log(key)
-                          var extension = fileValue.split(".");
-                          var iconsArray = ["pdf", "csv", "docx", "xlsx"];
-                          if(jQuery.inArray(extension[3],iconsArray) != -1){
-                              multiplefiles += "<a href='"+fileValue+"' target='_blank'><img src='https://daviapp.solcoder.com/public/images/"+extension[3]+"-icon.png' alt=''></a>";
-                          } else {
-                              multiplefiles += "<a href='"+fileValue+"' target='_blank'><img src='https://daviapp.solcoder.com/public/images/unknown-icon.png' alt=''></a>";
-                          }
-                          
-                          if(key == (filesArray.length-1)){
-                            file += '<div class="col-md-3 p-3 border-bottom"><strong>'+value.label+'</strong></div><div class="col-md-9 p-3 border-bottom">'+multiplefiles+'</div>';  
-                          }                        
+                          // var extension = fileValue.split(".");
+                          // var iconsArray = ["pdf", "csv", "docx", "xlsx"];
+                          // if(jQuery.inArray(extension[3],iconsArray) != -1){
+                          //     multiplefiles += "<a href='"+fileValue+"' target='_blank'><img src='https://daviapp.solcoder.com/public/images/"+extension[3]+"-icon.png' alt=''></a>";
+                          // } else {
+                          //     multiplefiles += "<a href='"+fileValue+"' target='_blank'><img src='https://daviapp.solcoder.com/public/images/unknown-icon.png' alt=''></a>";
+                          // }
+                          multiplefiles += fileValue+',';
+                          // if(key == (filesArray.length-1)){
+                          //   file += '<div class="col-md-3 p-3 border-bottom"><strong>'+value.label+'</strong></div><div class="col-md-9 p-3 border-bottom">'+multiplefiles+'</div>';  
+                          // }                        
                         });
                           
                       }
@@ -247,7 +250,7 @@
                 });
                 jQuery(".service_html").after(serviceshtml);
                 jQuery(".quotation_detail").after(html+"</div>");
-                jQuery(".files").after(file);
+                jQuery(".files").value(multiplefiles);
                 jQuery("#ref_number").html(response.referrence_number);
                 jQuery(".expiry_date").hide();
                 if(response.expiry_date == undefined || response.expiry_date == ''){
