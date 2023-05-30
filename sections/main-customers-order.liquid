@@ -229,7 +229,7 @@
                 });
                 jQuery(".service_html").after(serviceshtml);
                 jQuery(".quotation_detail").after(html+"</div>");
-                jQuery(".files").val(file);
+                jQuery("#files").val(file);
                 jQuery("#ref_number").html(response.referrence_number);
                 jQuery(".expiry_date").hide();
                 if(response.expiry_date == undefined || response.expiry_date == ''){
