@@ -233,12 +233,12 @@
                     }
                     else{
                         if(value.type != "files"){
-                          file += value.value+' ,';
+                          file += value.value+',';
                         }
                       else{
                         var filesArray = value.value;
                         $(filesArray).each(function( key, fileValue ) {
-                           file += fileValue+' ,';
+                           file += fileValue+',';
                         });
                           
                       }
