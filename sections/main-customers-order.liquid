@@ -185,23 +185,22 @@
       console.log(title);
       var ref_number = title[1];
       if ( ref_number != null ) {  
-        $('#downloadButton').on('click', function() {
           var fileUrls = jQuery('#files').val();
             fileUrls = fileUrls.split(",");
-                $(fileUrls).each(function( key, fileValue ) {
-                   
-                    var link = document.createElement('a');
-                    link.href = fileValue;
-                    link.download = fileValue; // replace with appropriate file names or extensions
-                    link.style.display = 'none';
-                    document.body.appendChild(link);
-                    link.click();
-                    document.body.removeChild(link);
-                });
+        $('#downloadButton').on('click', function() {    
+            var currentIndex = 0;
+            if (currentIndex < fileUrls.length) {
+                var link = document.createElement('a');
+                link.href = fileUrls[currentIndex];
+                link.download = 'file' + currentIndex + '.pdf'; 
+                link.style.display = 'none';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
                 currentIndex++;
-            // } else {
-            //     alert('All files have been downloaded.');
-            // }
+            } else {
+                alert('All files have been downloaded.');
+            }
         });
         
             var data = {
