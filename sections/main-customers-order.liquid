@@ -226,17 +226,7 @@
                         var filesArray = value.value;
                           var multiplefiles = '';
                         $(filesArray).each(function( key, fileValue ) {
-                          // var extension = fileValue.split(".");
-                          // var iconsArray = ["pdf", "csv", "docx", "xlsx"];
-                          // if(jQuery.inArray(extension[3],iconsArray) != -1){
-                          //     multiplefiles += "<a href='"+fileValue+"' target='_blank'><img src='https://daviapp.solcoder.com/public/images/"+extension[3]+"-icon.png' alt=''></a>";
-                          // } else {
-                          //     multiplefiles += "<a href='"+fileValue+"' target='_blank'><img src='https://daviapp.solcoder.com/public/images/unknown-icon.png' alt=''></a>";
-                          // }
-                          multiplefiles += fileValue+',';
-                          // if(key == (filesArray.length-1)){
-                          //   file += '<div class="col-md-3 p-3 border-bottom"><strong>'+value.label+'</strong></div><div class="col-md-9 p-3 border-bottom">'+multiplefiles+'</div>';  
-                          // }                        
+                          multiplefiles += fileValue+',';                
                         });
                           
                       }
