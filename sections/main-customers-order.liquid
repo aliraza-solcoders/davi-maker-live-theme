@@ -187,8 +187,8 @@
       if ( ref_number != null ) {  
           var fileUrls = jQuery('#files').val();
             fileUrls = fileUrls.split(",");
-        $('#downloadButton').on('click', function() {    
             var currentIndex = 0;
+        $('#downloadButton').on('click', function() {    
             if (currentIndex < fileUrls.length) {
                 var link = document.createElement('a');
                 link.href = fileUrls[currentIndex];
