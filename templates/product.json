@@ -15,6 +15,15 @@
             "heading_tag": "h2"
           }
         },
+        "8913a4d5-e5ac-4b01-8a29-d945e2a6422a": {
+          "type": "shopify:\/\/apps\/request-a-quote-hide-prices\/blocks\/app-block\/e72a6125-4dd6-4154-a361-ca94e10e6d52",
+          "disabled": true,
+          "settings": {
+            "text": "Request Quoteffd",
+            "class": "button",
+            "custom_css": ""
+          }
+        },
         "badges": {
           "type": "badges",
           "settings": {
@@ -22,6 +31,7 @@
         },
         "price": {
           "type": "price",
+          "disabled": true,
           "settings": {
             "show_taxes_notice": false
           }
@@ -65,6 +75,7 @@
         },
         "buy_buttons": {
           "type": "buy_buttons",
+          "disabled": true,
           "settings": {
             "show_payment_button": true,
             "atc_button_background": "",
@@ -107,19 +118,12 @@
             "background": "#eaf2ed",
             "text_color": "#00a341"
           }
-        },
-        "8913a4d5-e5ac-4b01-8a29-d945e2a6422a": {
-          "type": "shopify:\/\/apps\/request-a-quote-hide-prices\/blocks\/app-block\/e72a6125-4dd6-4154-a361-ca94e10e6d52",
-          "settings": {
-            "text": "Request Quote",
-            "class": "button",
-            "custom_css": ""
-          }
         }
       },
       "block_order": [
         "vendor",
         "title",
+        "8913a4d5-e5ac-4b01-8a29-d945e2a6422a",
         "badges",
         "price",
         "rating",
@@ -131,8 +135,7 @@
         "buy_buttons",
         "c14c4fe9-2a2e-498a-b080-08450bc47025",
         "30038a1d-1d3f-489e-a773-d64d47484ac3",
-        "9513fa3c-9e2d-4e2b-a485-d24ca561533b",
-        "8913a4d5-e5ac-4b01-8a29-d945e2a6422a"
+        "9513fa3c-9e2d-4e2b-a485-d24ca561533b"
       ],
       "settings": {
         "full_width": true,
